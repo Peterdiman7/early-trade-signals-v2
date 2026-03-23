@@ -1,8 +1,8 @@
 <template>
-  <ion-app>
-    <ion-router-outlet />
-    <div class="toast-container" id="toast-container"></div>
-  </ion-app>
+	<ion-app>
+		<ion-router-outlet />
+		<div class="toast-container" id="toast-container"></div>
+	</ion-app>
 </template>
 
 <script setup lang="ts">
@@ -13,11 +13,11 @@ import { useAppStore } from '@/stores/app'
 const appStore = useAppStore()
 
 function applyTheme(dark: boolean) {
-  if (dark) {
-    document.body.classList.remove('light-mode')
-  } else {
-    document.body.classList.add('light-mode')
-  }
+	if (dark) {
+		document.body.classList.remove('light-mode')
+	} else {
+		document.body.classList.add('light-mode')
+	}
 }
 
 onMounted(() => applyTheme(appStore.darkMode))
@@ -26,18 +26,18 @@ watch(() => appStore.darkMode, (val) => applyTheme(val))
 
 <style>
 .toast-container {
-  position: fixed;
-  top: 70px;
-  right: 16px;
-  z-index: 9000;
-  display: flex;
-  flex-direction: column;
-  gap: 8px;
-  max-width: 320px;
-  pointer-events: none;
+	position: fixed;
+	top: 70px;
+	right: 16px;
+	z-index: 9000;
+	display: flex;
+	flex-direction: column;
+	gap: 8px;
+	max-width: 320px;
+	pointer-events: none;
 }
 
 .toast-container>* {
-  pointer-events: all;
+	pointer-events: all;
 }
 </style>
