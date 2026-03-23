@@ -1,0 +1,140 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:opsz,wght@9..40,300;9..40,400;9..40,500;9..40,600;9..40,700;9..40,800&family=JetBrains+Mono:wght@400;500;700&family=Instrument+Serif:ital@0;1&display=swap');
+
+:root {
+  --g: #16c784; --gd: #0fa870; --gg: rgba(22,199,132,.1);
+  --y: #f0b90b; --r: #ea3943; --b: #4f8ef7; --pu: #a855f7;
+  --bg: #080b0f; --bg2: #0f1419; --bg3: #161d26; --bg4: #1e2835;
+  --bdr: rgba(255,255,255,.05); --bdr2: rgba(255,255,255,.11);
+  --tx: #dce6f0; --mu: #6b7d91; --mu2: #3d4f61;
+  --font: 'DM Sans', sans-serif;
+  --mono: 'JetBrains Mono', monospace;
+  --serif: 'Instrument Serif', serif;
+
+  --ion-background-color: var(--bg);
+  --ion-text-color: var(--tx);
+  --ion-toolbar-background: var(--bg2);
+  --ion-tab-bar-background: rgba(17,23,32,.97);
+  --ion-tab-bar-border-color: var(--bdr);
+  --ion-font-family: var(--font);
+  --ion-color-primary: var(--g);
+  --ion-color-primary-rgb: 22,199,132;
+  --ion-color-primary-contrast: #000;
+  --ion-color-primary-shade: #0fa870;
+  --ion-color-primary-tint: #2ed48e;
+  --ion-border-color: var(--bdr);
+  --ion-item-background: var(--bg2);
+  --ion-card-background: var(--bg2);
+}
+
+body.light-mode {
+  --bg: #f0f4f8; --bg2: #ffffff; --bg3: #e8eef5; --bg4: #dce6f0;
+  --bdr: rgba(0,0,0,.07); --bdr2: rgba(0,0,0,.14);
+  --tx: #0d1117; --mu: #556070; --mu2: #8fa0b4;
+  --ion-background-color: #f0f4f8;
+  --ion-text-color: #0d1117;
+  --ion-toolbar-background: rgba(240,244,248,.96);
+  --ion-tab-bar-background: rgba(240,244,248,.97);
+  --ion-tab-bar-border-color: rgba(0,0,0,.07);
+  --ion-item-background: #ffffff;
+  --ion-card-background: #ffffff;
+  background: #f0f4f8;
+  color: #0d1117;
+}
+body.light-mode ::-webkit-scrollbar-thumb { background: #c0cdd8; }
+body.light-mode ion-content { --background: #f0f4f8; }
+body.light-mode .navbar,
+body.light-mode .lnav {
+  background: rgba(240,244,248,.96) !important;
+  border-bottom-color: rgba(0,0,0,.07) !important;
+}
+body.light-mode .bottom-nav { background: rgba(240,244,248,.97) !important; }
+body.light-mode .hamburger { background: var(--bg4) !important; }
+body.light-mode .hamburger span { background: var(--tx) !important; }
+
+* { box-sizing: border-box; margin: 0; padding: 0; }
+
+body {
+  font-family: var(--font);
+  background: var(--bg);
+  color: var(--tx);
+  -webkit-font-smoothing: antialiased;
+  overflow-x: hidden;
+}
+
+::-webkit-scrollbar { width: 3px; }
+::-webkit-scrollbar-thumb { background: #2a3548; border-radius: 2px; }
+
+/* Ionic overrides */
+ion-tab-bar {
+  --border: 1px solid var(--bdr);
+  backdrop-filter: blur(20px);
+}
+
+ion-tab-button {
+  --color: var(--mu);
+  --color-selected: var(--g);
+}
+
+ion-header ion-toolbar {
+  --border-width: 0 0 1px 0;
+  --border-color: var(--bdr);
+}
+
+/* Animations */
+@keyframes fadeUp { from { opacity:0; transform:translateY(10px) } to { opacity:1; transform:translateY(0) } }
+@keyframes blink { 0%,100% { opacity:1 } 50% { opacity:.3 } }
+@keyframes pulse { 0%,100% { opacity:1;transform:scale(1) } 50% { opacity:.4;transform:scale(1.5) } }
+@keyframes spin { to { transform:rotate(360deg) } }
+@keyframes marquee { from { transform:translateX(0) } to { transform:translateX(-50%) } }
+@keyframes toastIn { from { opacity:0;transform:translateX(100%) } to { opacity:1;transform:translateX(0) } }
+@keyframes modalIn { from { opacity:0;transform:scale(.9) translateY(16px) } to { opacity:1;transform:scale(1) translateY(0) } }
+@keyframes sheetUp { from { transform:translateY(100%) } to { transform:translateY(0) } }
+
+.fade { animation: fadeUp .28s ease both; }
+
+/* Signal colors */
+.c-buy { color: var(--g); }
+.c-sell { color: var(--r); }
+.c-hold { color: var(--y); }
+
+/* Cards */
+.s-card {
+  background: var(--bg2);
+  border: 1px solid var(--bdr);
+  border-radius: 16px;
+  padding: 14px 14px 0 14px;
+  cursor: pointer;
+  transition: all .2s;
+  position: relative;
+  overflow: hidden;
+  margin-bottom: 9px;
+}
+.s-card:hover { border-color: var(--bdr2); }
+.s-card:active { transform: scale(.99); }
+
+/* Dur badges */
+.dur-badge {
+  display: inline-flex; align-items: center; gap: 4px;
+  font-size: 9px; font-weight: 700; padding: 3px 9px; border-radius: 100px;
+}
+.dur-badge.intraday { color: var(--pu); background: rgba(168,85,247,.13); border: 1px solid rgba(168,85,247,.3); }
+.dur-badge.short { color: var(--b); background: rgba(79,142,247,.13); border: 1px solid rgba(79,142,247,.3); }
+.dur-badge.medium { color: var(--y); background: rgba(240,185,11,.13); border: 1px solid rgba(240,185,11,.3); }
+.dur-badge.long { color: var(--g); background: rgba(22,199,132,.13); border: 1px solid rgba(22,199,132,.3); }
+
+/* Sig btn */
+.sig-btn {
+  border-radius: 8px; padding: 6px 13px; font-weight: 800;
+  font-size: 11px; border: 1.5px solid; cursor: pointer;
+  letter-spacing: .04em; font-family: var(--font); background: transparent;
+}
+.sig-btn.buy { border-color: var(--g); color: var(--g); }
+.sig-btn.hold { border-color: var(--y); color: var(--y); }
+.sig-btn.sell { border-color: var(--r); color: var(--r); }
+
+/* Loader */
+.loader {
+  display: inline-block; width: 14px; height: 14px;
+  border: 2px solid var(--bdr2); border-top-color: var(--g);
+  border-radius: 50%; animation: spin .7s linear infinite;
+}
