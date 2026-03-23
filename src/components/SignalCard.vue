@@ -34,7 +34,8 @@
 				</button>
 				<!-- Type badge -->
 				<button :class="['sig-btn', signal.type]" @click.stop>
-					{{ signal.type === 'buy' ? 'BUY' : signal.type === 'hold' ? 'HOLD' : 'SELL' }}
+					{{ signal.type === 'buy' ? t('common.buy') : signal.type === 'hold' ? t('common.hold') :
+						t('common.sell') }}
 				</button>
 			</div>
 		</div>
@@ -42,7 +43,7 @@
 		<!-- ROW 2: Perf + Price -->
 		<div class="sc-row2">
 			<div>
-				<div class="sc-row2-label">Perf. seit Beobachtung</div>
+				<div class="sc-row2-label">{{ t('signals.perfSince') }}</div>
 				<div :class="['sc-pct', sigUp ? 'up' : 'dn']">{{ sigUp ? '+' : '' }}{{ sigChg }}%</div>
 			</div>
 			<div class="sc-price-block">
@@ -50,27 +51,27 @@
 					minimumFractionDigits: 2,
 					maximumFractionDigits: 2
 				}) }}</div>
-				<div class="sc-entry">Einstieg: ${{ signal.signalPrice }}</div>
+				<div class="sc-entry">{{ t('signals.entry') }}: ${{ signal.signalPrice }}</div>
 			</div>
 		</div>
 
 		<!-- ROW 4: Meta -->
 		<div class="sc-data3">
 			<div class="sd3">
-				<label>Sektor</label>
+				<label>{{ t('signals.sector') }}</label>
 				<div class="v">{{ signal.sector }}</div>
 			</div>
 			<div class="sd3">
-				<label>Stärke</label>
-				<div :class="['v', `str-${signal.strength.toLowerCase()}`]">{{ signal.strength }}</div>
+				<label>{{ t('signals.strength') }}</label>
+				<div :class="['v', `str-${signal.strength.toLowerCase()}`]">{{ strengthLabel }}</div>
 			</div>
 			<div class="sd3">
-				<label>Qualität</label>
+				<label>{{ t('signals.quality') }}</label>
 				<div :class="['v', signal.quality >= 4 ? 'q-hi' : signal.quality >= 3 ? 'q-mid' : 'q-lo']">Q{{
 					signal.quality }}/5</div>
 			</div>
 			<div class="sd3">
-				<label>Horizont</label>
+				<label>{{ t('signals.horizon') }}</label>
 				<div class="v"><span :class="['dur-badge', signal.duration]">{{ durLabel }}</span></div>
 			</div>
 		</div>
@@ -84,9 +85,10 @@
 					<circle cx="12" cy="12" r="10" />
 					<polyline points="12 6 12 12 16 14" />
 				</svg>
-				<span class="sc-hist-count">{{ multiDay ? `${signal.dayHistory.length} Signale heute` : '1 Signal heute'
-					}}</span>
-				<span class="sc-hist-sub">· zuletzt <span style="color:var(--tx)">{{ signal.signalTime }}</span></span>
+				<span class="sc-hist-count">{{ multiDay ? `${signal.dayHistory.length} ${t('signals.signalsToday')}` :
+					`1 ${t('signals.oneSignalToday')}` }}</span>
+				<span class="sc-hist-sub">· {{ t('signals.lastAt') }} <span style="color:var(--tx)">{{ signal.signalTime
+						}}</span></span>
 				<span v-if="multiDay" class="sc-hist-arrow">▾</span>
 			</button>
 		</div>
@@ -111,12 +113,14 @@ import type { Signal } from '@/stores/signals'
 import { LOGOS } from '@/stores/signals'
 import { useWatchlistStore } from '@/stores/watchlist'
 import { useNotifStore } from '@/stores/notif'
+import { useI18n } from '@/i18n'
 
 const props = defineProps<{ signal: Signal }>()
 defineEmits(['click'])
 
 const wlStore = useWatchlistStore()
 const notifStore = useNotifStore()
+const { t, locale } = useI18n()
 
 const showFb = ref(false)
 const histOpen = ref(false)
@@ -128,8 +132,23 @@ const multiDay = computed(() => props.signal.dayHistory.length > 1)
 const sigChg = computed(() => ((props.signal.price - props.signal.signalPrice) / props.signal.signalPrice * 100).toFixed(2))
 const sigUp = computed(() => parseFloat(sigChg.value) >= 0)
 
-const durLabels: Record<string, string> = { intraday: '⚡ Intraday', short: '📅 Kurzfristig', medium: '📆 Mittelfristig', long: '🏔️ Langfristig' }
-const durLabel = computed(() => durLabels[props.signal.duration] || props.signal.duration)
+const strengthLabel = computed(() => {
+	const map: Record<string, string> = {
+		Strong: t('common.strong'),
+		Moderate: t('common.moderate'),
+		Weak: t('common.weak'),
+	}
+	return map[props.signal.strength] || props.signal.strength
+})
+
+const durLabels = computed((): Record<string, string> => ({
+	intraday: t('signals.intraday'),
+	short: t('signals.short'),
+	medium: t('signals.medium'),
+	long: t('signals.long'),
+}))
+
+const durLabel = computed(() => durLabels.value[props.signal.duration] || props.signal.duration)
 </script>
 
 <style scoped>
