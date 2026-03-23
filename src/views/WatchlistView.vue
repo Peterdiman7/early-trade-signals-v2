@@ -1,217 +1,85 @@
 <template>
-    <ion-page>
-        <ion-header class="ion-no-border">
-            <ion-toolbar>
-                <div class="page-header">
-                    <h1 class="font-display">Watchlist</h1>
-                    <span class="count-chip font-mono">{{ watchlistStore.items.length }}</span>
+  <ion-page>
+    <ion-content :fullscreen="true">
+      <div class="pad">
+        <div class="sec-head" style="margin-top:16px">
+          <span class="sec-title">⭐ Watchlist</span>
+          <span class="badge-sm">{{ wlStore.tickers.length }}</span>
+        </div>
+
+        <div v-if="wlStore.items.length === 0" class="wl-empty">
+          <span class="ico">⭐</span>
+          Noch keine Positionen.<br>Klicke ☆ bei einem Signal.
+        </div>
+
+        <div v-else>
+          <div v-for="s in wlStore.items" :key="s.id" class="wl-item" @click="selected = s">
+            <div class="wl-top">
+              <div class="wl-left">
+                <div class="wl-logo">
+                  <img :src="logoFor(s.ticker)" @error="imgFallback" alt="" />
                 </div>
-            </ion-toolbar>
-        </ion-header>
-
-        <ion-content :fullscreen="true">
-            <div v-if="watchlistStore.items.length === 0" class="empty-state">
-                <span>⭐</span>
-                <h3>Your watchlist is empty</h3>
-                <p>Add signals from the Signals tab to track them here.</p>
-                <button @click="$router.push('/app/signals')">Browse Signals →</button>
-            </div>
-
-            <div v-else class="watchlist-content">
-                <div v-for="item in watchlistStore.items" :key="item.id" class="watchlist-item fade-up">
-                    <div class="item-logo">
-                        <img :src="item.logo" :alt="item.ticker" @error="imgFallback" />
-                    </div>
-
-                    <div class="item-info">
-                        <div class="item-ticker font-display">{{ item.ticker }}</div>
-                        <div class="item-name">{{ item.name }}</div>
-                        <div v-if="item.targetPrice" class="item-target font-mono">
-                            Target: ${{ item.targetPrice }}
-                        </div>
-                    </div>
-
-                    <div class="item-price">
-                        <div class="price font-mono">${{ item.price.toFixed(2) }}</div>
-                        <div :class="['change font-mono', item.changePct >= 0 ? 'text-buy' : 'text-sell']">
-                            {{ item.changePct >= 0 ? '+' : '' }}{{ item.changePct }}%
-                        </div>
-                        <div class="added-date">Added {{ formatDate(item.addedAt) }}</div>
-                    </div>
-
-                    <button class="remove-btn" @click="remove(item.id)">✕</button>
+                <div>
+                  <div class="wl-ticker">{{ s.ticker }}</div>
+                  <div class="wl-name">{{ s.name }}</div>
                 </div>
+              </div>
+              <button class="wl-remove" @click.stop="wlStore.remove(s.ticker)">✕</button>
             </div>
-        </ion-content>
-    </ion-page>
+            <div class="wl-stats">
+              <div class="wl-s"><label>Akt. Preis</label><div class="v">${{ s.price }}</div></div>
+              <div class="wl-s"><label>Seit Aufnahme</label>
+                <div class="v" :style="{ color: sigChg(s) >= 0 ? 'var(--g)' : 'var(--r)' }">{{ sigChg(s) >= 0 ? '+' : '' }}{{ sigChg(s).toFixed(2) }}%</div>
+              </div>
+              <div class="wl-s"><label>Haltedauer</label><div class="v">{{ daysSince(s.signalDate) }}d</div></div>
+            </div>
+            <div class="wl-foot">
+              <span>Signal: {{ s.signalDate }}</span>
+              <span :style="{ color: s.type === 'buy' ? 'var(--g)' : s.type === 'hold' ? 'var(--y)' : 'var(--r)' }">● {{ s.type.toUpperCase() }} Q{{ s.quality }}/5</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <SignalDetailSheet v-if="selected" :signal="selected" @close="selected = null" />
+    </ion-content>
+  </ion-page>
 </template>
 
 <script setup lang="ts">
-import { IonPage, IonHeader, IonToolbar, IonContent } from '@ionic/vue'
+import { ref } from 'vue'
+import { IonPage, IonContent } from '@ionic/vue'
 import { useWatchlistStore } from '@/stores/watchlist'
+import { LOGOS } from '@/stores/signals'
+import type { Signal } from '@/stores/signals'
+import SignalDetailSheet from '@/components/SignalDetailSheet.vue'
 
-const watchlistStore = useWatchlistStore()
+const wlStore = useWatchlistStore()
+const selected = ref<Signal | null>(null)
 
-function remove(id: string) {
-    watchlistStore.removeFromWatchlist(id)
-}
-
-function imgFallback(e: Event) {
-    const img = e.target as HTMLImageElement
-    img.style.display = 'none'
-}
-
-function formatDate(d: string) {
-    return new Date(d).toLocaleDateString('en-US', { month: 'short', day: 'numeric' })
-}
+function logoFor(ticker: string) { return LOGOS[ticker] || '' }
+function imgFallback(e: Event) { (e.target as HTMLImageElement).style.display = 'none' }
+function sigChg(s: Signal) { return (s.price - s.signalPrice) / s.signalPrice * 100 }
+function daysSince(date: string) { return Math.max(1, Math.ceil((new Date('2026-02-22').getTime() - new Date(date).getTime()) / 86400000)) }
 </script>
 
 <style scoped>
-.page-header {
-    display: flex;
-    align-items: center;
-    gap: 10px;
-    padding: 8px 20px 12px;
-}
-
-.page-header h1 {
-    font-size: 22px;
-    font-weight: 800;
-    margin: 0;
-}
-
-.count-chip {
-    background: var(--et-accent-glow);
-    border: 1px solid rgba(99, 179, 237, 0.3);
-    color: var(--et-accent);
-    font-size: 13px;
-    padding: 2px 10px;
-    border-radius: 100px;
-}
-
-.watchlist-content {
-    padding: 12px 16px 80px;
-}
-
-.watchlist-item {
-    display: flex;
-    align-items: center;
-    gap: 12px;
-    padding: 14px 16px;
-    background: var(--et-surface);
-    border: 1px solid var(--et-border);
-    border-radius: 12px;
-    margin-bottom: 10px;
-}
-
-.item-logo {
-    width: 44px;
-    height: 44px;
-    border-radius: 10px;
-    background: var(--et-surface-3);
-    overflow: hidden;
-    flex-shrink: 0;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-.item-logo img {
-    width: 32px;
-    height: 32px;
-    object-fit: contain;
-}
-
-.item-info {
-    flex: 1;
-}
-
-.item-ticker {
-    font-size: 15px;
-    font-weight: 700;
-}
-
-.item-name {
-    font-size: 12px;
-    color: var(--et-text-muted);
-}
-
-.item-target {
-    font-size: 11px;
-    color: var(--et-accent);
-    margin-top: 3px;
-}
-
-.item-price {
-    text-align: right;
-}
-
-.price {
-    font-size: 15px;
-    font-weight: 600;
-}
-
-.change {
-    font-size: 12px;
-}
-
-.added-date {
-    font-size: 10px;
-    color: var(--et-text-muted);
-    margin-top: 3px;
-}
-
-.remove-btn {
-    width: 28px;
-    height: 28px;
-    border-radius: 50%;
-    background: var(--et-surface-3);
-    border: none;
-    color: var(--et-text-muted);
-    font-size: 11px;
-    cursor: pointer;
-    flex-shrink: 0;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-.empty-state {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    padding: 80px 32px;
-    text-align: center;
-    color: var(--et-text-muted);
-}
-
-.empty-state span {
-    font-size: 48px;
-    margin-bottom: 16px;
-}
-
-.empty-state h3 {
-    font-family: var(--font-display);
-    font-size: 20px;
-    color: var(--et-text-primary);
-    margin: 0 0 8px;
-}
-
-.empty-state p {
-    font-size: 14px;
-    margin: 0 0 24px;
-    line-height: 1.5;
-}
-
-.empty-state button {
-    background: var(--et-accent);
-    border: none;
-    color: #080c14;
-    padding: 12px 24px;
-    border-radius: 10px;
-    font-size: 15px;
-    font-weight: 600;
-    cursor: pointer;
-}
+.pad { padding: 16px 16px 80px; }
+.sec-head { display: flex; justify-content: space-between; align-items: center; margin-bottom: 12px; }
+.sec-title { font-size: 17px; font-weight: 800; letter-spacing: -.03em; }
+.badge-sm { font-family: var(--mono); font-size: 9px; color: var(--mu); background: var(--bg3); border: 1px solid var(--bdr); border-radius: 5px; padding: 2px 7px; }
+.wl-empty { text-align: center; padding: 50px 20px; color: var(--mu); line-height: 1.8; }
+.wl-empty .ico { font-size: 40px; display: block; margin-bottom: 10px; opacity: .3; }
+.wl-item { background: var(--bg2); border: 1px solid var(--bdr); border-radius: 13px; padding: 12px; margin-bottom: 8px; cursor: pointer; }
+.wl-top { display: flex; justify-content: space-between; align-items: center; margin-bottom: 9px; }
+.wl-left { display: flex; align-items: center; gap: 8px; }
+.wl-logo { width: 34px; height: 34px; border-radius: 8px; background: var(--bg3); display: flex; align-items: center; justify-content: center; overflow: hidden; }
+.wl-logo img { width: 22px; height: 22px; object-fit: contain; }
+.wl-ticker { font-size: 14px; font-weight: 800; }
+.wl-name { font-size: 9px; color: var(--mu); margin-top: 1px; }
+.wl-remove { width: 22px; height: 22px; border-radius: 5px; border: 1px solid var(--bdr); background: transparent; cursor: pointer; font-size: 12px; color: var(--mu); display: flex; align-items: center; justify-content: center; }
+.wl-stats { display: grid; grid-template-columns: repeat(3,1fr); gap: 5px; background: var(--bg); border-radius: 8px; padding: 8px; border: 1px solid var(--bdr); }
+.wl-s label { font-size: 7px; text-transform: uppercase; letter-spacing: .1em; color: var(--mu2); display: block; }
+.wl-s .v { font-family: var(--mono); font-size: 11px; font-weight: 700; margin-top: 2px; }
+.wl-foot { display: flex; justify-content: space-between; margin-top: 7px; font-family: var(--mono); font-size: 8px; color: var(--mu2); }
 </style>

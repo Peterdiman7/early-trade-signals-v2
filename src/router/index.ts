@@ -3,19 +3,14 @@ import { RouteRecordRaw } from 'vue-router'
 import { useAuthStore } from '@/stores/auth'
 
 const routes: Array<RouteRecordRaw> = [
-  {
-    path: '/',
-    redirect: '/landing'
-  },
+  { path: '/', redirect: '/landing' },
   {
     path: '/landing',
-    name: 'Landing',
     component: () => import('@/views/LandingView.vue'),
     meta: { public: true }
   },
   {
     path: '/onboarding',
-    name: 'Onboarding',
     component: () => import('@/views/OnboardingView.vue'),
     meta: { public: true }
   },
@@ -24,46 +19,15 @@ const routes: Array<RouteRecordRaw> = [
     component: () => import('@/views/TabsView.vue'),
     meta: { requiresAuth: true },
     children: [
-      {
-        path: '',
-        redirect: '/app/dashboard'
-      },
-      {
-        path: 'dashboard',
-        name: 'Dashboard',
-        component: () => import('@/views/DashboardView.vue')
-      },
-      {
-        path: 'signals',
-        name: 'Signals',
-        component: () => import('@/views/SignalsView.vue')
-      },
-      {
-        path: 'watchlist',
-        name: 'Watchlist',
-        component: () => import('@/views/WatchlistView.vue')
-      },
-      {
-        path: 'portfolio',
-        name: 'Portfolio',
-        component: () => import('@/views/PortfolioView.vue')
-      },
-      {
-        path: 'analysis',
-        name: 'Analysis',
-        component: () => import('@/views/AnalysisView.vue')
-      },
-      {
-        path: 'profile',
-        name: 'Profile',
-        component: () => import('@/views/ProfileView.vue')
-      }
+      { path: '', redirect: '/app/home' },
+      { path: 'home', component: () => import('@/views/HomeView.vue') },
+      { path: 'signals', component: () => import('@/views/SignalsView.vue') },
+      { path: 'watchlist', component: () => import('@/views/WatchlistView.vue') },
+      { path: 'portfolio', component: () => import('@/views/PortfolioView.vue') },
+      { path: 'market', component: () => import('@/views/MarketView.vue') }
     ]
   },
-  {
-    path: '/:pathMatch(.*)*',
-    redirect: '/'
-  }
+  { path: '/:pathMatch(.*)*', redirect: '/' }
 ]
 
 const router = createRouter({
@@ -72,13 +36,9 @@ const router = createRouter({
 })
 
 router.beforeEach((to, _from, next) => {
-  const authStore = useAuthStore()
-
-  if (to.meta.requiresAuth && !authStore.isLoggedIn) {
-    next('/landing')
-  } else {
-    next()
-  }
+  const auth = useAuthStore()
+  if (to.meta.requiresAuth && !auth.isLoggedIn) next('/landing')
+  else next()
 })
 
 export default router

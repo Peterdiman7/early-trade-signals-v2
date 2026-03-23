@@ -1,369 +1,325 @@
-/* ============================================
-   EarlyTrade Signals — Global Styles
-   Design: Dark-first, terminal-meets-luxury
-   Fonts: Syne (display) + JetBrains Mono (data) + Inter (body)
-============================================ */
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:opsz,wght@9..40,300;9..40,400;9..40,500;9..40,600;9..40,700;9..40,800&family=JetBrains+Mono:wght@400;500;700&family=Instrument+Serif:ital@0;1&display=swap');
 
 :root {
-  /* Brand Colors */
-  --et-bg: #080c14;
-  --et-surface: #0e1520;
-  --et-surface-2: #141e2e;
-  --et-surface-3: #1a2540;
-  --et-border: rgba(255,255,255,0.07);
-  --et-border-accent: rgba(99,179,237,0.25);
+  --g: #16c784;
+  --gd: #0fa870;
+  --gg: rgba(22, 199, 132, .1);
+  --y: #f0b90b;
+  --r: #ea3943;
+  --b: #4f8ef7;
+  --pu: #a855f7;
+  --bg: #080b0f;
+  --bg2: #0f1419;
+  --bg3: #161d26;
+  --bg4: #1e2835;
+  --bdr: rgba(255, 255, 255, .05);
+  --bdr2: rgba(255, 255, 255, .11);
+  --tx: #dce6f0;
+  --mu: #6b7d91;
+  --mu2: #3d4f61;
+  --font: 'DM Sans', sans-serif;
+  --mono: 'JetBrains Mono', monospace;
+  --serif: 'Instrument Serif', serif;
 
-  /* Text */
-  --et-text-primary: #e8edf5;
-  --et-text-secondary: #8899b5;
-  --et-text-muted: #4a5c7a;
-
-  /* Accent */
-  --et-accent: #63b3ed;
-  --et-accent-glow: rgba(99,179,237,0.15);
-
-  /* Signal Colors */
-  --et-buy: #48bb78;
-  --et-buy-bg: rgba(72,187,120,0.12);
-  --et-buy-border: rgba(72,187,120,0.3);
-
-  --et-sell: #fc8181;
-  --et-sell-bg: rgba(252,129,129,0.12);
-  --et-sell-border: rgba(252,129,129,0.3);
-
-  --et-hold: #f6c90e;
-  --et-hold-bg: rgba(246,201,14,0.12);
-  --et-hold-border: rgba(246,201,14,0.3);
-
-  /* Quality */
-  --et-q5: #a78bfa;
-  --et-q4: #63b3ed;
-  --et-q3: #8899b5;
-
-  /* Typography */
-  --font-display: 'Syne', sans-serif;
-  --font-mono: 'JetBrains Mono', monospace;
-  --font-body: 'Inter', sans-serif;
-
-  /* Ionic Overrides */
-  --ion-background-color: var(--et-bg);
-  --ion-text-color: var(--et-text-primary);
-  --ion-toolbar-background: var(--et-surface);
-  --ion-tab-bar-background: var(--et-surface);
-  --ion-tab-bar-border-color: var(--et-border);
-  --ion-item-background: var(--et-surface-2);
-  --ion-card-background: var(--et-surface);
-  --ion-color-primary: var(--et-accent);
-  --ion-color-primary-rgb: 99,179,237;
-  --ion-color-primary-contrast: #080c14;
-  --ion-color-primary-shade: #4da0d8;
-  --ion-color-primary-tint: #7bc4f0;
-  --ion-border-color: var(--et-border);
-  --ion-font-family: var(--font-body);
+  --ion-background-color: var(--bg);
+  --ion-text-color: var(--tx);
+  --ion-toolbar-background: var(--bg2);
+  --ion-tab-bar-background: rgba(17, 23, 32, .97);
+  --ion-tab-bar-border-color: var(--bdr);
+  --ion-font-family: var(--font);
+  --ion-color-primary: var(--g);
+  --ion-color-primary-rgb: 22, 199, 132;
+  --ion-color-primary-contrast: #000;
+  --ion-color-primary-shade: #0fa870;
+  --ion-color-primary-tint: #2ed48e;
+  --ion-border-color: var(--bdr);
+  --ion-item-background: var(--bg2);
+  --ion-card-background: var(--bg2);
 }
 
-/* Light mode overrides */
-.light-theme {
-  --et-bg: #f0f4f8;
-  --et-surface: #ffffff;
-  --et-surface-2: #f7f9fc;
-  --et-surface-3: #edf2f7;
-  --et-border: rgba(0,0,0,0.08);
-  --et-text-primary: #0d1a2e;
-  --et-text-secondary: #4a5c7a;
-  --et-text-muted: #8899b5;
-  --ion-background-color: var(--et-bg);
-  --ion-toolbar-background: var(--et-surface);
+body.light-mode {
+  --bg: #f0f4f8;
+  --bg2: #ffffff;
+  --bg3: #e8eef5;
+  --bg4: #dce6f0;
+  --bdr: rgba(0, 0, 0, .07);
+  --bdr2: rgba(0, 0, 0, .14);
+  --tx: #0d1117;
+  --mu: #556070;
+  --mu2: #8fa0b4;
+  --ion-background-color: #f0f4f8;
+  --ion-text-color: #0d1117;
+  --ion-toolbar-background: rgba(240, 244, 248, .96);
+  --ion-tab-bar-background: rgba(240, 244, 248, .97);
+  --ion-tab-bar-border-color: rgba(0, 0, 0, .07);
+  --ion-item-background: #ffffff;
+  --ion-card-background: #ffffff;
+  background: #f0f4f8;
+  color: #0d1117;
 }
 
-/* ============================================
-   Base Resets
-============================================ */
-* { box-sizing: border-box; }
+body.light-mode ::-webkit-scrollbar-thumb {
+  background: #c0cdd8;
+}
+
+body.light-mode ion-content {
+  --background: #f0f4f8;
+}
+
+body.light-mode .navbar,
+body.light-mode .lnav {
+  background: rgba(240, 244, 248, .96) !important;
+  border-bottom-color: rgba(0, 0, 0, .07) !important;
+}
+
+body.light-mode .bottom-nav {
+  background: rgba(240, 244, 248, .97) !important;
+}
+
+body.light-mode .hamburger {
+  background: var(--bg4) !important;
+}
+
+body.light-mode .hamburger span {
+  background: var(--tx) !important;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
 
 body {
-  font-family: var(--font-body);
-  background: var(--et-bg);
-  color: var(--et-text-primary);
+  font-family: var(--font);
+  background: var(--bg);
+  color: var(--tx);
   -webkit-font-smoothing: antialiased;
+  overflow-x: hidden;
 }
 
-/* ============================================
-   Typography Utilities
-============================================ */
-.font-display { font-family: var(--font-display); }
-.font-mono { font-family: var(--font-mono); }
-
-.text-buy { color: var(--et-buy); }
-.text-sell { color: var(--et-sell); }
-.text-hold { color: var(--et-hold); }
-.text-muted { color: var(--et-text-secondary); }
-.text-accent { color: var(--et-accent); }
-
-/* ============================================
-   Signal Badge
-============================================ */
-.signal-badge {
-  display: inline-flex;
-  align-items: center;
-  gap: 4px;
-  padding: 3px 10px;
-  border-radius: 4px;
-  font-family: var(--font-mono);
-  font-size: 11px;
-  font-weight: 600;
-  letter-spacing: 0.08em;
-  text-transform: uppercase;
-}
-
-.signal-badge.buy {
-  background: var(--et-buy-bg);
-  border: 1px solid var(--et-buy-border);
-  color: var(--et-buy);
-}
-.signal-badge.sell {
-  background: var(--et-sell-bg);
-  border: 1px solid var(--et-sell-border);
-  color: var(--et-sell);
-}
-.signal-badge.hold {
-  background: var(--et-hold-bg);
-  border: 1px solid var(--et-hold-border);
-  color: var(--et-hold);
-}
-
-/* ============================================
-   Quality Badge
-============================================ */
-.quality-badge {
-  display: inline-flex;
-  align-items: center;
-  padding: 2px 7px;
-  border-radius: 3px;
-  font-family: var(--font-mono);
-  font-size: 10px;
-  font-weight: 600;
-  letter-spacing: 0.05em;
-}
-.quality-badge.q5 { background: rgba(167,139,250,0.15); color: var(--et-q5); border: 1px solid rgba(167,139,250,0.3); }
-.quality-badge.q4 { background: rgba(99,179,237,0.12); color: var(--et-q4); border: 1px solid rgba(99,179,237,0.25); }
-.quality-badge.q3 { background: rgba(136,153,181,0.12); color: var(--et-q3); border: 1px solid rgba(136,153,181,0.25); }
-
-/* ============================================
-   Cards
-============================================ */
-.et-card {
-  background: var(--et-surface);
-  border: 1px solid var(--et-border);
-  border-radius: 12px;
-  padding: 16px;
-}
-
-.et-card:hover {
-  border-color: var(--et-border-accent);
-  transition: border-color 0.2s;
-}
-
-/* ============================================
-   Signal Card
-============================================ */
-.signal-card {
-  display: flex;
-  align-items: center;
-  gap: 14px;
-  padding: 14px 16px;
-  background: var(--et-surface);
-  border: 1px solid var(--et-border);
-  border-radius: 12px;
-  margin-bottom: 10px;
-  cursor: pointer;
-  transition: all 0.18s;
-  position: relative;
-  overflow: hidden;
-}
-
-.signal-card::before {
-  content: '';
-  position: absolute;
-  left: 0;
-  top: 0;
-  bottom: 0;
+::-webkit-scrollbar {
   width: 3px;
-  border-radius: 3px 0 0 3px;
-}
-.signal-card.buy::before { background: var(--et-buy); }
-.signal-card.sell::before { background: var(--et-sell); }
-.signal-card.hold::before { background: var(--et-hold); }
-
-.signal-card:active { transform: scale(0.985); opacity: 0.9; }
-
-.signal-card .ticker-logo {
-  width: 42px;
-  height: 42px;
-  border-radius: 10px;
-  background: var(--et-surface-3);
-  overflow: hidden;
-  flex-shrink: 0;
-  display: flex;
-  align-items: center;
-  justify-content: center;
 }
 
-.signal-card .ticker-logo img {
-  width: 32px;
-  height: 32px;
-  object-fit: contain;
+::-webkit-scrollbar-thumb {
+  background: #2a3548;
+  border-radius: 2px;
 }
 
-.signal-card .ticker-info { flex: 1; min-width: 0; }
-.signal-card .ticker-symbol {
-  font-family: var(--font-display);
-  font-weight: 700;
-  font-size: 15px;
-  color: var(--et-text-primary);
-}
-.signal-card .ticker-name {
-  font-size: 12px;
-  color: var(--et-text-secondary);
-  white-space: nowrap;
-  overflow: hidden;
-  text-overflow: ellipsis;
-}
-
-.signal-card .price-info { text-align: right; }
-.signal-card .price {
-  font-family: var(--font-mono);
-  font-size: 15px;
-  font-weight: 600;
-  color: var(--et-text-primary);
-}
-.signal-card .change {
-  font-family: var(--font-mono);
-  font-size: 12px;
-}
-
-/* ============================================
-   Stat Tiles
-============================================ */
-.stat-tile {
-  background: var(--et-surface);
-  border: 1px solid var(--et-border);
-  border-radius: 10px;
-  padding: 14px 16px;
-  text-align: center;
-}
-
-.stat-tile .stat-value {
-  font-family: var(--font-mono);
-  font-size: 20px;
-  font-weight: 700;
-  color: var(--et-text-primary);
-  line-height: 1.1;
-}
-
-.stat-tile .stat-label {
-  font-size: 11px;
-  color: var(--et-text-muted);
-  text-transform: uppercase;
-  letter-spacing: 0.06em;
-  margin-top: 4px;
-}
-
-.stat-tile .stat-change {
-  font-family: var(--font-mono);
-  font-size: 11px;
-  margin-top: 2px;
-}
-
-/* ============================================
-   Ionic Customizations
-============================================ */
-ion-header ion-toolbar {
-  --border-width: 0 0 1px 0;
-  --border-color: var(--et-border);
-}
-
+/* Ionic overrides */
 ion-tab-bar {
-  --border: 1px solid var(--et-border);
-  height: 60px;
-  padding-bottom: env(safe-area-inset-bottom);
+  --border: 1px solid var(--bdr);
+  backdrop-filter: blur(20px);
 }
 
 ion-tab-button {
-  --color: var(--et-text-muted);
-  --color-selected: var(--et-accent);
+  --color: var(--mu);
+  --color-selected: var(--g);
 }
 
-ion-segment {
-  --background: var(--et-surface-2);
+ion-header ion-toolbar {
+  --border-width: 0 0 1px 0;
+  --border-color: var(--bdr);
 }
 
-ion-segment-button {
-  --color: var(--et-text-muted);
-  --color-checked: var(--et-text-primary);
-  --indicator-color: var(--et-accent);
-  font-family: var(--font-body);
-  font-size: 13px;
+/* Animations */
+@keyframes fadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(10px)
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0)
+  }
 }
 
-ion-searchbar {
-  --background: var(--et-surface-2);
-  --border-radius: 10px;
-  --color: var(--et-text-primary);
-  --placeholder-color: var(--et-text-muted);
-  --icon-color: var(--et-text-muted);
+@keyframes blink {
+
+  0%,
+  100% {
+    opacity: 1
+  }
+
+  50% {
+    opacity: .3
+  }
 }
 
-ion-chip {
-  --background: var(--et-surface-2);
-  --color: var(--et-text-secondary);
+@keyframes pulse {
+
+  0%,
+  100% {
+    opacity: 1;
+    transform: scale(1)
+  }
+
+  50% {
+    opacity: .4;
+    transform: scale(1.5)
+  }
 }
 
-ion-chip.active {
-  --background: var(--et-accent-glow);
-  --color: var(--et-accent);
-  border: 1px solid rgba(99,179,237,0.3);
+@keyframes spin {
+  to {
+    transform: rotate(360deg)
+  }
 }
 
-ion-refresher-content {
-  color: var(--et-accent);
+@keyframes marquee {
+  from {
+    transform: translateX(0)
+  }
+
+  to {
+    transform: translateX(-50%)
+  }
 }
 
-/* ============================================
-   Animations
-============================================ */
-@keyframes fadeInUp {
-  from { opacity: 0; transform: translateY(12px); }
-  to   { opacity: 1; transform: translateY(0); }
+@keyframes toastIn {
+  from {
+    opacity: 0;
+    transform: translateX(100%)
+  }
+
+  to {
+    opacity: 1;
+    transform: translateX(0)
+  }
 }
 
-@keyframes pulse-glow {
-  0%, 100% { box-shadow: 0 0 0 0 rgba(99,179,237,0.4); }
-  50% { box-shadow: 0 0 0 8px rgba(99,179,237,0); }
+@keyframes modalIn {
+  from {
+    opacity: 0;
+    transform: scale(.9) translateY(16px)
+  }
+
+  to {
+    opacity: 1;
+    transform: scale(1) translateY(0)
+  }
 }
 
-.fade-up { animation: fadeInUp 0.35s ease both; }
+@keyframes sheetUp {
+  from {
+    transform: translateY(100%)
+  }
 
-.live-dot {
+  to {
+    transform: translateY(0)
+  }
+}
+
+.fade {
+  animation: fadeUp .28s ease both;
+}
+
+/* Signal colors */
+.c-buy {
+  color: var(--g);
+}
+
+.c-sell {
+  color: var(--r);
+}
+
+.c-hold {
+  color: var(--y);
+}
+
+/* Cards */
+.s-card {
+  background: var(--bg2);
+  border: 1px solid var(--bdr);
+  border-radius: 16px;
+  padding: 14px 14px 0 14px;
+  cursor: pointer;
+  transition: all .2s;
+  position: relative;
+  overflow: hidden;
+  margin-bottom: 9px;
+}
+
+.s-card:hover {
+  border-color: var(--bdr2);
+}
+
+.s-card:active {
+  transform: scale(.99);
+}
+
+/* Dur badges */
+.dur-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  font-size: 9px;
+  font-weight: 700;
+  padding: 3px 9px;
+  border-radius: 100px;
+}
+
+.dur-badge.intraday {
+  color: var(--pu);
+  background: rgba(168, 85, 247, .13);
+  border: 1px solid rgba(168, 85, 247, .3);
+}
+
+.dur-badge.short {
+  color: var(--b);
+  background: rgba(79, 142, 247, .13);
+  border: 1px solid rgba(79, 142, 247, .3);
+}
+
+.dur-badge.medium {
+  color: var(--y);
+  background: rgba(240, 185, 11, .13);
+  border: 1px solid rgba(240, 185, 11, .3);
+}
+
+.dur-badge.long {
+  color: var(--g);
+  background: rgba(22, 199, 132, .13);
+  border: 1px solid rgba(22, 199, 132, .3);
+}
+
+/* Sig btn */
+.sig-btn {
+  border-radius: 8px;
+  padding: 6px 13px;
+  font-weight: 800;
+  font-size: 11px;
+  border: 1.5px solid;
+  cursor: pointer;
+  letter-spacing: .04em;
+  font-family: var(--font);
+  background: transparent;
+}
+
+.sig-btn.buy {
+  border-color: var(--g);
+  color: var(--g);
+}
+
+.sig-btn.hold {
+  border-color: var(--y);
+  color: var(--y);
+}
+
+.sig-btn.sell {
+  border-color: var(--r);
+  color: var(--r);
+}
+
+/* Loader */
+.loader {
   display: inline-block;
-  width: 7px;
-  height: 7px;
+  width: 14px;
+  height: 14px;
+  border: 2px solid var(--bdr2);
+  border-top-color: var(--g);
   border-radius: 50%;
-  background: var(--et-buy);
-  animation: pulse-glow 2s infinite;
+  animation: spin .7s linear infinite;
 }
-
-/* Staggered list */
-.stagger > *:nth-child(1) { animation-delay: 0.05s; }
-.stagger > *:nth-child(2) { animation-delay: 0.1s; }
-.stagger > *:nth-child(3) { animation-delay: 0.15s; }
-.stagger > *:nth-child(4) { animation-delay: 0.2s; }
-.stagger > *:nth-child(5) { animation-delay: 0.25s; }
-.stagger > *:nth-child(6) { animation-delay: 0.3s; }
-.stagger > *:nth-child(7) { animation-delay: 0.35s; }
-.stagger > *:nth-child(8) { animation-delay: 0.4s; }
-
-/* Scrollbar */
-::-webkit-scrollbar { width: 4px; }
-::-webkit-scrollbar-track { background: transparent; }
-::-webkit-scrollbar-thumb { background: var(--et-border); border-radius: 2px; }

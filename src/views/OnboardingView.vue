@@ -1,389 +1,145 @@
 <template>
-    <ion-page class="onboarding-page">
-        <ion-content :fullscreen="true">
-            <div class="onboarding-container">
-                <!-- Progress bar -->
-                <div class="progress-bar">
-                    <div class="progress-fill" :style="{ width: `${(step / totalSteps) * 100}%` }" />
-                </div>
+  <ion-page style="--ion-background-color:var(--bg)">
+    <ion-content :fullscreen="true">
+      <div class="modal" style="max-width:480px;margin:20px auto;padding:28px 24px">
+        <!-- Step dots -->
+        <div class="step-indicator">
+          <div v-for="i in 3" :key="i" :class="['step-dot', { active: obStep === i - 1 }]"></div>
+        </div>
 
-                <div class="step-counter font-mono">
-                    {{ step }} / {{ totalSteps }}
-                </div>
+        <!-- Step 0: Welcome -->
+        <div v-if="obStep === 0">
+          <div class="onboard-h">Willkommen! 👋</div>
+          <div class="onboard-sub">Lass uns dein Profil einrichten, damit wir dir die besten Signale zeigen können.<br><br>Es dauert nur 60 Sekunden.</div>
+          <div class="fg"><label>Wie möchtest du genannt werden?</label><input v-model="profile.name" type="text" placeholder="Dein Name" /></div>
+          <div class="fg">
+            <label>Trading-Erfahrung</label>
+            <select v-model="profile.exp">
+              <option value="beginner">Einsteiger (0–1 Jahr)</option>
+              <option value="intermediate">Fortgeschritten (1–5 Jahre)</option>
+              <option value="expert">Experte (5+ Jahre)</option>
+            </select>
+          </div>
+          <button class="onboard-next" @click="obStep = 1">Weiter →</button>
+        </div>
 
-                <!-- Step 1: Name + Experience -->
-                <Transition name="slide">
-                    <div v-if="step === 1" key="step1" class="step">
-                        <div class="step-icon">👋</div>
-                        <h1 class="step-title">Welcome!</h1>
-                        <p class="step-sub">Let's set up your profile. It only takes 60 seconds.</p>
-
-                        <div class="form-group">
-                            <label>How should we call you?</label>
-                            <input v-model="profile.firstName" type="text" placeholder="Your first name"
-                                class="et-input" />
-                        </div>
-
-                        <div class="form-group">
-                            <label>Trading Experience</label>
-                            <div class="option-list">
-                                <button v-for="exp in experiences" :key="exp.value"
-                                    :class="['option-btn', { active: profile.experience === exp.value }]"
-                                    @click="profile.experience = exp.value">
-                                    <span class="option-icon">{{ exp.icon }}</span>
-                                    <div class="option-text">
-                                        <span class="option-label">{{ exp.label }}</span>
-                                        <span class="option-sub">{{ exp.sub }}</span>
-                                    </div>
-                                </button>
-                            </div>
-                        </div>
-                    </div>
-                </Transition>
-
-                <!-- Step 2: Risk Profile -->
-                <Transition name="slide">
-                    <div v-if="step === 2" key="step2" class="step">
-                        <div class="step-icon">⚖️</div>
-                        <h1 class="step-title">Your Risk Tolerance</h1>
-                        <p class="step-sub">We'll tailor signal quality and selection accordingly.</p>
-
-                        <div class="risk-grid">
-                            <button v-for="risk in riskProfiles" :key="risk.value"
-                                :class="['risk-card', { active: profile.riskProfile === risk.value }]"
-                                @click="profile.riskProfile = risk.value">
-                                <span class="risk-icon">{{ risk.icon }}</span>
-                                <span class="risk-label">{{ risk.label }}</span>
-                                <span class="risk-sub">{{ risk.sub }}</span>
-                            </button>
-                        </div>
-                    </div>
-                </Transition>
-
-                <!-- Step 3: Horizon -->
-                <Transition name="slide">
-                    <div v-if="step === 3" key="step3" class="step">
-                        <div class="step-icon">📅</div>
-                        <h1 class="step-title">Your Investment Horizon</h1>
-                        <p class="step-sub">Which signal types match your trading style?</p>
-
-                        <div class="option-list">
-                            <button v-for="h in horizons" :key="h.value"
-                                :class="['option-btn', { active: profile.horizon === h.value }]"
-                                @click="profile.horizon = h.value">
-                                <span class="option-icon">{{ h.icon }}</span>
-                                <div class="option-text">
-                                    <span class="option-label">{{ h.label }}</span>
-                                    <span class="option-sub">{{ h.sub }}</span>
-                                </div>
-                            </button>
-                        </div>
-                    </div>
-                </Transition>
-
-                <!-- Nav buttons -->
-                <div class="step-nav">
-                    <button v-if="step > 1" class="btn-back" @click="step--">← Back</button>
-                    <button class="btn-next" :disabled="!canProceed" @click="handleNext">
-                        {{ step === totalSteps ? 'Save Profile ✓' : 'Continue →' }}
-                    </button>
-                </div>
+        <!-- Step 1: Risk -->
+        <div v-else-if="obStep === 1">
+          <div class="onboard-h">Deine Risikobereitschaft</div>
+          <div class="onboard-sub">Wähle deinen Risikotyp — wir passen die Signalauswahl an.</div>
+          <div class="risk-grid">
+            <div v-for="r in riskOptions" :key="r.value"
+                :class="['risk-card', { selected: profile.risk === r.value }]"
+                @click="profile.risk = r.value">
+              <span class="risk-ico">{{ r.icon }}</span>
+              <div class="risk-name">{{ r.name }}</div>
+              <div class="risk-desc">{{ r.desc }}</div>
             </div>
-        </ion-content>
-    </ion-page>
+          </div>
+          <button class="onboard-next" @click="obStep = 2">Weiter →</button>
+          <button class="onboard-back" @click="obStep = 0">← Zurück</button>
+        </div>
+
+        <!-- Step 2: Horizon -->
+        <div v-else>
+          <div class="onboard-h">Dein Anlagehorizont</div>
+          <div class="onboard-sub">Welche Signaltypen passen zu deinem Handelsstil?</div>
+          <div class="horizon-btns">
+            <div v-for="h in horizonOptions" :key="h.value"
+                :class="['horizon-btn', { selected: profile.horizon === h.value }]"
+                @click="profile.horizon = h.value">
+              <span class="h-ico">{{ h.icon }}</span>
+              <div>
+                <div class="h-name">{{ h.name }}</div>
+                <div class="h-desc">{{ h.desc }}</div>
+              </div>
+            </div>
+          </div>
+          <button class="onboard-next" @click="finish">Profil speichern ✓</button>
+          <button class="onboard-back" @click="obStep = 1">← Zurück</button>
+        </div>
+      </div>
+    </ion-content>
+  </ion-page>
 </template>
 
 <script setup lang="ts">
-import { ref, computed } from 'vue'
+import { ref } from 'vue'
 import { IonPage, IonContent } from '@ionic/vue'
 import { useRouter } from 'vue-router'
 import { useAuthStore } from '@/stores/auth'
 
 const router = useRouter()
 const authStore = useAuthStore()
+const obStep = ref(0)
 
-const step = ref(1)
-const totalSteps = 3
+const profile = ref({ name: authStore.user?.firstName || '', exp: 'intermediate', risk: 'conservative', horizon: 'medium' })
 
-const profile = ref({
-    firstName: authStore.user?.firstName || '',
-    experience: '' as string,
-    riskProfile: '' as string,
-    horizon: '' as string
-})
+const riskOptions = [
+  { value: 'conservative', icon: '🛡️', name: 'Konservativ', desc: 'Geringe Volatilität, stabile Werte' },
+  { value: 'moderate', icon: '⚖️', name: 'Moderat', desc: 'Balance aus Sicherheit & Rendite' },
+  { value: 'aggressive', icon: '🚀', name: 'Aggressiv', desc: 'Hohe Rendite, höheres Risiko' },
+  { value: 'speculative', icon: '⚡', name: 'Spekulativ', desc: 'Maximale Chancen, hohes Risiko' }
+]
 
-const canProceed = computed(() => {
-    if (step.value === 1) return profile.value.firstName && profile.value.experience
-    if (step.value === 2) return profile.value.riskProfile
-    if (step.value === 3) return profile.value.horizon
-    return false
-})
+const horizonOptions = [
+  { value: 'intraday', icon: '⚡', name: 'Intraday', desc: 'Eröffnung bis Börsenschluss · Min–Stunden' },
+  { value: 'short', icon: '📅', name: 'Kurzfristig', desc: '1–14 Tage · Swing Trading' },
+  { value: 'medium', icon: '📆', name: 'Mittelfristig', desc: '2–12 Wochen · Trendfolge' },
+  { value: 'long', icon: '🏔️', name: 'Langfristig', desc: '3+ Monate · Fundamentals' }
+]
 
-async function handleNext() {
-    if (step.value < totalSteps) {
-        step.value++
-    } else {
-        authStore.updateProfile({
-            firstName: profile.value.firstName,
-            experience: profile.value.experience as any,
-            riskProfile: profile.value.riskProfile as any,
-            horizon: profile.value.horizon as any,
-            onboardingComplete: true
-        })
-        router.push('/app/dashboard')
-    }
+function finish() {
+  authStore.updateProfile({
+    firstName: profile.value.name || authStore.user?.firstName,
+    experience: profile.value.exp as any,
+    riskProfile: profile.value.risk as any,
+    horizon: profile.value.horizon as any,
+    onboardingComplete: true
+  })
+  router.push('/app/home')
 }
-
-const experiences = [
-    { value: 'beginner', icon: '🌱', label: 'Beginner', sub: '0–1 year' },
-    { value: 'intermediate', icon: '📈', label: 'Intermediate', sub: '1–5 years' },
-    { value: 'expert', icon: '🎯', label: 'Expert', sub: '5+ years' }
-]
-
-const riskProfiles = [
-    { value: 'conservative', icon: '🛡️', label: 'Conservative', sub: 'Low volatility, stable assets' },
-    { value: 'moderate', icon: '⚖️', label: 'Moderate', sub: 'Balance of safety & return' },
-    { value: 'aggressive', icon: '🚀', label: 'Aggressive', sub: 'Higher risk, more return' },
-    { value: 'speculative', icon: '⚡', label: 'Speculative', sub: 'Maximum chance, high risk' }
-]
-
-const horizons = [
-    { value: 'intraday', icon: '⚡', label: 'Intraday', sub: 'Open to close · Minutes–Hours' },
-    { value: 'short', icon: '📅', label: 'Short-term', sub: '1–14 days · Swing trading' },
-    { value: 'medium', icon: '📆', label: 'Medium-term', sub: '2–12 weeks · Trend following' },
-    { value: 'long', icon: '🏔️', label: 'Long-term', sub: '3+ months · Fundamentals' }
-]
 </script>
 
 <style scoped>
-.onboarding-page {
-    --ion-background-color: var(--et-bg);
+.step-indicator { display: flex; justify-content: center; gap: 6px; margin-bottom: 20px; }
+.step-dot { width: 7px; height: 7px; border-radius: 50%; background: var(--bdr2); transition: all .3s; }
+.step-dot.active { background: var(--g); width: 20px; border-radius: 4px; }
+.onboard-h { font-size: 18px; font-weight: 800; letter-spacing: -.03em; text-align: center; margin-bottom: 6px; }
+.onboard-sub { font-size: 12px; color: var(--mu); text-align: center; margin-bottom: 20px; line-height: 1.6; }
+.fg { margin-bottom: 13px; }
+.fg label { font-size: 9px; text-transform: uppercase; letter-spacing: .1em; color: var(--mu); display: block; margin-bottom: 6px; font-family: var(--mono); }
+.fg input, .fg select {
+  width: 100%; background: var(--bg3); border: 1px solid var(--bdr);
+  border-radius: 10px; padding: 12px 14px; color: var(--tx);
+  font-family: var(--font); font-size: 13px; outline: none;
 }
-
-.onboarding-container {
-    min-height: 100vh;
-    padding: 24px 24px 48px;
-    display: flex;
-    flex-direction: column;
-}
-
-.progress-bar {
-    height: 3px;
-    background: var(--et-surface-3);
-    border-radius: 100px;
-    overflow: hidden;
-    margin-bottom: 12px;
-}
-
-.progress-fill {
-    height: 100%;
-    background: var(--et-accent);
-    border-radius: 100px;
-    transition: width 0.4s ease;
-}
-
-.step-counter {
-    font-size: 12px;
-    color: var(--et-text-muted);
-    margin-bottom: 32px;
-}
-
-.step {
-    flex: 1;
-}
-
-.step-icon {
-    font-size: 40px;
-    margin-bottom: 16px;
-}
-
-.step-title {
-    font-family: var(--font-display);
-    font-size: 28px;
-    font-weight: 800;
-    margin: 0 0 10px;
-    color: var(--et-text-primary);
-}
-
-.step-sub {
-    font-size: 15px;
-    color: var(--et-text-secondary);
-    margin: 0 0 32px;
-    line-height: 1.5;
-}
-
-/* Form */
-.form-group {
-    margin-bottom: 24px;
-}
-
-.form-group label {
-    display: block;
-    font-size: 14px;
-    font-weight: 500;
-    color: var(--et-text-secondary);
-    margin-bottom: 10px;
-}
-
-.et-input {
-    width: 100%;
-    background: var(--et-surface);
-    border: 1px solid var(--et-border);
-    border-radius: 10px;
-    padding: 14px 16px;
-    font-size: 16px;
-    color: var(--et-text-primary);
-    font-family: var(--font-body);
-    outline: none;
-    transition: border-color 0.18s;
-}
-
-.et-input:focus {
-    border-color: var(--et-accent);
-}
-
-.et-input::placeholder {
-    color: var(--et-text-muted);
-}
-
-/* Options */
-.option-list {
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
-}
-
-.option-btn {
-    display: flex;
-    align-items: center;
-    gap: 14px;
-    padding: 14px 16px;
-    background: var(--et-surface);
-    border: 1px solid var(--et-border);
-    border-radius: 12px;
-    cursor: pointer;
-    text-align: left;
-    transition: all 0.18s;
-}
-
-.option-btn.active {
-    border-color: var(--et-accent);
-    background: var(--et-accent-glow);
-}
-
-.option-icon {
-    font-size: 22px;
-    flex-shrink: 0;
-}
-
-.option-text {
-    display: flex;
-    flex-direction: column;
-}
-
-.option-label {
-    font-weight: 600;
-    font-size: 15px;
-    color: var(--et-text-primary);
-}
-
-.option-sub {
-    font-size: 13px;
-    color: var(--et-text-muted);
-}
-
-/* Risk grid */
-.risk-grid {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 12px;
-}
-
+.fg select option { background: var(--bg3); }
+.risk-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 8px; margin-bottom: 18px; }
 .risk-card {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    padding: 18px 14px;
-    background: var(--et-surface);
-    border: 1px solid var(--et-border);
-    border-radius: 12px;
-    cursor: pointer;
-    text-align: left;
-    transition: all 0.18s;
-    gap: 6px;
+  background: var(--bg3); border: 2px solid var(--bdr); border-radius: 12px;
+  padding: 14px; cursor: pointer; text-align: center;
 }
-
-.risk-card.active {
-    border-color: var(--et-accent);
-    background: var(--et-accent-glow);
+.risk-card.selected { border-color: var(--g); background: rgba(22,199,132,.06); }
+.risk-ico { font-size: 24px; display: block; margin-bottom: 7px; }
+.risk-name { font-size: 12px; font-weight: 700; margin-bottom: 3px; }
+.risk-desc { font-size: 10px; color: var(--mu); }
+.horizon-btns { display: flex; flex-direction: column; gap: 7px; margin-bottom: 18px; }
+.horizon-btn {
+  background: var(--bg3); border: 2px solid var(--bdr); border-radius: 11px;
+  padding: 12px 16px; cursor: pointer; display: flex; align-items: center; gap: 12px; color: var(--tx);
 }
-
-.risk-icon {
-    font-size: 26px;
+.horizon-btn.selected { border-color: var(--g); background: rgba(22,199,132,.06); }
+.h-ico { font-size: 20px; }
+.h-name { font-size: 13px; font-weight: 700; }
+.h-desc { font-size: 10px; color: var(--mu); margin-top: 1px; }
+.onboard-next {
+  width: 100%; background: var(--g); border: none; border-radius: 10px;
+  padding: 14px; color: #000; font-weight: 700; font-size: 14px; cursor: pointer;
 }
-
-.risk-label {
-    font-family: var(--font-display);
-    font-weight: 700;
-    font-size: 15px;
-    color: var(--et-text-primary);
-}
-
-.risk-sub {
-    font-size: 12px;
-    color: var(--et-text-muted);
-    line-height: 1.4;
-}
-
-/* Navigation */
-.step-nav {
-    display: flex;
-    gap: 12px;
-    margin-top: 32px;
-}
-
-.btn-back {
-    padding: 14px 20px;
-    background: var(--et-surface);
-    border: 1px solid var(--et-border);
-    color: var(--et-text-secondary);
-    border-radius: 10px;
-    font-size: 15px;
-    cursor: pointer;
-}
-
-.btn-next {
-    flex: 1;
-    padding: 14px;
-    background: var(--et-accent);
-    border: none;
-    color: #080c14;
-    border-radius: 10px;
-    font-family: var(--font-display);
-    font-size: 16px;
-    font-weight: 700;
-    cursor: pointer;
-    transition: all 0.18s;
-}
-
-.btn-next:disabled {
-    opacity: 0.4;
-    cursor: not-allowed;
-}
-
-/* Transition */
-.slide-enter-active,
-.slide-leave-active {
-    transition: all 0.3s ease;
-}
-
-.slide-enter-from {
-    opacity: 0;
-    transform: translateX(20px);
-}
-
-.slide-leave-to {
-    opacity: 0;
-    transform: translateX(-20px);
+.onboard-back {
+  width: 100%; background: transparent; border: 1px solid var(--bdr);
+  border-radius: 10px; padding: 12px; color: var(--mu);
+  font-weight: 600; font-size: 13px; cursor: pointer; margin-top: 8px;
 }
 </style>

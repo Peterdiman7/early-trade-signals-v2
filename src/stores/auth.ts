@@ -1,63 +1,72 @@
 import { defineStore } from 'pinia'
 import { ref } from 'vue'
 
-export interface Notification {
-  id: string
-  type: 'signal' | 'watchlist' | 'system'
-  title: string
-  message: string
-  time: string
-  read: boolean
+export interface User {
+  firstName: string
+  lastName: string
+  email: string
+  experience: 'beginner' | 'intermediate' | 'expert'
+  riskProfile: 'conservative' | 'moderate' | 'aggressive' | 'speculative'
+  horizon: 'intraday' | 'short' | 'medium' | 'long'
+  onboardingComplete: boolean
 }
 
-export const useAppStore = defineStore('app', () => {
-  const darkMode = ref(true)
-  const notifications = ref<Notification[]>([
-    {
-      id: '1',
-      type: 'signal',
-      title: 'New BUY Signal',
-      message: 'AAPL — Quality Q5, Strong momentum detected',
-      time: '2m ago',
-      read: false
-    },
-    {
-      id: '2',
-      type: 'signal',
-      title: 'New SELL Signal',
-      message: 'AMD — Bearish reversal pattern confirmed',
-      time: '18m ago',
-      read: false
-    },
-    {
-      id: '3',
-      type: 'watchlist',
-      title: 'Watchlist Alert',
-      message: 'NVDA hit your target price of $825',
-      time: '1h ago',
-      read: true
+export const useAuthStore = defineStore('auth', () => {
+  const user = ref<User | null>(null)
+  const isLoggedIn = ref(false)
+
+  // Load from localStorage
+  try {
+    const stored = localStorage.getItem('ets_profile')
+    if (stored) {
+      user.value = JSON.parse(stored)
+      isLoggedIn.value = true
     }
-  ])
+  } catch (e) {}
 
-  const unreadCount = ref(notifications.value.filter(n => !n.read).length)
-
-  function toggleDarkMode() {
-    darkMode.value = !darkMode.value
-    document.body.classList.toggle('dark', darkMode.value)
+  async function register(firstName: string, lastName: string, email: string, _password: string) {
+    await new Promise(r => setTimeout(r, 800))
+    user.value = {
+      firstName, lastName, email,
+      experience: 'intermediate',
+      riskProfile: 'moderate',
+      horizon: 'medium',
+      onboardingComplete: false
+    }
+    isLoggedIn.value = true
+    saveProfile()
   }
 
-  function markAllRead() {
-    notifications.value.forEach(n => (n.read = true))
-    unreadCount.value = 0
+  async function login(email: string, _password: string) {
+    await new Promise(r => setTimeout(r, 600))
+    if (!user.value) {
+      user.value = {
+        firstName: 'Trader', lastName: '',
+        email, experience: 'intermediate',
+        riskProfile: 'moderate', horizon: 'medium',
+        onboardingComplete: true
+      }
+    }
+    isLoggedIn.value = true
+    saveProfile()
   }
 
-  function markRead(id: string) {
-    const n = notifications.value.find(n => n.id === id)
-    if (n && !n.read) {
-      n.read = true
-      unreadCount.value = Math.max(0, unreadCount.value - 1)
+  function updateProfile(data: Partial<User>) {
+    if (user.value) {
+      user.value = { ...user.value, ...data }
+      saveProfile()
     }
   }
 
-  return { darkMode, notifications, unreadCount, toggleDarkMode, markAllRead, markRead }
+  function saveProfile() {
+    try { localStorage.setItem('ets_profile', JSON.stringify(user.value)) } catch (e) {}
+  }
+
+  function logout() {
+    user.value = null
+    isLoggedIn.value = false
+    try { localStorage.removeItem('ets_profile') } catch (e) {}
+  }
+
+  return { user, isLoggedIn, register, login, updateProfile, logout }
 })

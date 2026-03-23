@@ -1,318 +1,140 @@
 <template>
-    <ion-page>
-        <ion-header class="ion-no-border">
-            <ion-toolbar>
-                <div class="signals-header">
-                    <h1 class="font-display">Live Signals</h1>
-                    <div class="header-right">
-                        <span class="live-dot" />
-                        <span class="update-text font-mono">Auto-update 30s</span>
-                    </div>
-                </div>
-            </ion-toolbar>
-        </ion-header>
+  <ion-page>
+    <ion-content :fullscreen="true">
+      <div class="pad">
+        <div class="sec-head" style="margin-top:16px">
+          <span class="sec-title">
+            <span class="live-dot-sm"></span>
+            Live-Signale
+          </span>
+          <span class="badge-sm">{{ nowStr }}</span>
+        </div>
 
-        <ion-content :fullscreen="true">
-            <ion-refresher slot="fixed" @ionRefresh="refresh($event)">
-                <ion-refresher-content />
-            </ion-refresher>
+        <div class="ubar">Zuletzt: {{ nowStr }} · Auto-Update alle 30 Sek</div>
 
-            <!-- Filter chips -->
-            <div class="filter-section">
-                <div class="filter-row">
-                    <ion-chip v-for="t in typeFilters" :key="t.value"
-                        :class="{ active: signalsStore.filterType === t.value }"
-                        @click="signalsStore.filterType = t.value">
-                        {{ t.label }}
-                    </ion-chip>
-                </div>
-                <div class="filter-row">
-                    <ion-chip v-for="h in horizonFilters" :key="h.value"
-                        :class="{ active: signalsStore.filterHorizon === h.value }"
-                        @click="signalsStore.filterHorizon = h.value">
-                        {{ h.label }}
-                    </ion-chip>
-                </div>
-                <div class="filter-row">
-                    <ion-chip v-for="q in qualityFilters" :key="q.value"
-                        :class="{ active: signalsStore.filterQuality === q.value }"
-                        @click="signalsStore.filterQuality = q.value">
-                        {{ q.label }}
-                    </ion-chip>
-                </div>
+        <!-- Tabs -->
+        <div class="tabs" style="margin-bottom:14px">
+          <button :class="['tab buy', { on: sigStore.filterType === 'buy' }]" @click="sigStore.filterType = 'buy'">
+            <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><polyline points="23 6 13.5 15.5 8.5 10.5 1 18"/><polyline points="17 6 23 6 23 12"/></svg>
+            Kaufen <span class="ct">{{ sigStore.buySignals.length }}</span>
+          </button>
+          <button :class="['tab hold', { on: sigStore.filterType === 'hold' }]" @click="sigStore.filterType = 'hold'">
+            <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><circle cx="12" cy="12" r="10"/><line x1="10" y1="15" x2="10" y2="9"/><line x1="14" y1="15" x2="14" y2="9"/></svg>
+            Halten <span class="ct">{{ sigStore.holdSignals.length }}</span>
+          </button>
+          <button :class="['tab sell', { on: sigStore.filterType === 'sell' }]" @click="sigStore.filterType = 'sell'">
+            <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><polyline points="23 18 13.5 8.5 8.5 13.5 1 6"/><polyline points="17 18 23 18 23 12"/></svg>
+            Verkaufen <span class="ct">{{ sigStore.sellSignals.length }}</span>
+          </button>
+        </div>
+
+        <!-- Filters -->
+        <div style="display:grid;grid-template-columns:1fr 1fr;gap:8px;margin-bottom:14px">
+          <!-- Duration -->
+          <div style="position:relative">
+            <button :class="['fdd-btn', { active: sigStore.filterDuration !== 'all', open: durOpen }]" @click="durOpen = !durOpen; qualOpen = false">
+              <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+              <span>{{ durLabel }}</span>
+              <svg class="fdd-caret" width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><polyline points="6 9 12 15 18 9"/></svg>
+            </button>
+            <div :class="['fdd-menu', { open: durOpen }]">
+              <div v-for="o in durOptions" :key="o.value"
+                   :class="['fdd-item', { on: sigStore.filterDuration === o.value }]"
+                   @click="sigStore.filterDuration = o.value as any; durOpen = false">{{ o.label }}</div>
             </div>
-
-            <!-- Count -->
-            <div class="count-bar">
-                <span class="font-mono count-text">
-                    {{ signalsStore.filteredSignals.length }} signals
-                </span>
-                <span class="count-breakdown">
-                    <span class="text-buy">{{ signalsStore.buySignals.length }} BUY</span> ·
-                    <span class="text-hold">{{ signalsStore.holdSignals.length }} HOLD</span> ·
-                    <span class="text-sell">{{ signalsStore.sellSignals.length }} SELL</span>
-                </span>
+          </div>
+          <!-- Quality -->
+          <div style="position:relative">
+            <button :class="['fdd-btn', { active: sigStore.filterQuality > 0, open: qualOpen }]" @click="qualOpen = !qualOpen; durOpen = false">
+              <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round stroke-linejoin:round"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+              <span>{{ qualLabel }}</span>
+              <svg class="fdd-caret" width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><polyline points="6 9 12 15 18 9"/></svg>
+            </button>
+            <div :class="['fdd-menu', { open: qualOpen }]">
+              <div v-for="o in qualOptions" :key="o.value"
+                   :class="['fdd-item', { on: sigStore.filterQuality === o.value }]"
+                   @click="sigStore.filterQuality = o.value; qualOpen = false">{{ o.label }}</div>
             </div>
+          </div>
+        </div>
+      </div>
 
-            <!-- Loading -->
-            <div v-if="signalsStore.loading" class="loading-state">
-                <div class="loading-spinner" />
-                <p>Loading signals…</p>
-            </div>
+      <!-- Signal cards -->
+      <div style="padding:0 16px 80px">
+        <div v-if="sigStore.loading" style="text-align:center;padding:48px;color:var(--mu)">
+          <span class="loader"></span>
+        </div>
+        <template v-else>
+          <SignalCard v-for="s in filtered" :key="s.id" :signal="s" @click="selected = s" />
+          <div v-if="filtered.length === 0" style="text-align:center;padding:48px 24px;color:var(--mu)">
+            <div style="font-size:13px;font-weight:700;margin-bottom:4px">Keine Signale gefunden</div>
+            <div style="font-size:11px">Versuche andere Filter oder prüfe später nochmal.</div>
+          </div>
+        </template>
+      </div>
 
-            <!-- Signal list -->
-            <div v-else class="signal-list-container stagger">
-                <div v-for="signal in signalsStore.filteredSignals" :key="signal.id"
-                    :class="['signal-card', signal.type.toLowerCase(), 'fade-up']" @click="select(signal)">
-                    <div class="ticker-logo">
-                        <img :src="signal.logo" :alt="signal.ticker" @error="imgFallback" />
-                    </div>
-
-                    <div class="ticker-info">
-                        <div class="top-row">
-                            <span class="ticker-symbol">{{ signal.ticker }}</span>
-                            <span :class="['signal-badge', signal.type.toLowerCase()]">{{ signal.type }}</span>
-                        </div>
-                        <div class="ticker-name">{{ signal.name }}</div>
-                        <div class="meta-row">
-                            <span :class="['quality-badge', signal.quality.toLowerCase()]">{{ signal.quality }}</span>
-                            <span class="horizon-tag font-mono">{{ horizonLabel(signal.horizon) }}</span>
-                            <span class="sector-tag">{{ signal.sector }}</span>
-                        </div>
-                    </div>
-
-                    <div class="price-info">
-                        <div class="price font-mono">${{ signal.price.toFixed(2) }}</div>
-                        <div :class="['change font-mono', signal.changePct >= 0 ? 'text-buy' : 'text-sell']">
-                            {{ signal.changePct >= 0 ? '+' : '' }}{{ signal.changePct }}%
-                        </div>
-                        <div class="win-rate font-mono">{{ signal.winRate }}% WR</div>
-                    </div>
-                </div>
-
-                <div v-if="signalsStore.filteredSignals.length === 0" class="empty-state">
-                    <span>🔍</span>
-                    <p>No signals match your filters</p>
-                    <button @click="resetFilters">Reset filters</button>
-                </div>
-            </div>
-        </ion-content>
-
-        <SignalDetail v-if="showDetail && selectedSignal" :signal="selectedSignal" @close="showDetail = false" />
-    </ion-page>
+      <SignalDetailSheet v-if="selected" :signal="selected" @close="selected = null" />
+    </ion-content>
+  </ion-page>
 </template>
 
 <script setup lang="ts">
-import { ref } from 'vue'
-import { IonPage, IonHeader, IonToolbar, IonContent, IonRefresher, IonRefresherContent, IonChip } from '@ionic/vue'
+import { computed, ref } from 'vue'
+import { IonPage, IonContent } from '@ionic/vue'
 import { useSignalsStore } from '@/stores/signals'
 import type { Signal } from '@/stores/signals'
-import SignalDetail from '@/components/SignalDetail.vue'
+import SignalCard from '@/components/SignalCard.vue'
+import SignalDetailSheet from '@/components/SignalDetailSheet.vue'
 
-const signalsStore = useSignalsStore()
-const showDetail = ref(false)
-const selectedSignal = ref<Signal | null>(null)
+const sigStore = useSignalsStore()
+const selected = ref<Signal | null>(null)
+const durOpen = ref(false)
+const qualOpen = ref(false)
 
-function select(signal: Signal) {
-    selectedSignal.value = signal
-    showDetail.value = true
-}
+const nowStr = computed(() => new Date().toLocaleString('de-DE', { day:'2-digit', month:'short', hour:'2-digit', minute:'2-digit' }))
 
-function imgFallback(e: Event) {
-    const img = e.target as HTMLImageElement
-    img.style.display = 'none'
-}
+const filtered = computed(() => sigStore.filteredSignals)
 
-function horizonLabel(h: string) {
-    const map: Record<string, string> = { intraday: 'Intraday', short: 'Short', medium: 'Mid', long: 'Long' }
-    return map[h] || h
-}
-
-function resetFilters() {
-    signalsStore.filterType = 'all'
-    signalsStore.filterHorizon = 'all'
-    signalsStore.filterQuality = 'all'
-}
-
-async function refresh(event: any) {
-    await signalsStore.refresh()
-    event.target.complete()
-}
-
-const typeFilters = [
-    { value: 'all', label: 'All' },
-    { value: 'BUY', label: '🟢 Buy' },
-    { value: 'HOLD', label: '🟡 Hold' },
-    { value: 'SELL', label: '🔴 Sell' }
+const durOptions = [
+  { value: 'all', label: 'Alle Horizonte' },
+  { value: 'intraday', label: '⚡ Intraday' },
+  { value: 'short', label: '📅 Kurzfristig' },
+  { value: 'medium', label: '📆 Mittelfristig' },
+  { value: 'long', label: '🏔️ Langfristig' }
 ]
 
-const horizonFilters = [
-    { value: 'all', label: 'All Horizons' },
-    { value: 'intraday', label: '⚡ Intraday' },
-    { value: 'short', label: '📅 Short' },
-    { value: 'medium', label: '📆 Medium' },
-    { value: 'long', label: '🏔️ Long' }
+const qualOptions = [
+  { value: 0, label: 'Alle Qualitäten' },
+  { value: 5, label: '★ Q5 Perfekt' },
+  { value: 4, label: 'Q4+ Top' },
+  { value: 3, label: 'Q3+ Gut' }
 ]
 
-const qualityFilters = [
-    { value: 'all', label: 'All Quality' },
-    { value: 'Q5', label: '⭐ Q5 Perfect' },
-    { value: 'Q4', label: 'Q4 Top' },
-    { value: 'Q3', label: 'Q3 Good' }
-]
+const durLabel = computed(() => durOptions.find(o => o.value === sigStore.filterDuration)?.label || 'Alle Horizonte')
+const qualLabel = computed(() => qualOptions.find(o => o.value === sigStore.filterQuality)?.label || 'Alle Qualitäten')
 </script>
 
 <style scoped>
-.signals-header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 8px 20px 12px;
-}
+.pad { padding: 16px 16px 0; }
+.sec-head { display: flex; justify-content: space-between; align-items: center; margin-bottom: 12px; }
+.sec-title { font-size: 17px; font-weight: 800; letter-spacing: -.03em; display: flex; align-items: center; gap: 6px; }
+.live-dot-sm { display: inline-block; width: 6px; height: 6px; border-radius: 50%; background: var(--g); animation: blink 1.8s ease infinite; }
+.badge-sm { font-family: var(--mono); font-size: 9px; color: var(--mu); background: var(--bg3); border: 1px solid var(--bdr); border-radius: 5px; padding: 2px 7px; }
+.ubar { font-family: var(--mono); font-size: 9px; color: var(--mu2); text-align: center; padding: 5px 10px; background: var(--bg3); border-radius: 7px; margin-bottom: 10px; border: 1px solid var(--bdr); }
 
-.signals-header h1 {
-    font-size: 22px;
-    font-weight: 800;
-    margin: 0;
-}
+.tabs { display: flex; gap: 3px; background: var(--bg3); border-radius: 11px; padding: 3px; border: 1px solid var(--bdr); }
+.tab { flex: 1; padding: 8px; border: none; border-radius: 8px; background: transparent; color: var(--mu); font-weight: 700; font-size: 11px; cursor: pointer; display: flex; align-items: center; justify-content: center; gap: 4px; }
+.tab.on.buy { background: var(--g); color: #000; }
+.tab.on.hold { background: var(--y); color: #000; }
+.tab.on.sell { background: var(--r); color: #fff; }
+.ct { font-family: var(--mono); font-size: 9px; opacity: .75; }
 
-.header-right {
-    display: flex;
-    align-items: center;
-    gap: 6px;
-}
-
-.update-text {
-    font-size: 11px;
-    color: var(--et-text-muted);
-}
-
-/* Filters */
-.filter-section {
-    padding: 8px 16px 0;
-}
-
-.filter-row {
-    display: flex;
-    gap: 8px;
-    overflow-x: auto;
-    padding-bottom: 8px;
-    scrollbar-width: none;
-}
-
-.filter-row::-webkit-scrollbar {
-    display: none;
-}
-
-/* Count bar */
-.count-bar {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 10px 20px;
-    border-bottom: 1px solid var(--et-border);
-}
-
-.count-text {
-    font-size: 13px;
-    color: var(--et-text-secondary);
-}
-
-.count-breakdown {
-    font-size: 12px;
-    color: var(--et-text-muted);
-}
-
-/* Signal list */
-.signal-list-container {
-    padding: 12px 16px 80px;
-}
-
-.top-row {
-    display: flex;
-    align-items: center;
-    gap: 8px;
-    margin-bottom: 2px;
-}
-
-.meta-row {
-    display: flex;
-    gap: 6px;
-    align-items: center;
-    margin-top: 4px;
-    flex-wrap: wrap;
-}
-
-.horizon-tag {
-    font-size: 10px;
-    color: var(--et-text-muted);
-    background: var(--et-surface-3);
-    padding: 2px 6px;
-    border-radius: 3px;
-}
-
-.sector-tag {
-    font-size: 10px;
-    color: var(--et-text-muted);
-}
-
-.win-rate {
-    font-size: 11px;
-    color: var(--et-accent);
-    margin-top: 3px;
-}
-
-/* Loading */
-.loading-state {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    padding: 60px 20px;
-    color: var(--et-text-muted);
-}
-
-.loading-spinner {
-    width: 32px;
-    height: 32px;
-    border: 2px solid var(--et-border);
-    border-top-color: var(--et-accent);
-    border-radius: 50%;
-    animation: spin 0.8s linear infinite;
-    margin-bottom: 12px;
-}
-
-@keyframes spin {
-    to {
-        transform: rotate(360deg);
-    }
-}
-
-/* Empty */
-.empty-state {
-    text-align: center;
-    padding: 60px 20px;
-    color: var(--et-text-muted);
-}
-
-.empty-state span {
-    font-size: 40px;
-    display: block;
-    margin-bottom: 12px;
-}
-
-.empty-state p {
-    font-size: 15px;
-    margin-bottom: 20px;
-}
-
-.empty-state button {
-    background: var(--et-surface);
-    border: 1px solid var(--et-border);
-    color: var(--et-accent);
-    padding: 10px 20px;
-    border-radius: 8px;
-    font-size: 14px;
-    cursor: pointer;
-}
+.fdd-btn { width: 100%; background: var(--bg3); border: 1px solid var(--bdr); border-radius: 10px; padding: 9px 11px; color: var(--tx); font-size: 11px; font-weight: 600; font-family: var(--font); cursor: pointer; display: flex; align-items: center; gap: 6px; text-align: left; }
+.fdd-btn.active { border-color: var(--g); color: var(--g); }
+.fdd-caret { flex-shrink: 0; color: var(--mu); }
+.fdd-menu { position: absolute; top: calc(100% + 5px); left: 0; right: 0; background: var(--bg2); border: 1px solid var(--bdr2); border-radius: 11px; padding: 5px; z-index: 200; display: none; box-shadow: 0 8px 32px rgba(0,0,0,.5); }
+.fdd-menu.open { display: block; }
+.fdd-item { display: flex; align-items: center; gap: 8px; padding: 9px 10px; border-radius: 8px; font-size: 11px; font-weight: 600; color: var(--mu); cursor: pointer; }
+.fdd-item:hover { background: var(--bg3); color: var(--tx); }
+.fdd-item.on { background: rgba(22,199,132,.1); color: var(--g); }
 </style>
