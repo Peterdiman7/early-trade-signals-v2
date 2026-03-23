@@ -73,8 +73,7 @@
 							@click="qualOpen = !qualOpen; durOpen = false">
 							<svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor"
 								stroke-width="2.5" stroke-linecap="round">
-								<polygon
-									points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2" />
+								<polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2" />
 							</svg>
 							<span>{{ qualLabel }}</span>
 							<svg class="fdd-caret" width="10" height="10" viewBox="0 0 24 24" fill="none"
@@ -154,167 +153,24 @@ const qualLabel = computed(() => qualOptions.value.find(o => o.value === sigStor
 </script>
 
 <style scoped>
-.pad {
-	padding: 16px 16px 0;
-}
-
-.sec-head {
-	display: flex;
-	justify-content: space-between;
-	align-items: center;
-	margin-bottom: 12px;
-}
-
-.sec-title {
-	font-size: 17px;
-	font-weight: 800;
-	letter-spacing: -.03em;
-	display: flex;
-	align-items: center;
-	gap: 6px;
-}
-
-.live-dot-sm {
-	display: inline-block;
-	width: 6px;
-	height: 6px;
-	border-radius: 50%;
-	background: var(--g);
-	animation: blink 1.8s ease infinite;
-}
-
-.badge-sm {
-	font-family: var(--mono);
-	font-size: 9px;
-	color: var(--mu);
-	background: var(--bg3);
-	border: 1px solid var(--bdr);
-	border-radius: 5px;
-	padding: 2px 7px;
-}
-
-.ubar {
-	font-family: var(--mono);
-	font-size: 9px;
-	color: var(--mu2);
-	text-align: center;
-	padding: 5px 10px;
-	background: var(--bg3);
-	border-radius: 7px;
-	margin-bottom: 10px;
-	border: 1px solid var(--bdr);
-}
-
-.tabs {
-	display: flex;
-	gap: 3px;
-	background: var(--bg3);
-	border-radius: 11px;
-	padding: 3px;
-	border: 1px solid var(--bdr);
-}
-
-.tab {
-	flex: 1;
-	padding: 8px;
-	border: none;
-	border-radius: 8px;
-	background: transparent;
-	color: var(--mu);
-	font-weight: 700;
-	font-size: 11px;
-	cursor: pointer;
-	display: flex;
-	align-items: center;
-	justify-content: center;
-	gap: 4px;
-}
-
-.tab.on.buy {
-	background: var(--g);
-	color: #000;
-}
-
-.tab.on.hold {
-	background: var(--y);
-	color: #000;
-}
-
-.tab.on.sell {
-	background: var(--r);
-	color: #fff;
-}
-
-.ct {
-	font-family: var(--mono);
-	font-size: 9px;
-	opacity: .75;
-}
-
-.fdd-btn {
-	width: 100%;
-	background: var(--bg3);
-	border: 1px solid var(--bdr);
-	border-radius: 10px;
-	padding: 9px 11px;
-	color: var(--tx);
-	font-size: 11px;
-	font-weight: 600;
-	font-family: var(--font);
-	cursor: pointer;
-	display: flex;
-	align-items: center;
-	gap: 6px;
-	text-align: left;
-}
-
-.fdd-btn.active {
-	border-color: var(--g);
-	color: var(--g);
-}
-
-.fdd-caret {
-	flex-shrink: 0;
-	color: var(--mu);
-}
-
-.fdd-menu {
-	position: absolute;
-	top: calc(100% + 5px);
-	left: 0;
-	right: 0;
-	background: var(--bg2);
-	border: 1px solid var(--bdr2);
-	border-radius: 11px;
-	padding: 5px;
-	z-index: 200;
-	display: none;
-	box-shadow: 0 8px 32px rgba(0, 0, 0, .5);
-}
-
-.fdd-menu.open {
-	display: block;
-}
-
-.fdd-item {
-	display: flex;
-	align-items: center;
-	gap: 8px;
-	padding: 9px 10px;
-	border-radius: 8px;
-	font-size: 11px;
-	font-weight: 600;
-	color: var(--mu);
-	cursor: pointer;
-}
-
-.fdd-item:hover {
-	background: var(--bg3);
-	color: var(--tx);
-}
-
-.fdd-item.on {
-	background: rgba(22, 199, 132, .1);
-	color: var(--g);
-}
+.pad { padding: 16px 16px 0; }
+.sec-head { display: flex; justify-content: space-between; align-items: center; margin-bottom: 12px; }
+.sec-title { font-size: 17px; font-weight: 800; letter-spacing: -.03em; display: flex; align-items: center; gap: 6px; }
+.live-dot-sm { display: inline-block; width: 6px; height: 6px; border-radius: 50%; background: var(--g); animation: blink 1.8s ease infinite; }
+.badge-sm { font-family: var(--mono); font-size: 9px; color: var(--mu); background: var(--bg3); border: 1px solid var(--bdr); border-radius: 5px; padding: 2px 7px; }
+.ubar { font-family: var(--mono); font-size: 9px; color: var(--mu2); text-align: center; padding: 5px 10px; background: var(--bg3); border-radius: 7px; margin-bottom: 10px; border: 1px solid var(--bdr); }
+.tabs { display: flex; gap: 3px; background: var(--bg3); border-radius: 11px; padding: 3px; border: 1px solid var(--bdr); }
+.tab { flex: 1; padding: 8px; border: none; border-radius: 8px; background: transparent; color: var(--mu); font-weight: 700; font-size: 11px; cursor: pointer; display: flex; align-items: center; justify-content: center; gap: 4px; }
+.tab.on.buy { background: var(--g); color: #000; }
+.tab.on.hold { background: var(--y); color: #000; }
+.tab.on.sell { background: var(--r); color: #fff; }
+.ct { font-family: var(--mono); font-size: 9px; opacity: .75; }
+.fdd-btn { width: 100%; background: var(--bg3); border: 1px solid var(--bdr); border-radius: 10px; padding: 9px 11px; color: var(--tx); font-size: 11px; font-weight: 600; font-family: var(--font); cursor: pointer; display: flex; align-items: center; gap: 6px; text-align: left; }
+.fdd-btn.active { border-color: var(--g); color: var(--g); }
+.fdd-caret { flex-shrink: 0; color: var(--mu); }
+.fdd-menu { position: absolute; top: calc(100% + 5px); left: 0; right: 0; background: var(--bg2); border: 1px solid var(--bdr2); border-radius: 11px; padding: 5px; z-index: 200; display: none; box-shadow: 0 8px 32px rgba(0,0,0,.5); }
+.fdd-menu.open { display: block; }
+.fdd-item { display: flex; align-items: center; gap: 8px; padding: 9px 10px; border-radius: 8px; font-size: 11px; font-weight: 600; color: var(--mu); cursor: pointer; }
+.fdd-item:hover { background: var(--bg3); color: var(--tx); }
+.fdd-item.on { background: rgba(22,199,132,.1); color: var(--g); }
 </style>

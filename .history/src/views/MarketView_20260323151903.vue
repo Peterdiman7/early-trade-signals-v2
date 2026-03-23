@@ -34,8 +34,7 @@
 							</div>
 							<div class="sector-stats">
 								<span>{{ sec.perc }}% {{ t('market.bullish') }}</span>
-								<span :style="{ color: sec.change >= 0 ? 'var(--g)' : 'var(--r)' }">{{ sec.change >= 0 ?
-									'+' : '' }}{{ sec.change }}%</span>
+								<span :style="{ color: sec.change >= 0 ? 'var(--g)' : 'var(--r)' }">{{ sec.change >= 0 ? '+' : '' }}{{ sec.change }}%</span>
 							</div>
 						</div>
 					</div>
@@ -83,140 +82,24 @@ const sectorSignals = computed(() => activeSector.value ? sigStore.signals.filte
 </script>
 
 <style scoped>
-.pad {
-	padding: 16px 16px 80px;
-}
-
-.sec-head {
-	display: flex;
-	justify-content: space-between;
-	align-items: center;
-	margin-bottom: 12px;
-}
-
-.sec-title {
-	font-size: 17px;
-	font-weight: 800;
-	letter-spacing: -.03em;
-}
-
-.badge-sm {
-	font-family: var(--mono);
-	font-size: 9px;
-	color: var(--mu);
-	background: var(--bg3);
-	border: 1px solid var(--bdr);
-	border-radius: 5px;
-	padding: 2px 7px;
-}
-
-.ma-section {
-	margin-bottom: 18px;
-}
-
-.ma-title {
-	font-size: 10px;
-	font-weight: 700;
-	text-transform: uppercase;
-	letter-spacing: .1em;
-	color: var(--mu);
-	margin-bottom: 9px;
-	padding-left: 8px;
-	border-left: 2px solid var(--g);
-}
-
-.ma-box {
-	background: var(--bg2);
-	border: 1px solid var(--bdr);
-	border-radius: 13px;
-	padding: 13px;
-}
-
-.sector-grid {
-	display: grid;
-	grid-template-columns: 1fr 1fr;
-	gap: 7px;
-}
-
-.sector-card {
-	background: var(--bg2);
-	border: 1px solid var(--bdr);
-	border-radius: 12px;
-	padding: 11px;
-	cursor: pointer;
-	transition: all .2s;
-}
-
-.sector-card:hover {
-	border-color: var(--bdr2);
-}
-
-.sector-name {
-	font-size: 11px;
-	font-weight: 700;
-	margin-bottom: 5px;
-}
-
-.sbar-bg {
-	background: var(--bg);
-	border-radius: 3px;
-	height: 4px;
-	overflow: hidden;
-}
-
-.sbar {
-	height: 4px;
-	border-radius: 3px;
-}
-
-.sbar.up {
-	background: var(--g);
-}
-
-.sbar.down {
-	background: var(--r);
-}
-
-.sector-stats {
-	display: flex;
-	justify-content: space-between;
-	margin-top: 5px;
-	font-family: var(--mono);
-	font-size: 8px;
-	color: var(--mu);
-}
-
-.sector-detail {
-	background: var(--bg2);
-	border: 1px solid var(--bdr2);
-	border-radius: 13px;
-	padding: 13px;
-	margin-top: 12px;
-}
-
-.sd-head {
-	display: flex;
-	justify-content: space-between;
-	align-items: center;
-	margin-bottom: 12px;
-}
-
-.sd-title {
-	font-size: 16px;
-	font-weight: 800;
-}
-
-.sd-close {
-	background: var(--bg3);
-	border: 1px solid var(--bdr);
-	border-radius: 8px;
-	width: 28px;
-	height: 28px;
-	cursor: pointer;
-	color: var(--mu);
-	font-size: 14px;
-	display: flex;
-	align-items: center;
-	justify-content: center;
-}
+.pad { padding: 16px 16px 80px; }
+.sec-head { display: flex; justify-content: space-between; align-items: center; margin-bottom: 12px; }
+.sec-title { font-size: 17px; font-weight: 800; letter-spacing: -.03em; }
+.badge-sm { font-family: var(--mono); font-size: 9px; color: var(--mu); background: var(--bg3); border: 1px solid var(--bdr); border-radius: 5px; padding: 2px 7px; }
+.ma-section { margin-bottom: 18px; }
+.ma-title { font-size: 10px; font-weight: 700; text-transform: uppercase; letter-spacing: .1em; color: var(--mu); margin-bottom: 9px; padding-left: 8px; border-left: 2px solid var(--g); }
+.ma-box { background: var(--bg2); border: 1px solid var(--bdr); border-radius: 13px; padding: 13px; }
+.sector-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 7px; }
+.sector-card { background: var(--bg2); border: 1px solid var(--bdr); border-radius: 12px; padding: 11px; cursor: pointer; transition: all .2s; }
+.sector-card:hover { border-color: var(--bdr2); }
+.sector-name { font-size: 11px; font-weight: 700; margin-bottom: 5px; }
+.sbar-bg { background: var(--bg); border-radius: 3px; height: 4px; overflow: hidden; }
+.sbar { height: 4px; border-radius: 3px; }
+.sbar.up { background: var(--g); }
+.sbar.down { background: var(--r); }
+.sector-stats { display: flex; justify-content: space-between; margin-top: 5px; font-family: var(--mono); font-size: 8px; color: var(--mu); }
+.sector-detail { background: var(--bg2); border: 1px solid var(--bdr2); border-radius: 13px; padding: 13px; margin-top: 12px; }
+.sd-head { display: flex; justify-content: space-between; align-items: center; margin-bottom: 12px; }
+.sd-title { font-size: 16px; font-weight: 800; }
+.sd-close { background: var(--bg3); border: 1px solid var(--bdr); border-radius: 8px; width: 28px; height: 28px; cursor: pointer; color: var(--mu); font-size: 14px; display: flex; align-items: center; justify-content: center; }
 </style>

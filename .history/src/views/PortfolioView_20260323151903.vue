@@ -12,13 +12,11 @@
 					<div class="ptf-perf">
 						<div class="ptf-p">
 							<label>{{ t('portfolio.performance') }}</label>
-							<div class="v" :style="{ color: perf >= 0 ? 'var(--g)' : 'var(--r)' }">{{ perf >= 0 ? '+' :
-								'' }}{{ perf.toFixed(2) }}%</div>
+							<div class="v" :style="{ color: perf >= 0 ? 'var(--g)' : 'var(--r)' }">{{ perf >= 0 ? '+' : '' }}{{ perf.toFixed(2) }}%</div>
 						</div>
 						<div class="ptf-p">
 							<label>{{ t('portfolio.unrealPnl') }}</label>
-							<div class="v" :style="{ color: pnl >= 0 ? 'var(--g)' : 'var(--r)' }">{{ pnl >= 0 ? '+' : ''
-								}}${{ pnl.toFixed(2) }}</div>
+							<div class="v" :style="{ color: pnl >= 0 ? 'var(--g)' : 'var(--r)' }">{{ pnl >= 0 ? '+' : '' }}${{ pnl.toFixed(2) }}</div>
 						</div>
 					</div>
 					<div style="margin-top:12px">
@@ -26,8 +24,7 @@
 					</div>
 				</div>
 
-				<div
-					style="font-size:9px;font-weight:700;text-transform:uppercase;letter-spacing:.09em;color:var(--mu);margin:16px 0 8px">
+				<div style="font-size:9px;font-weight:700;text-transform:uppercase;letter-spacing:.09em;color:var(--mu);margin:16px 0 8px">
 					{{ t('portfolio.positionsLabel') }}
 				</div>
 				<div v-for="p in positions" :key="p.ticker" class="pos-item" @click="selected = p.sig">
@@ -41,8 +38,7 @@
 						</div>
 						<div>
 							<div class="pos-value">${{ p.val.toFixed(2) }}</div>
-							<div class="pos-change" :style="{ color: p.pnlPct >= 0 ? 'var(--g)' : 'var(--r)' }">{{
-								p.pnlPct >= 0 ? '+' : '' }}{{ p.pnlPct.toFixed(2) }}%</div>
+							<div class="pos-change" :style="{ color: p.pnlPct >= 0 ? 'var(--g)' : 'var(--r)' }">{{ p.pnlPct >= 0 ? '+' : '' }}{{ p.pnlPct.toFixed(2) }}%</div>
 						</div>
 					</div>
 					<div class="pos-data">
@@ -53,8 +49,7 @@
 							<div class="v">${{ p.entry }}</div>
 						</div>
 						<div class="pos-d"><label>{{ t('portfolio.pnl') }}</label>
-							<div class="v" :style="{ color: p.pnl >= 0 ? 'var(--g)' : 'var(--r)' }">{{ p.pnl >= 0 ? '+'
-								: '' }}${{ p.pnl.toFixed(0) }}</div>
+							<div class="v" :style="{ color: p.pnl >= 0 ? 'var(--g)' : 'var(--r)' }">{{ p.pnl >= 0 ? '+' : '' }}${{ p.pnl.toFixed(0) }}</div>
 						</div>
 					</div>
 				</div>
@@ -101,159 +96,26 @@ const perf = computed(() => totalCost.value > 0 ? pnl.value / totalCost.value * 
 </script>
 
 <style scoped>
-.pad {
-	padding: 16px 16px 80px;
-}
-
-.sec-head {
-	display: flex;
-	justify-content: space-between;
-	align-items: center;
-	margin-bottom: 12px;
-}
-
-.sec-title {
-	font-size: 17px;
-	font-weight: 800;
-	letter-spacing: -.03em;
-}
-
-.ptf-header {
-	background: var(--bg2);
-	border: 1px solid var(--bdr);
-	border-radius: 15px;
-	padding: 16px;
-	margin-bottom: 12px;
-	position: relative;
-	overflow: hidden;
-}
-
-.ptf-sub {
-	font-size: 10px;
-	color: var(--mu);
-}
-
-.ptf-val {
-	font-family: var(--mono);
-	font-size: 30px;
-	font-weight: 700;
-	margin-bottom: 2px;
-}
-
-.ptf-perf {
-	display: grid;
-	grid-template-columns: 1fr 1fr;
-	gap: 7px;
-	margin-top: 10px;
-}
-
-.ptf-p {
-	background: var(--bg);
-	border-radius: 9px;
-	padding: 9px;
-	border: 1px solid var(--bdr);
-}
-
-.ptf-p label {
-	font-size: 7px;
-	text-transform: uppercase;
-	letter-spacing: .1em;
-	color: var(--mu2);
-	display: block;
-	margin-bottom: 2px;
-}
-
-.ptf-p .v {
-	font-family: var(--mono);
-	font-size: 13px;
-	font-weight: 700;
-}
-
-.pos-item {
-	background: var(--bg2);
-	border: 1px solid var(--bdr);
-	border-radius: 12px;
-	padding: 11px;
-	cursor: pointer;
-	margin-bottom: 7px;
-}
-
-.pos-top {
-	display: flex;
-	justify-content: space-between;
-	align-items: center;
-	margin-bottom: 7px;
-}
-
-.pos-left {
-	display: flex;
-	align-items: center;
-	gap: 8px;
-}
-
-.pos-logo {
-	width: 32px;
-	height: 32px;
-	border-radius: 8px;
-	background: var(--bg3);
-	display: flex;
-	align-items: center;
-	justify-content: center;
-	overflow: hidden;
-}
-
-.pos-logo img {
-	width: 20px;
-	height: 20px;
-	object-fit: contain;
-}
-
-.pos-ticker {
-	font-size: 13px;
-	font-weight: 800;
-}
-
-.pos-name {
-	font-size: 9px;
-	color: var(--mu);
-	margin-top: 1px;
-}
-
-.pos-value {
-	font-family: var(--mono);
-	font-size: 13px;
-	font-weight: 700;
-	text-align: right;
-}
-
-.pos-change {
-	font-family: var(--mono);
-	font-size: 9px;
-	text-align: right;
-}
-
-.pos-data {
-	display: grid;
-	grid-template-columns: repeat(3, 1fr);
-	gap: 5px;
-	background: var(--bg);
-	border-radius: 8px;
-	padding: 8px;
-	border: 1px solid var(--bdr);
-}
-
-.pos-d label {
-	font-size: 7px;
-	text-transform: uppercase;
-	letter-spacing: .1em;
-	color: var(--mu2);
-	display: block;
-}
-
-.pos-d .v {
-	font-family: var(--mono);
-	font-size: 10px;
-	font-weight: 700;
-	margin-top: 2px;
-}
+.pad { padding: 16px 16px 80px; }
+.sec-head { display: flex; justify-content: space-between; align-items: center; margin-bottom: 12px; }
+.sec-title { font-size: 17px; font-weight: 800; letter-spacing: -.03em; }
+.ptf-header { background: var(--bg2); border: 1px solid var(--bdr); border-radius: 15px; padding: 16px; margin-bottom: 12px; position: relative; overflow: hidden; }
+.ptf-sub { font-size: 10px; color: var(--mu); }
+.ptf-val { font-family: var(--mono); font-size: 30px; font-weight: 700; margin-bottom: 2px; }
+.ptf-perf { display: grid; grid-template-columns: 1fr 1fr; gap: 7px; margin-top: 10px; }
+.ptf-p { background: var(--bg); border-radius: 9px; padding: 9px; border: 1px solid var(--bdr); }
+.ptf-p label { font-size: 7px; text-transform: uppercase; letter-spacing: .1em; color: var(--mu2); display: block; margin-bottom: 2px; }
+.ptf-p .v { font-family: var(--mono); font-size: 13px; font-weight: 700; }
+.pos-item { background: var(--bg2); border: 1px solid var(--bdr); border-radius: 12px; padding: 11px; cursor: pointer; margin-bottom: 7px; }
+.pos-top { display: flex; justify-content: space-between; align-items: center; margin-bottom: 7px; }
+.pos-left { display: flex; align-items: center; gap: 8px; }
+.pos-logo { width: 32px; height: 32px; border-radius: 8px; background: var(--bg3); display: flex; align-items: center; justify-content: center; overflow: hidden; }
+.pos-logo img { width: 20px; height: 20px; object-fit: contain; }
+.pos-ticker { font-size: 13px; font-weight: 800; }
+.pos-name { font-size: 9px; color: var(--mu); margin-top: 1px; }
+.pos-value { font-family: var(--mono); font-size: 13px; font-weight: 700; text-align: right; }
+.pos-change { font-family: var(--mono); font-size: 9px; text-align: right; }
+.pos-data { display: grid; grid-template-columns: repeat(3,1fr); gap: 5px; background: var(--bg); border-radius: 8px; padding: 8px; border: 1px solid var(--bdr); }
+.pos-d label { font-size: 7px; text-transform: uppercase; letter-spacing: .1em; color: var(--mu2); display: block; }
+.pos-d .v { font-family: var(--mono); font-size: 10px; font-weight: 700; margin-top: 2px; }
 </style>

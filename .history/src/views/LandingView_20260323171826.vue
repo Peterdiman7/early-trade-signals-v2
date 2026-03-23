@@ -75,7 +75,7 @@
 						<span>{{ s.ticker }}</span>
 						<span class="mp">${{ s.price }}</span>
 						<span :style="{ color: s.up ? 'var(--g)' : 'var(--r)' }">{{ s.up ? '+' : '' }}{{ s.pct
-						}}%</span>
+							}}%</span>
 					</div>
 				</div>
 			</div>
