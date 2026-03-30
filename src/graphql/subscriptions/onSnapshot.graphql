@@ -1,0 +1,9 @@
+subscription OnSnapshot($id: ID!) {
+  snapshot(id: $id) {
+    id
+    close
+    change
+    changePercent
+    when
+  }
+}

@@ -1,11 +1,9 @@
-import { fileURLToPath, URL } from "node:url"
-
-import { defineConfig } from "vite"
-import vue from "@vitejs/plugin-vue"
-
+import { fileURLToPath, URL } from "node:url";
+import { defineConfig } from "vite";
+import vue from "@vitejs/plugin-vue";
 // https://vitejs.dev/config/
-export default defineConfig(() => {
-    const proxyTarget = "https://ets-stage.app.devalex.consulting/graphql"
+export default defineConfig(function () {
+    var proxyTarget = "https://ets-stage.app.devalex.consulting/graphql";
     return {
         plugins: [
             vue(),
@@ -28,5 +26,5 @@ export default defineConfig(() => {
                 },
             }
         },
-    }
-})
+    };
+});

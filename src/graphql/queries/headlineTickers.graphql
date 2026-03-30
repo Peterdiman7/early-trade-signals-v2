@@ -1,0 +1,16 @@
+query headlineTickers {
+  headlineTickers {
+    id
+    name
+    snapshot {
+      id
+      open
+      high
+      low
+      close
+      change
+      changePercent
+      when
+    }
+  }
+}

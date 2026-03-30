@@ -1,0 +1,13 @@
+query GetInstrument($id: ID!) {
+  instrument(id: $id) {
+    id
+    name
+    snapshot {
+      id
+      close
+      change
+      changePercent
+      when
+    }
+  }
+}

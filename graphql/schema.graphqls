@@ -1,0 +1,28 @@
+scalar Date
+
+type Snapshot {
+  id: ID!
+  open: Float!
+  high: Float!
+  low: Float!
+  close: Float!
+  change: Float!
+  changePercent: Float!
+  when: Date!
+}
+
+type Instrument {
+  id: ID!
+  name: String!
+  snapshot: Snapshot!
+}
+
+type Query {
+  headlineTickers: [Instrument!]!
+
+  instrument(id: ID!): Instrument!
+}
+
+type Subscription {
+  snapshot(id: ID!): Snapshot!
+}

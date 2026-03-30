@@ -1,0 +1,24 @@
+overwrite: true
+schema: "./graphql/schema.graphqls"
+documents: "src/**/*.graphql"
+ignoreNoDocuments: true
+generates:
+  src/generated/introspection_schema.json:
+    plugins: 
+     - 'introspection'
+    config:
+      minify: true
+  src/generated/:
+    preset: "client"
+    presetConfig:
+      avoidOptionals: true
+      enumsAsTypes: true
+      fragmentMasking: false
+      useTypeImports: true
+    config:
+      avoidOptionals: true
+      enumsAsTypes: true
+      useTypeImports: true
+      namingConvention: {
+        enumValues: "change-case-all#upperCase",
+      }
