@@ -243,6 +243,8 @@ import DrawerMenu from '@/components/DrawerMenu.vue'
 import NotifSheet from '@/components/NotifSheet.vue'
 import ChartIndex from '@/components/ChartIndex.vue'
 import ChartSignalDist from '@/components/ChartSignalDist.vue'
+import { useQuery } from '@urql/vue'
+import { HeadlineTickersDocument, HeadlineTickersQuery, HeadlineTickersQueryVariables } from '@/generated/graphql'
 
 const router = useRouter()
 const authStore = useAuthStore()
@@ -323,6 +325,10 @@ async function doRefresh(event: any) {
 	await sigStore.refresh()
 	event.target.complete()
 }
+
+const getHeadlineTickers = useQuery<HeadlineTickersQuery, HeadlineTickersQueryVariables>({
+	query: HeadlineTickersDocument
+})
 </script>
 
 <style scoped>
