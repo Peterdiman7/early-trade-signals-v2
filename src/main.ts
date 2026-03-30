@@ -3,10 +3,6 @@ import { IonicVue } from "@ionic/vue"
 import { createPinia } from "pinia"
 import { provideClient } from "@urql/vue"
 
-import App from "./App.vue"
-import router from "./router"
-import urqlClient from "./plugins/urql"
-
 import "@ionic/vue/css/core.css"
 import "@ionic/vue/css/normalize.css"
 import "@ionic/vue/css/structure.css"
@@ -19,17 +15,19 @@ import "@ionic/vue/css/flex-utils.css"
 import "@ionic/vue/css/display.css"
 import "./assets/global.css"
 
+import App from "./App.vue"
+import router from "./router"
+import urqlClient from "./plugins/urql"
+
 const app = createApp({
-    setup() {
-        provideClient(urqlClient)
-    },
-    render: () => h(App),
+  setup() {
+    provideClient(urqlClient)
+  },
+  render: () => h(App),
 })
 
-const pinia = createPinia()
-
 app.use(IonicVue, { mode: "md", animated: true })
-app.use(pinia)
+app.use(createPinia())
 app.use(router)
 
 router.isReady().then(() => app.mount("#app"))

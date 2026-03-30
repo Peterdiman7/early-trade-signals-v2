@@ -1,29 +1,23 @@
-import { fileURLToPath, URL } from "node:url";
 import { defineConfig } from "vite";
 import vue from "@vitejs/plugin-vue";
-// https://vitejs.dev/config/
+import { fileURLToPath, URL } from "node:url";
 export default defineConfig(function () {
-    var proxyTarget = "https://ets-stage.app.devalex.consulting/graphql";
+    const proxyTarget = "https://ets-stage.app.devalex.consulting";
     return {
-        plugins: [
-            vue(),
-        ],
+        plugins: [vue()],
         resolve: {
             alias: {
                 "@": fileURLToPath(new URL("./src", import.meta.url)),
-            }
-        },
-        preview: {
-            port: 3000,
+            },
         },
         server: {
             port: 3000,
             proxy: {
-                '/graphql': {
+                "/graphql": {
                     target: proxyTarget,
                     changeOrigin: true,
-                    ws: true
-                },
+                    ws: true,
+                }
             }
         },
     };
