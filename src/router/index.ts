@@ -1,44 +1,91 @@
 import { createRouter, createWebHistory } from '@ionic/vue-router'
-import { RouteRecordRaw } from 'vue-router'
+import type { RouteRecordRaw } from 'vue-router'
 import { useAuthStore } from '@/stores/auth'
 
+export const rootRoute = { path: '/app/home' }
+
 const routes: Array<RouteRecordRaw> = [
-	{ path: '/', redirect: '/landing' },
-	{
-		path: '/landing',
-		component: () => import('@/views/LandingView.vue'),
-		meta: { public: true }
-	},
-	{
-		path: '/onboarding',
-		component: () => import('@/views/OnboardingView.vue'),
-		meta: { public: true }
-	},
-	{
-		path: '/app',
-		component: () => import('@/views/TabsView.vue'),
-		meta: { requiresAuth: true },
-		children: [
-			{ path: '', redirect: '/app/home' },
-			{ path: 'home', component: () => import('@/views/HomeView.vue') },
-			{ path: 'signals', component: () => import('@/views/SignalsView.vue') },
-			{ path: 'watchlist', component: () => import('@/views/WatchlistView.vue') },
-			{ path: 'portfolio', component: () => import('@/views/PortfolioView.vue') },
-			{ path: 'market', component: () => import('@/views/MarketView.vue') }
-		]
-	},
-	{ path: '/:pathMatch(.*)*', redirect: '/' }
+  {
+    path: '/',
+    redirect: rootRoute
+  },
+
+  // 🌐 Public routes
+  {
+    path: '/landing',
+    component: () => import('@/views/LandingView.vue'),
+    meta: { public: true }
+  },
+  {
+    path: '/onboarding',
+    component: () => import('@/views/OnboardingView.vue'),
+    meta: { public: true }
+  },
+
+  // 🔐 Protected app (tabs)
+  {
+    path: '/app',
+    component: () => import('@/views/TabsView.vue'),
+    meta: { requiresAuth: true },
+    children: [
+      { path: '', redirect: '/app/home' },
+
+      {
+        path: 'home',
+        name: 'home',
+        component: () => import('@/views/HomeView.vue')
+      },
+      {
+        path: 'signals',
+        name: 'signals',
+        component: () => import('@/views/SignalsView.vue')
+      },
+      {
+        path: 'watchlist',
+        name: 'watchlist',
+        component: () => import('@/views/WatchlistView.vue')
+      },
+      {
+        path: 'portfolio',
+        name: 'portfolio',
+        component: () => import('@/views/PortfolioView.vue')
+      },
+      {
+        path: 'market',
+        name: 'market',
+        component: () => import('@/views/MarketView.vue')
+      }
+    ]
+  },
+
+  // ❌ fallback
+  {
+    path: '/:pathMatch(.*)*',
+    redirect: '/'
+  }
 ]
 
 const router = createRouter({
-	history: createWebHistory(),
-	routes
+  history: createWebHistory(import.meta.env.BASE_URL),
+  routes
 })
 
-router.beforeEach((to, _from, next) => {
-	const auth = useAuthStore()
-	if (to.meta.requiresAuth && !auth.isLoggedIn) next('/landing')
-	else next()
+
+// 🧠 Global guard (замества Keycloak логиката)
+router.beforeEach((to) => {
+  const auth = useAuthStore()
+
+  // redirect root
+  if (to.path === '/') {
+    return rootRoute
+  }
+
+  // 🔐 auth check
+  if (to.meta.requiresAuth && !auth.isLoggedIn) {
+    return { path: '/landing' }
+  }
+
+  return true
 })
 
 export default router

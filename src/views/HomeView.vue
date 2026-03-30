@@ -1,5 +1,6 @@
 <template>
 	<ion-page>
+		{{ headlineTickers }}
 		<!-- Navbar -->
 		<div class="navbar">
 			<div class="nav-top">
@@ -36,7 +37,7 @@
 						<span>{{ s.ticker }}</span>
 						<span class="p">${{ s.price }}</span>
 						<span :style="{ color: s.up ? 'var(--g)' : 'var(--r)' }">{{ s.up ? '+' : '' }}{{ s.pct
-							}}%</span>
+						}}%</span>
 					</div>
 				</div>
 			</div>
@@ -243,6 +244,8 @@ import DrawerMenu from '@/components/DrawerMenu.vue'
 import NotifSheet from '@/components/NotifSheet.vue'
 import ChartIndex from '@/components/ChartIndex.vue'
 import ChartSignalDist from '@/components/ChartSignalDist.vue'
+import { useQuery } from "@urql/vue"
+import { HeadlineTickersDocument, HeadlineTickersQuery, HeadlineTickersQueryVariables } from '@/generated/graphql'
 
 const router = useRouter()
 const authStore = useAuthStore()
@@ -323,6 +326,10 @@ async function doRefresh(event: any) {
 	await sigStore.refresh()
 	event.target.complete()
 }
+
+const headlineTickers = useQuery<HeadlineTickersQuery, HeadlineTickersQueryVariables>({
+	query: HeadlineTickersDocument,
+})
 </script>
 
 <style scoped>
