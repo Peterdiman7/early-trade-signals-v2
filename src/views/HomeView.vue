@@ -27,6 +27,7 @@
 					</button>
 				</div>
 			</div>
+
 			<!-- Ticker -->
 			<div class="nav-ticker-row">
 				<div class="ticker-inner">
@@ -78,7 +79,7 @@
 						m.val }}</div>
 				</div>
 			</div>
-			
+
 			<!-- Top Signals -->
 			<div class="pad">
 				<div class="sec-head" style="margin-top:16px">
@@ -91,16 +92,17 @@
 							<div class="ch-dot" style="background:var(--g)"></div>
 							<span style="color:var(--g)">{{ t('home.topBuy') }}</span>
 						</div>
-						<div v-for="s in topBuy" :key="s.id" class="ts-row" @click="openDetail(s)">
-							<div class="ts-logo"><img :src="logoFor(s.ticker)" @error="imgFallback" alt="" /></div>
+						<div v-for="ticker in topBuy" :key="ticker.id" class="ts-row" @click="openTickerDetail(ticker)">
+							<div class="ts-logo"><img :src="logoFor(ticker.id)" @error="imgFallback" alt="" /></div>
 							<div style="flex:1">
-								<div class="ts-ticker">{{ s.ticker }}</div>
-								<div style="font-family:var(--mono);font-size:8px;color:var(--mu)">{{ agePrefix }} {{
-									ageLabel(s) }}</div>
+								<div class="ts-ticker">{{ ticker.id }}</div>
+								<div style="font-family:var(--mono);font-size:8px;color:var(--mu)">{{ ticker.name }}
+								</div>
 							</div>
-							<div style="display:flex;align-items:center;gap:6px">
-								<div class="ts-chg" :style="{ color: sigChg(s) >= 0 ? 'var(--g)' : 'var(--r)' }">{{
-									sigChg(s) >= 0 ? '+' : '' }}{{ sigChg(s).toFixed(2) }}%</div>
+							<div class="ts-chg"
+								:style="{ color: (ticker.snapshot?.change ?? 0) >= 0 ? 'var(--g)' : 'var(--r)' }">
+								{{ (ticker.snapshot?.change ?? 0) >= 0 ? '+' : '' }}{{
+									ticker.snapshot?.changePercent?.toFixed(2) }}%
 							</div>
 						</div>
 					</div>
@@ -109,15 +111,19 @@
 							<div class="ch-dot" style="background:var(--r)"></div>
 							<span style="color:var(--r)">{{ t('home.topSell') }}</span>
 						</div>
-						<div v-for="s in topSell" :key="s.id" class="ts-row" @click="openDetail(s)">
-							<div class="ts-logo"><img :src="logoFor(s.ticker)" @error="imgFallback" alt="" /></div>
+						<div v-for="ticker in topSell" :key="ticker.id" class="ts-row"
+							@click="openTickerDetail(ticker)">
+							<div class="ts-logo"><img :src="logoFor(ticker.id)" @error="imgFallback" alt="" /></div>
 							<div style="flex:1">
-								<div class="ts-ticker">{{ s.ticker }}</div>
-								<div style="font-family:var(--mono);font-size:8px;color:var(--mu)">{{ agePrefix }} {{
-									ageLabel(s) }}</div>
+								<div class="ts-ticker">{{ ticker.id }}</div>
+								<div style="font-family:var(--mono);font-size:8px;color:var(--mu)">{{ ticker.name }}
+								</div>
 							</div>
-							<div class="ts-chg" :style="{ color: sigChg(s) >= 0 ? 'var(--g)' : 'var(--r)' }">{{
-								sigChg(s) >= 0 ? '+' : '' }}{{ sigChg(s).toFixed(2) }}%</div>
+							<div class="ts-chg"
+								:style="{ color: (ticker.snapshot?.change ?? 0) >= 0 ? 'var(--g)' : 'var(--r)' }">
+								{{ (ticker.snapshot?.change ?? 0) >= 0 ? '+' : '' }}{{
+									ticker.snapshot?.changePercent?.toFixed(2) }}%
+							</div>
 						</div>
 					</div>
 				</div>
@@ -253,7 +259,7 @@ import NotifSheet from '@/components/NotifSheet.vue'
 import ChartIndex from '@/components/ChartIndex.vue'
 import ChartSignalDist from '@/components/ChartSignalDist.vue'
 import { useQuery } from '@urql/vue'
-import { HeadlineTickersDocument, HeadlineTickersQuery, HeadlineTickersQueryVariables, SubscribeSnapshotChangesDocument, SubscribeSnapshotChangesSubscription, SubscribeSnapshotChangesSubscriptionVariables } from '@/generated/graphql'
+import { HeadlineTickersDocument, HeadlineTickersQuery, HeadlineTickersQueryVariables } from '@/generated/graphql'
 
 const router = useRouter()
 const authStore = useAuthStore()
@@ -282,16 +288,12 @@ const greeting = computed(() => {
 	return h < 12 ? t('home.greetingMorning') : h < 18 ? t('home.greetingDay') : t('home.greetingEvening')
 })
 
-const agePrefix = computed(() => t('home.agoPrefix'))
-
 const subText = computed(() => {
 	const todaySignals = sigStore.signals.filter(s => s.signalDate === '2026-02-22').length
 	const q4plus = sigStore.signals.filter(s => s.quality >= 4).length
 	return `${todaySignals} ${t('home.newSignalsToday')} · ${sigStore.buySignals.length} ${t('home.buy')} · ${q4plus}× ${t('home.subTextSuffix')}`
 })
 
-const topBuy = computed(() => [...sigStore.buySignals].sort((a, b) => b.quality - a.quality).slice(0, 5))
-const topSell = computed(() => [...sigStore.sellSignals].sort((a, b) => b.quality - a.quality).slice(0, 5))
 const sectors = SECTORS
 
 const marketItems = computed(() => [
@@ -302,28 +304,38 @@ const marketItems = computed(() => [
 	{ label: t('home.sentiment'), val: t('home.sentimentBullish'), up: true }
 ])
 
-const tickerItems = sigStore.signals.slice(0, 8).map(s => ({
-	ticker: s.ticker, logo: LOGOS[s.ticker] || '',
-	price: s.price.toFixed(2), pct: s.change, up: s.change >= 0
-}))
-
 function logoFor(ticker: string) { return LOGOS[ticker] || '' }
 function imgFallback(e: Event) { (e.target as HTMLImageElement).style.display = 'none' }
-function sigChg(s: Signal) { return (s.price - s.signalPrice) / s.signalPrice * 100 }
 
-function ageLabel(s: Signal) {
-	const now = new Date('2026-02-22T16:00:00')
-	const sig = new Date(`${s.signalDate}T${s.signalTime}`)
-	const mins = Math.floor((now.getTime() - sig.getTime()) / 60000)
-	const hours = Math.floor(mins / 60)
-	const days = Math.floor(hours / 24)
-	if (mins < 60) return `${mins} ${t('home.minutesAgo')}`
-	if (hours < 24) return `${hours} ${t('home.hoursAgo')}`
-	if (days === 1) return t('home.yesterday')
-	return `${days} ${t('home.daysAgo')}`
+// GraphQL — ticker лента в navbar + topBuy/topSell
+const getHeadlineTickersResult = useQuery<HeadlineTickersQuery, HeadlineTickersQueryVariables>({
+	query: HeadlineTickersDocument
+})
+
+const headlineTickers = computed(() => getHeadlineTickersResult.data.value?.headlineTickers ?? [])
+
+// Top gainers — сортирани по change DESC, взимаме само тези с change >= 0
+const topBuy = computed(() =>
+	[...headlineTickers.value]
+		.filter(t => (t.snapshot?.change ?? 0) >= 0)
+		.sort((a, b) => (b.snapshot?.change ?? 0) - (a.snapshot?.change ?? 0))
+		.slice(0, 5)
+)
+
+// Top losers — сортирани по change ASC (най-голям спад), взимаме само тези с change < 0
+const topSell = computed(() =>
+	[...headlineTickers.value]
+		.filter(t => (t.snapshot?.change ?? 0) < 0)
+		.sort((a, b) => (a.snapshot?.change ?? 0) - (b.snapshot?.change ?? 0))
+		.slice(0, 5)
+)
+
+function openTickerDetail(ticker: (typeof headlineTickers.value)[number]) {
+	// Намираме съответния Signal от sigStore по ticker.id ако съществува,
+	// иначе не отваряме sheet (може да се разшири при нужда)
+	const match = sigStore.signals.find(s => s.ticker === ticker.id)
+	if (match) detailSignal.value = match
 }
-
-function openDetail(s: Signal) { detailSignal.value = s }
 
 function goSignals(type: string) {
 	sigStore.filterType = type as any
@@ -334,12 +346,6 @@ async function doRefresh(event: any) {
 	await sigStore.refresh()
 	event.target.complete()
 }
-
-const getHeadlineTickersResult = useQuery<HeadlineTickersQuery, HeadlineTickersQueryVariables>({
-	query: HeadlineTickersDocument
-})
-
-const headlineTickers = computed(() => getHeadlineTickersResult.data.value?.headlineTickers)
 </script>
 
 <style scoped>

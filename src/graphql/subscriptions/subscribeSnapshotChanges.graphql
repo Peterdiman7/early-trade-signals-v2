@@ -1,6 +1,9 @@
-subscription OnSnapshot($id: ID!) {
+subscription subscribeSnapshotChanges($id: ID!) {
   snapshot(id: $id) {
     id
+    open
+    high
+    low
     close
     change
     changePercent

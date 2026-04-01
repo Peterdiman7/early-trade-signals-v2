@@ -66,16 +66,26 @@
 				</div>
 			</section>
 
-			<!-- MARQUEE -->
 			<div class="marquee-wrap">
 				<div class="marquee-inner">
-					<div v-for="(s, i) in [...marqueeItems, ...marqueeItems]" :key="i"
-						:class="['mi', s.up ? 'up' : 'down']">
-						<img :src="s.logo" @error="imgFallback" alt="" />
-						<span>{{ s.ticker }}</span>
-						<span class="mp">${{ s.price }}</span>
-						<span :style="{ color: s.up ? 'var(--g)' : 'var(--r)' }">{{ s.up ? '+' : '' }}{{ s.pct
-						}}%</span>
+					<div v-for="headlineTicker in headlineTickers" :key="headlineTicker.id" :class="[
+						'mi',
+						headlineTicker.snapshot && headlineTicker.snapshot.change >= 0 ? 'up' : 'down'
+					]">
+						<span>{{ headlineTicker.id }}</span>
+
+						<span class="mp">
+							${{ headlineTicker.snapshot?.open }}
+						</span>
+
+						<span :style="{
+							color: headlineTicker.snapshot && headlineTicker.snapshot.change >= 0
+								? 'var(--g)'
+								: 'var(--r)'
+						}">
+							{{ headlineTicker.snapshot && headlineTicker.snapshot.change >= 0 ? '+' : '' }}
+							{{ headlineTicker.snapshot?.changePercent }}%
+						</span>
 					</div>
 				</div>
 			</div>
@@ -182,11 +192,13 @@
 </template>
 
 <script setup lang="ts">
-import { ref } from 'vue'
+import { computed, ref } from 'vue'
 import { IonPage, IonContent } from '@ionic/vue'
 import { useRouter } from 'vue-router'
 import { useAuthStore } from '@/stores/auth'
 import AuthModal from '@/components/AuthModal.vue'
+import { useQuery } from '@urql/vue'
+import { HeadlineTickersDocument, HeadlineTickersQuery, HeadlineTickersQueryVariables } from '@/generated/graphql'
 
 const router = useRouter()
 const authStore = useAuthStore()
@@ -243,6 +255,13 @@ const reviews = [
 	{ text: 'Das Backtracking-Feature hat mir geholfen, meiner Strategie wirklich zu vertrauen.', name: 'Marcus H.', role: 'Pro-Mitglied seit 2024', av: '👨‍💼' },
 	{ text: 'Die News-Sentiment-Analyse ist ein echter Gamechanger für meine Entscheidungen.', name: 'Sandra K.', role: 'Forex-Traderin · Pro', av: '👩‍💼' }
 ]
+
+const getHeadlineTickersResult = useQuery<HeadlineTickersQuery, HeadlineTickersQueryVariables>({
+	query: HeadlineTickersDocument
+})
+
+const headlineTickers = computed(() => getHeadlineTickersResult.data.value?.headlineTickers)
+
 </script>
 
 <style scoped>
@@ -365,7 +384,6 @@ const reviews = [
 
 .hero-content {
 	position: relative;
-	max-width: 520px;
 }
 
 .hero-tag {
