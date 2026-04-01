@@ -30,13 +30,22 @@
 			<!-- Ticker -->
 			<div class="nav-ticker-row">
 				<div class="ticker-inner">
-					<div v-for="(s, i) in [...tickerItems, ...tickerItems]" :key="i"
-						:class="['tick', s.up ? 'up' : 'down']">
-						<img :src="s.logo" @error="imgFallback" alt="" class="tick-logo" />
-						<span>{{ s.ticker }}</span>
-						<span class="p">${{ s.price }}</span>
-						<span :style="{ color: s.up ? 'var(--g)' : 'var(--r)' }">{{ s.up ? '+' : '' }}{{ s.pct
-							}}%</span>
+					<div v-for="headlineTicker in headlineTickers" :key="headlineTicker.id" :class="[
+						'tick',
+						headlineTicker.snapshot && headlineTicker.snapshot.change >= 0 ? 'up' : 'down'
+					]">
+						<span>{{ headlineTicker.id }}</span>
+						<span class="p">
+							${{ headlineTicker.snapshot?.open }}
+						</span>
+						<span :style="{
+							color: headlineTicker.snapshot && headlineTicker.snapshot?.change >= 0
+								? 'var(--g)'
+								: 'var(--r)'
+						}">
+							{{ headlineTicker.snapshot && headlineTicker.snapshot?.change >= 0 ? '+' : '' }}
+							{{ headlineTicker.snapshot?.changePercent }}%
+						</span>
 					</div>
 				</div>
 			</div>
@@ -69,7 +78,7 @@
 						m.val }}</div>
 				</div>
 			</div>
-
+			
 			<!-- Top Signals -->
 			<div class="pad">
 				<div class="sec-head" style="margin-top:16px">
@@ -244,7 +253,7 @@ import NotifSheet from '@/components/NotifSheet.vue'
 import ChartIndex from '@/components/ChartIndex.vue'
 import ChartSignalDist from '@/components/ChartSignalDist.vue'
 import { useQuery } from '@urql/vue'
-import { HeadlineTickersDocument, HeadlineTickersQuery, HeadlineTickersQueryVariables } from '@/generated/graphql'
+import { HeadlineTickersDocument, HeadlineTickersQuery, HeadlineTickersQueryVariables, SubscribeSnapshotChangesDocument, SubscribeSnapshotChangesSubscription, SubscribeSnapshotChangesSubscriptionVariables } from '@/generated/graphql'
 
 const router = useRouter()
 const authStore = useAuthStore()
@@ -326,9 +335,11 @@ async function doRefresh(event: any) {
 	event.target.complete()
 }
 
-const getHeadlineTickers = useQuery<HeadlineTickersQuery, HeadlineTickersQueryVariables>({
+const getHeadlineTickersResult = useQuery<HeadlineTickersQuery, HeadlineTickersQueryVariables>({
 	query: HeadlineTickersDocument
 })
+
+const headlineTickers = computed(() => getHeadlineTickersResult.data.value?.headlineTickers)
 </script>
 
 <style scoped>

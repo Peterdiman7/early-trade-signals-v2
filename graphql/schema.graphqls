@@ -3,8 +3,8 @@ scalar Date
 type Snapshot {
   id: ID!
   open: Float!
-  high: Float!
-  low: Float!
+  high: Float
+  low: Float
   close: Float!
   change: Float!
   changePercent: Float!
@@ -14,7 +14,7 @@ type Snapshot {
 type Instrument {
   id: ID!
   name: String!
-  snapshot: Snapshot!
+  snapshot: Snapshot
 }
 
 type Query {
