@@ -93,7 +93,7 @@
 							<span style="color:var(--g)">{{ t('home.topBuy') }}</span>
 						</div>
 						<div v-for="ticker in topBuy" :key="ticker.id" class="ts-row" @click="openTickerDetail(ticker)">
-							<div class="ts-logo"><img :src="logoFor(ticker.id)" @error="imgFallback" alt="" /></div>
+							<div class="ts-logo"><img :src="ticker.imageUrl" @error="imgFallback" alt="" /></div>
 							<div style="flex:1">
 								<div class="ts-ticker">{{ ticker.id }}</div>
 								<div style="font-family:var(--mono);font-size:8px;color:var(--mu)">{{ ticker.name }}
@@ -102,7 +102,7 @@
 							<div class="ts-chg"
 								:style="{ color: (ticker.snapshot?.change ?? 0) >= 0 ? 'var(--g)' : 'var(--r)' }">
 								{{ (ticker.snapshot?.change ?? 0) >= 0 ? '+' : '' }}{{
-									ticker.snapshot?.changePercent?.toFixed(2) }}%
+									ticker.snapshot?.change?.toFixed(2) }}%
 							</div>
 						</div>
 					</div>
@@ -113,7 +113,7 @@
 						</div>
 						<div v-for="ticker in topSell" :key="ticker.id" class="ts-row"
 							@click="openTickerDetail(ticker)">
-							<div class="ts-logo"><img :src="logoFor(ticker.id)" @error="imgFallback" alt="" /></div>
+							<div class="ts-logo"><img :src="ticker.imageUrl" @error="imgFallback" alt="" /></div>
 							<div style="flex:1">
 								<div class="ts-ticker">{{ ticker.id }}</div>
 								<div style="font-family:var(--mono);font-size:8px;color:var(--mu)">{{ ticker.name }}
@@ -122,7 +122,7 @@
 							<div class="ts-chg"
 								:style="{ color: (ticker.snapshot?.change ?? 0) >= 0 ? 'var(--g)' : 'var(--r)' }">
 								{{ (ticker.snapshot?.change ?? 0) >= 0 ? '+' : '' }}{{
-									ticker.snapshot?.changePercent?.toFixed(2) }}%
+									ticker.snapshot?.change?.toFixed(2) }}%
 							</div>
 						</div>
 					</div>
@@ -249,7 +249,7 @@ import { computed, ref } from 'vue'
 import { IonPage, IonContent, IonRefresher, IonRefresherContent } from '@ionic/vue'
 import { useRouter } from 'vue-router'
 import { useAuthStore } from '@/stores/auth'
-import { useSignalsStore, LOGOS, SECTORS } from '@/stores/signals'
+import { useSignalsStore, SECTORS } from '@/stores/signals'
 import { useAppStore } from '@/stores/app'
 import { useI18n } from '@/i18n'
 import type { Signal } from '@/stores/signals'
@@ -259,7 +259,8 @@ import NotifSheet from '@/components/NotifSheet.vue'
 import ChartIndex from '@/components/ChartIndex.vue'
 import ChartSignalDist from '@/components/ChartSignalDist.vue'
 import { useQuery } from '@urql/vue'
-import { HeadlineTickersDocument, HeadlineTickersQuery, HeadlineTickersQueryVariables } from '@/generated/graphql'
+import { GetTopMoversDocument, GetTopMoversQuery, GetTopMoversQueryVariables, HeadlineTickersDocument, HeadlineTickersQuery, HeadlineTickersQueryVariables } from '@/generated/graphql'
+import { companies } from "../assets/companies.json"
 
 const router = useRouter()
 const authStore = useAuthStore()
@@ -304,35 +305,60 @@ const marketItems = computed(() => [
 	{ label: t('home.sentiment'), val: t('home.sentimentBullish'), up: true }
 ])
 
-function logoFor(ticker: string) { return LOGOS[ticker] || '' }
-function imgFallback(e: Event) { (e.target as HTMLImageElement).style.display = 'none' }
-
-// GraphQL — ticker лента в navbar + topBuy/topSell
 const getHeadlineTickersResult = useQuery<HeadlineTickersQuery, HeadlineTickersQueryVariables>({
 	query: HeadlineTickersDocument
 })
 
-const headlineTickers = computed(() => getHeadlineTickersResult.data.value?.headlineTickers ?? [])
+const getTopMovers = useQuery<GetTopMoversQuery, GetTopMoversQueryVariables>({
+	query: GetTopMoversDocument
+})
 
-// Top gainers — сортирани по change DESC, взимаме само тези с change >= 0
+const headlineTickers = computed(() => getHeadlineTickersResult.data.value?.headlineTickers ?? [])
+// map companies by symbol
+const companyMap = computed(() => {
+	return Object.fromEntries(
+		companies.map(c => [c.symbol, c])
+	)
+})
+
+// enrich movers
+const topMoversEnriched = computed(() => {
+	const data = getTopMovers.data.value?.topMovers ?? []
+
+	return data.map(t => {
+		const company = companyMap.value[t.id]
+
+		return {
+			...t,
+			symbol: t.id,
+			name: company?.name ?? t.name,
+			imageUrl: company?.imageUrl ?? ''
+		}
+	})
+})
+
+// buy / sell
 const topBuy = computed(() =>
-	[...headlineTickers.value]
+	topMoversEnriched.value
 		.filter(t => (t.snapshot?.change ?? 0) >= 0)
 		.sort((a, b) => (b.snapshot?.change ?? 0) - (a.snapshot?.change ?? 0))
 		.slice(0, 5)
 )
 
-// Top losers — сортирани по change ASC (най-голям спад), взимаме само тези с change < 0
 const topSell = computed(() =>
-	[...headlineTickers.value]
+	topMoversEnriched.value
 		.filter(t => (t.snapshot?.change ?? 0) < 0)
 		.sort((a, b) => (a.snapshot?.change ?? 0) - (b.snapshot?.change ?? 0))
 		.slice(0, 5)
 )
 
+// fallback image
+function imgFallback(e: Event) {
+	const el = e.target as HTMLImageElement
+	el.style.display = 'none'
+}
+
 function openTickerDetail(ticker: (typeof headlineTickers.value)[number]) {
-	// Намираме съответния Signal от sigStore по ticker.id ако съществува,
-	// иначе не отваряме sheet (може да се разшири при нужда)
 	const match = sigStore.signals.find(s => s.ticker === ticker.id)
 	if (match) detailSignal.value = match
 }
