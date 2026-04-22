@@ -1,0 +1,2534 @@
+{
+    "companies": [
+        {
+            "symbol": "MMM",
+            "name": "3M Company",
+            "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/1/15/3M_wordmark.svg"
+        },
+        {
+            "symbol": "ABT",
+            "name": "Abbott Laboratories",
+            "imageUrl": "https://www.ca.abbott/etc.clientlibs/abbott-platform/clientlibs/clientlib-site/resources/images/abbott-logo.png"
+        },
+        {
+            "symbol": "ABBV",
+            "name": "AbbVie Inc.",
+            "imageUrl": "https://s3-symbol-logo.tradingview.com/abbvie--600.png"
+        },
+        {
+            "symbol": "ACN",
+            "name": "Accenture plc",
+            "imageUrl": "https://www.cplace.com/wp-content/uploads/2023/08/partnerlogo-accenture-partner-overview-scaled.jpg"
+        },
+        {
+            "symbol": "ATVI",
+            "name": "Activision Blizzard",
+            "imageUrl": "https://e7.pngegg.com/pngimages/896/989/png-clipart-logo-brand-font-product-activision-blizzard-blizzard-blue-text.png"
+        },
+        {
+            "symbol": "AYI",
+            "name": "Acuity Brands Inc",
+            "imageUrl": "https://media.ceros.com/acuity-brands/images/2025/02/28/6004b23459563f8a7119360d077e7a6a/logo-circle-a-outline-green.png?imageOpt=1&fit=bounds&width=1118"
+        },
+        {
+            "symbol": "ADBE",
+            "name": "Adobe Systems Inc",
+            "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/7b/Adobe_Systems_logo_and_wordmark.svg/250px-Adobe_Systems_logo_and_wordmark.svg.png"
+        },
+        {
+            "symbol": "AMD",
+            "name": "Advanced Micro Devices Inc",
+            "imageUrl": "https://cdn.dividendmax.com/companies/advanced-micro-devices-inc.png"
+        },
+        {
+            "symbol": "AAP",
+            "name": "Advance Auto Parts",
+            "imageUrl": "https://yt3.googleusercontent.com/OSniSy1wi24P9mvVjKNitV-ubUKZxuS6bNOYcQWpWDkdjpVM4arSqUp-N19hJbA94Eg4-zG8HA=s900-c-k-c0x00ffffff-no-rj"
+        },
+        {
+            "symbol": "AES",
+            "name": "AES Corp",
+            "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/d0/AES_Corporation_logo.svg/1280px-AES_Corporation_logo.svg.png"
+        },
+        {
+            "symbol": "AET",
+            "name": "Aetna Inc",
+            "imageUrl": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQsp-EvNr_FL1nJqLBL0rwgYkUiOKBbasqtkA&s"
+        },
+        {
+            "symbol": "AMG",
+            "name": "Affiliated Managers Group Inc",
+            "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/5c/Affiliated_Managers_Group_logo_%282024%29.svg/250px-Affiliated_Managers_Group_logo_%282024%29.svg.png"
+        },
+        {
+            "symbol": "AFL",
+            "name": "AFLAC Inc",
+            "imageUrl": "https://lh5.googleusercontent.com/proxy/PkOBgZLTiexYcXNxcrIiVhIotYcnqqDTODMG8rEOFsB682MZWBHg5uFSVvfSLEdOeSnnNUewLGVzHWoIscefNA0PRgHU6RrM3Gx3cg"
+        },
+        {
+            "symbol": "A",
+            "name": "Agilent Technologies Inc",
+            "imageUrl": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSNEftp2YDGl9XK-WJE4lFUltoXBlHnSU6oyw&s"
+        },
+        {
+            "symbol": "APD",
+            "name": "Air Products & Chemicals Inc",
+            "imageUrl": "https://s3-symbol-logo.tradingview.com/air-products-and-chemicals--600.png"
+        },
+        {
+            "symbol": "AKAM",
+            "name": "Akamai Technologies Inc",
+            "imageUrl": "https://pbs.twimg.com/profile_images/1955294443554091008/JEOCQqs1.jpg"
+        },
+        {
+            "symbol": "ALK",
+            "name": "Alaska Air Group Inc",
+            "imageUrl": "https://s.yimg.com/os/en/us.finance.gurufocus/17551f254f6b34f70f12af7e5cf41957"
+        },
+        {
+            "symbol": "ALB",
+            "name": "Albemarle Corp",
+            "imageUrl": "https://s3-symbol-logo.tradingview.com/albemarle--600.png"
+        },
+        {
+            "symbol": "ARE",
+            "name": "Alexandria Real Estate Equities Inc",
+            "imageUrl": "https://media.licdn.com/dms/image/v2/C4D0BAQH2TnYtIPtITA/company-logo_200_200/company-logo_200_200/0/1631300698287?e=2147483647&v=beta&t=W0QdOnuN5XMhrE-hEWnZvB72X1sEzN7cjKLW_xLeslA"
+        },
+        {
+            "symbol": "ALXN",
+            "name": "Alexion Pharmaceuticals",
+            "imageUrl": "https://yt3.googleusercontent.com/UP9XrtSGO665SPEOnVwLeTZ2lCkU4Mhx8CvFUjn3g7WB8LWOJCKsEnZUO-6Nh6I52qw-Jcl1PQ=s900-c-k-c0x00ffffff-no-rj"
+        },
+        {
+            "symbol": "ALGN",
+            "name": "Align Technology",
+            "imageUrl": "https://www.heroku.com/wp-content/uploads/2025/03/aligntech-1.png"
+        },
+        {
+            "symbol": "ALLE",
+            "name": "Allegion",
+            "imageUrl": "https://www.allegion.co.uk/content/dam/allegionuk/allegion-uk-new-assets/allegion-logo.png"
+        },
+        {
+            "symbol": "AGN",
+            "name": "Allergan, Plc",
+            "imageUrl": "https://www.logo.wine/a/logo/Allergan/Allergan-White-Dark-Background-Logo.wine.svg"
+        },
+        {
+            "symbol": "ADS",
+            "name": "Alliance Data Systems",
+            "imageUrl": "https://mma.prnewswire.com/media/95414/alliance_data_logo.jpg?p=facebook"
+        },
+        {
+            "symbol": "LNT",
+            "name": "Alliant Energy Corp",
+            "imageUrl": "https://yt3.googleusercontent.com/ytc/AIdro_nzbS9RGosAysjt40bXRsLQZJX_LSN8KFx3WlwhPaw5wA=s900-c-k-c0x00ffffff-no-rj"
+        },
+        {
+            "symbol": "ALL",
+            "name": "Allstate Corp",
+            "imageUrl": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRuSAhH8SbtNMRJU0oOfqUN_1nUBMENUmypdg&s"
+        },
+        {
+            "symbol": "GOOGL",
+            "name": "Alphabet Inc Class A",
+            "imageUrl": "https://trading212equities.s3.eu-central-1.amazonaws.com/GOOGL_US_EQ.png"
+        },
+        {
+            "symbol": "GOOG",
+            "name": "Alphabet Inc Class C",
+            "imageUrl": "https://trading212equities.s3.eu-central-1.amazonaws.com/GOOGL_US_EQ.png"
+        },
+        {
+            "symbol": "MO",
+            "name": "Altria Group Inc",
+            "imageUrl": "https://cdn.freebiesupply.com/logos/large/2x/altria-group-01-logo-png-transparent.png"
+        },
+        {
+            "symbol": "AMZN",
+            "name": "Amazon.com Inc",
+            "imageUrl": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTXeWwa831xefgIlDoqqbAnjmpBO6Wg0kh5mg&s"
+        },
+        {
+            "symbol": "AEE",
+            "name": "Ameren Corp",
+            "imageUrl": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSn0QkDh3I58pd5IyAla3Xd2F9MKGYJ4s5lUw&s"
+        },
+        {
+            "symbol": "AAL",
+            "name": "American Airlines Group",
+            "imageUrl": "https://s3-symbol-logo.tradingview.com/american-airlines-group--600.png"
+        },
+        {
+            "symbol": "AEP",
+            "name": "American Electric Power",
+            "imageUrl": "https://www.windpowerengineering.com/wp-content/uploads/2013/01/AEP.jpg"
+        },
+        {
+            "symbol": "AXP",
+            "name": "American Express Co",
+            "imageUrl": "https://1000logos.net/wp-content/uploads/2016/10/American-Express-logo.png"
+        },
+        {
+            "symbol": "AIG",
+            "name": "American International Group, Inc.",
+            "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/c/cf/AIG_wordmark.svg"
+        },
+        {
+            "symbol": "AMT",
+            "name": "American Tower Corp A",
+            "imageUrl": "https://s3-symbol-logo.tradingview.com/american-tower--600.png"
+        },
+        {
+            "symbol": "AWK",
+            "name": "American Water Works Company Inc",
+            "imageUrl": "https://s3-symbol-logo.tradingview.com/american-water-works--600.png"
+        },
+        {
+            "symbol": "AMP",
+            "name": "Ameriprise Financial",
+            "imageUrl": "https://play-lh.googleusercontent.com/TG4m-O9pqYGMPTyIk_uotTLvw-c5G-QXDQqQAw7u6IzMySqWsXzjPk2DvR1Zr2AV09gB"
+        },
+        {
+            "symbol": "ABC",
+            "name": "AmerisourceBergen Corp",
+            "imageUrl": "https://media.licdn.com/dms/image/v2/D560BAQGU76m-VsvaXg/company-logo_200_200/company-logo_200_200/0/1688397852953/amerisourcebergen_logo?e=2147483647&v=beta&t=RcwzHbHmkPhVVGOO5F2rC8elFX2BDLL-0lnXUAWV60E"
+        },
+        {
+            "symbol": "AME",
+            "name": "AMETEK Inc",
+            "imageUrl": "https://mb.cision.com/Public/8884/logo/a9ea5f44eaddae47_800x800ar.jpg"
+        },
+        {
+            "symbol": "AMGN",
+            "name": "Amgen Inc",
+            "imageUrl": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRJaxoUIRQ2LU-RXGM6NDuT2KEEjMsIDYhmQQ&s"
+        },
+        {
+            "symbol": "APH",
+            "name": "Amphenol Corp",
+            "imageUrl": "https://media.licdn.com/dms/image/v2/C4E0BAQEnwSL80pWLKw/company-logo_200_200/company-logo_200_200/0/1641833778476/amphenol_logo?e=2147483647&v=beta&t=lJdY-qkCnsEOw2-2i6GBlWxXWKcUDDLllVcvJ0B-p0A"
+        },
+        {
+            "symbol": "APC",
+            "name": "Anadarko Petroleum Corp",
+            "imageUrl": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSBFSPXo6vRs2_ChSXIql_5sf96mpBWBoHP_Q&s"
+        },
+        {
+            "symbol": "ADI",
+            "name": "Analog Devices, Inc.",
+            "imageUrl": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRMKrTA6mZ-StcucattUj-iFkoZuIoyLq7lLA&s"
+        },
+        {
+            "symbol": "ANDV",
+            "name": "Andeavor",
+            "imageUrl": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTz3dm_c8yxBW6UY44j7qsMvcBqgKWlTODJ8A&s"
+        },
+        {
+            "symbol": "ANSS",
+            "name": "ANSYS",
+            "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/e/e5/ANSYS_logo.png"
+        },
+        {
+            "symbol": "ANTM",
+            "name": "Anthem Inc.",
+            "imageUrl": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQtffgjPP8GRw8uQa_rtLQu0-eLMBgC-9B6cg&s"
+        },
+        {
+            "symbol": "AON",
+            "name": "Aon plc",
+            "imageUrl": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTUynDtySNSkiBbWjSJI8UTg6Mc8UpWCNckjw&s"
+        },
+        {
+            "symbol": "AOS",
+            "name": "A.O. Smith",
+            "imageUrl": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSvKgmoVcXv87TNP2Z8VgbX6aPz4wBqvebJkA&s"
+        },
+        {
+            "symbol": "APA",
+            "name": "Apache Corporation",
+            "imageUrl": "https://apacorp.com/wp-content/uploads/2021/02/APACorp_Logo_Color6839.png"
+        },
+        {
+            "symbol": "AIV",
+            "name": "Apartment Investment & Management",
+            "imageUrl": "https://s3-symbol-logo.tradingview.com/apartment-investment-and-management-company--600.png"
+        },
+        {
+            "symbol": "AAPL",
+            "name": "Apple Inc.",
+            "imageUrl": "https://download.logo.wine/logo/Apple_Inc./Apple_Inc.-Logo.wine.png"
+        },
+        {
+            "symbol": "AMAT",
+            "name": "Applied Materials Inc",
+            "imageUrl": "https://www.appliedmaterials.com/content/dam/applied-materials/Applied-Materials-Logo-No-Tag-Line.png"
+        },
+        {
+            "symbol": "ADM",
+            "name": "Archer-Daniels-Midland Co",
+            "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/9d/Archer-Daniels-Midland_Company_former_logo.svg/250px-Archer-Daniels-Midland_Company_former_logo.svg.png"
+        },
+        {
+            "symbol": "ARNC",
+            "name": "Arconic Inc",
+            "imageUrl": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT2iCEc5O710X2CsWGBk_gupx7iWiFUtn2tPg&s"
+        },
+        {
+            "symbol": "AJG",
+            "name": "Arthur J. Gallagher & Co.",
+            "imageUrl": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRGPdDBNyeyZoJCnnkEf_cFwOsL47nqcX0U4g&s"
+        },
+        {
+            "symbol": "AIZ",
+            "name": "Assurant Inc",
+            "imageUrl": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQxnyX0euzDBHJ4RX0mEWynJkqhs_hN9tTWqQ&s"
+        },
+        {
+            "symbol": "T",
+            "name": "AT&T Inc",
+            "imageUrl": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQPWu6a0r7-eZ-S_vSmG4HTcAXZEgXjVKkA1w&s"
+        },
+        {
+            "symbol": "ADSK",
+            "name": "Autodesk Inc",
+            "imageUrl": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRzU03cGc_oIY3pbn4kAZWqAmCOIeeUtEzk8A&s"
+        },
+        {
+            "symbol": "ADP",
+            "name": "Automatic Data Processing",
+            "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/ad/Automatic-Data-Processing-Logo.svg/250px-Automatic-Data-Processing-Logo.svg.png"
+        },
+        {
+            "symbol": "AZO",
+            "name": "AutoZone Inc",
+            "imageUrl": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTj6aWO68Cgif58AUBuo6GRIluYA0UFlsrDhA&s"
+        },
+        {
+            "symbol": "AVB",
+            "name": "AvalonBay Communities, Inc.",
+            "imageUrl": "https://s3-symbol-logo.tradingview.com/avalonbay-communities--600.png"
+        },
+        {
+            "symbol": "AVY",
+            "name": "Avery Dennison Corp",
+            "imageUrl": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTZn-GXsucqH87G0A_z5wTi4UkSNxNHM57Q5w&s"
+        },
+        {
+            "symbol": "BHGE",
+            "name": "Baker Hughes, a GE Company",
+            "imageUrl": "https://cdn.houstonpublicmedia.org/wp-content/uploads/2016/10/31174208/Baker_Hughes_2_color_logo.png"
+        },
+        {
+            "symbol": "BLL",
+            "name": "Ball Corp",
+            "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/a/ac/Ball_Corporation_logo_2024.svg"
+        },
+        {
+            "symbol": "BAC",
+            "name": "Bank of America Corp",
+            "imageUrl": "https://s.yimg.com/ny/api/res/1.2/ftupl2YTHub2qxcRmxj4UA--/YXBwaWQ9aGlnaGxhbmRlcjt3PTY0MDtoPTY0MA--/https://media.zenfs.com/en/us.finance.gurufocus/ad43d760348991a4d953184ebcac746f"
+        },
+        {
+            "symbol": "BK",
+            "name": "The Bank of New York Mellon Corp.",
+            "imageUrl": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSxyk-zERBetg8UHwpLpC_HfDBnD9gWP8E3-A&s"
+        },
+        {
+            "symbol": "BCR",
+            "name": "Bard (C.R.) Inc.",
+            "imageUrl": "https://www.rxinjuryhelp.com/wp-content/uploads/CR-BARD.jpg"
+        },
+        {
+            "symbol": "BAX",
+            "name": "Baxter International Inc.",
+            "imageUrl": "https://npr.brightspotcdn.com/dims4/default/62b5b47/2147483647/strip/true/crop/802x534+0+0/resize/880x586!/quality/90/?url=http%3A%2F%2Fnpr-brightspot.s3.amazonaws.com%2Flegacy%2Fimages%2Fnews-images%2Fbaxter.jpg"
+        },
+        {
+            "symbol": "BBT",
+            "name": "BB&T Corporation",
+            "imageUrl": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTLT5znZDSLd83vEkZZZGFspg2VBLcZCQx86A&s"
+        },
+        {
+            "symbol": "BDX",
+            "name": "Becton Dickinson",
+            "imageUrl": "https://arahealth.com/wp-content/uploads/2021/11/bd.jpg"
+        },
+        {
+            "symbol": "BRK.B",
+            "name": "Berkshire Hathaway",
+            "imageUrl": "https://vevorinvestmentgroup.com/companyimg/sov5GQLMgnJh3qj.png"
+        },
+        {
+            "symbol": "BBY",
+            "name": "Best Buy Co. Inc.",
+            "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/f/f5/Best_Buy_Logo.svg"
+        },
+        {
+            "symbol": "BIIB",
+            "name": "Biogen Inc.",
+            "imageUrl": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQo2QG0KvaMOn34PVtus-s0enO4vXlqrNtrlQ&s"
+        },
+        {
+            "symbol": "BLK",
+            "name": "BlackRock",
+            "imageUrl": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSU5vgY1I77b80lKOzwzNzXYG8FXGJGPpoabQ&s"
+        },
+        {
+            "symbol": "HRB",
+            "name": "Block H&R",
+            "imageUrl": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTZZes0QVcFy8ROaIefZhySnypVMwdNIJDirg&s"
+        },
+        {
+            "symbol": "BA",
+            "name": "Boeing Company",
+            "imageUrl": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcROnjK30u2lNm5cJBtku4xfnqM-mX6G-ryWZQ&s"
+        },
+        {
+            "symbol": "BWA",
+            "name": "BorgWarner",
+            "imageUrl": "https://www.borgwarner.com/images/default-source/company/new-logo.png?sfvrsn=8f66d43d_3"
+        },
+        {
+            "symbol": "BXP",
+            "name": "Boston Properties",
+            "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b2/Bxp_boston_logo.png/250px-Bxp_boston_logo.png"
+        },
+        {
+            "symbol": "BSX",
+            "name": "Boston Scientific",
+            "imageUrl": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSLJlATDattzQQRyhPZHqjVrQ_VTUrCuPQwug&s"
+        },
+        {
+            "symbol": "BHF",
+            "name": "Brighthouse Financial Inc",
+            "imageUrl": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSZc1iGOpcjgbqbMyAGWabZwxl09sZ9pbq7Nw&s"
+        },
+        {
+            "symbol": "BMY",
+            "name": "Bristol-Myers Squibb",
+            "imageUrl": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ-JIpx1bcRW7FwCv3ddJYpXkETwyOm9AQxVQ&s"
+        },
+        {
+            "symbol": "AVGO",
+            "name": "Broadcom",
+            "imageUrl": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSBImumrRb91c61r5qCU5qnb2JGvNSE_MZjFA&s"
+        },
+        {
+            "symbol": "BF.B",
+            "name": "Brown-Forman Corp.",
+            "imageUrl": "https://images.squarespace-cdn.com/content/v1/59fde96f8c56a851a9a431ae/01e6c2b0-072d-4d44-8775-bf18caf560bb/Brown+Tile.jpg"
+        },
+        {
+            "symbol": "CHRW",
+            "name": "C. H. Robinson Worldwide",
+            "imageUrl": "https://media.licdn.com/dms/image/v2/D560BAQFGkKBfslcLQw/company-logo_200_200/company-logo_200_200/0/1665582872759/c_h_robinson_logo?e=2147483647&v=beta&t=kpCwHgfR3nT4qgmtebgHdT5j_VbJ3oDrsIkOxaWO77c"
+        },
+        {
+            "symbol": "CA",
+            "name": "CA, Inc.",
+            "imageUrl": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSDMNOuLa2790cCACbdY5RU8EaDZGeSKdNkKw&s"
+        },
+        {
+            "symbol": "COG",
+            "name": "Cabot Oil & Gas",
+            "imageUrl": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSKoRuOjA0rGH6sS87DXwXFyMPJELfBrT6gfw&s"
+        },
+        {
+            "symbol": "CDNS",
+            "name": "Cadence Design Systems",
+            "imageUrl": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQZ7ZWV_CDugTEVAgl-_1jnfl1AiSUR8VVSBQ&s"
+        },
+        {
+            "symbol": "CPB",
+            "name": "Campbell Soup",
+            "imageUrl": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSQOCE99AV2LJz3RSlKuBZH4WY7ze2Yu-0_Vw&s"
+        },
+        {
+            "symbol": "COF",
+            "name": "Capital One Financial",
+            "imageUrl": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRH__I0e7votfSrdMDopokv4_SoGdkC1MLRYQ&s"
+        },
+        {
+            "symbol": "CAH",
+            "name": "Cardinal Health",
+            "imageUrl": "https://bullfincher.io/logos/us/CAH.png"
+        },
+        {
+            "symbol": "CBOE",
+            "name": "CBOE Holdings",
+            "imageUrl": "https://api.admiralmarkets.com/trade_icons/bright-128/CBOE.png"
+        },
+        {
+            "symbol": "KMX",
+            "name": "Carmax Inc",
+            "imageUrl": "https://cdn.dividendmax.com/companies/carmax-inc.jpeg"
+        },
+        {
+            "symbol": "CCL",
+            "name": "Carnival Corp.",
+            "imageUrl": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTaI75T_xgkZcsgk9lFP6NLcVe3QpVachmfsA&s"
+        },
+        {
+            "symbol": "CAT",
+            "name": "Caterpillar Inc.",
+            "imageUrl": "https://s7d2.scene7.com/is/image/Caterpillar/CM20131112-34116-31362"
+        },
+        {
+            "symbol": "CBG",
+            "name": "CBRE Group",
+            "imageUrl": "https://trading212equities.s3.eu-central-1.amazonaws.com/CBREUS.png"
+        },
+        {
+            "symbol": "CBS",
+            "name": "CBS Corp.",
+            "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/f/fd/CBS_Corporation_logo.svg"
+        },
+        {
+            "symbol": "CELG",
+            "name": "Celgene Corp.",
+            "imageUrl": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTTtFB3aXPop3YMvLrgkoLXNGMqM71L8HHymA&s"
+        },
+        {
+            "symbol": "CNC",
+            "name": "Centene Corporation",
+            "imageUrl": "https://www.centene.com/content/dam/centenedotcom/open-graph/default_opengraph.jpg"
+        },
+        {
+            "symbol": "CNP",
+            "name": "CenterPoint Energy",
+            "imageUrl": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTZo5sC2NwicJXVHsiLsujBnelZdx7tKkviWA&s"
+        },
+        {
+            "symbol": "CTL",
+            "name": "CenturyLink Inc",
+            "imageUrl": "https://media.licdn.com/dms/image/v2/C4D0BAQGi2ll7bC7CHQ/company-logo_200_200/company-logo_200_200/0/1631300984431?e=2147483647&v=beta&t=Ej9zhzjF_dPG1whmzsnpB749jJ4LZvsHD7ThnJHykqo"
+        },
+        {
+            "symbol": "CERN",
+            "name": "Cerner",
+            "imageUrl": "https://www.acep.org/siteassets/sites/acep/media/health-information-technology/logo-cerner-400x495.jpg"
+        },
+        {
+            "symbol": "CF",
+            "name": "CF Industries Holdings Inc",
+            "imageUrl": "https://s.yimg.com/os/en/us.finance.gurufocus/33495dba35d80ef4c33de65f0818341a"
+        },
+        {
+            "symbol": "SCHW",
+            "name": "Charles Schwab Corporation",
+            "imageUrl": "https://play-lh.googleusercontent.com/5L2eOX9RC1_wWxbEvwETAZDQs1a8VVyQyAGBXsK_VOnt1-umQLgbWRIsz11yAYAPF28"
+        },
+        {
+            "symbol": "CHTR",
+            "name": "Charter Communications",
+            "imageUrl": "https://specials-images.forbesimg.com/dam/imageserve/684c7b598605f8e220ffcef1/400x0.png?cropX1=0&cropX2=700&cropY1=0&cropY2=700"
+        },
+        {
+            "symbol": "CHK",
+            "name": "Chesapeake Energy",
+            "imageUrl": "https://media.licdn.com/dms/image/v2/D560BAQEO3HmiyaprYg/company-logo_200_200/company-logo_200_200/0/1719595213014/chesapeake_energy_logo?e=2147483647&v=beta&t=WgPVHtuR4q9KTGOPiovj0X5p2muJCV1X_ofIGCtG6e4"
+        },
+        {
+            "symbol": "CVX",
+            "name": "Chevron Corp.",
+            "imageUrl": "https://s3-symbol-logo.tradingview.com/chevron--600.png"
+        },
+        {
+            "symbol": "CMG",
+            "name": "Chipotle Mexican Grill",
+            "imageUrl": "https://upload.wikimedia.org/wikipedia/en/3/3b/Chipotle_Mexican_Grill_logo.svg"
+        },
+        {
+            "symbol": "CB",
+            "name": "Chubb Limited",
+            "imageUrl": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTEYurDkVO3zQ826qh9AIVF5VUgStubS3sqvQ&s"
+        },
+        {
+            "symbol": "CHD",
+            "name": "Church & Dwight",
+            "imageUrl": "https://upload.wikimedia.org/wikipedia/en/thumb/d/df/Church_%26_Dwight_logo.svg/1280px-Church_%26_Dwight_logo.svg.png"
+        },
+        {
+            "symbol": "CI",
+            "name": "CIGNA Corp.",
+            "imageUrl": "https://cdn.cookielaw.org/logos/33942db4-005c-450a-a0e5-a16f93ecaa7f/01939693-636d-706f-b4f8-cf239122389d/c79c4bcb-f076-4beb-94bb-26aacc43d62a/cignahlthcr_logo_color_pos_sm_rgb.png"
+        },
+        {
+            "symbol": "XEC",
+            "name": "Cimarex Energy",
+            "imageUrl": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTSF4j3ZT2apuwzhFUEBXD3zoYwy864HItMjQ&s"
+        },
+        {
+            "symbol": "CINF",
+            "name": "Cincinnati Financial",
+            "imageUrl": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcReAva4PKMxGyk-QoeHE2LdZlJiu3wiUquRDg&s"
+        },
+        {
+            "symbol": "CTAS",
+            "name": "Cintas Corporation",
+            "imageUrl": "https://parsers.vc/logo/a5a245b9-856a-4921-ae85-a0e9c9e8a09c-1.png"
+        },
+        {
+            "symbol": "CSCO",
+            "name": "Cisco Systems",
+            "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/08/Cisco_logo_blue_2016.svg/1280px-Cisco_logo_blue_2016.svg.png"
+        },
+        {
+            "symbol": "C",
+            "name": "Citigroup Inc.",
+            "imageUrl": "https://s3-symbol-logo.tradingview.com/citigroup--600.png"
+        },
+        {
+            "symbol": "CFG",
+            "name": "Citizens Financial Group",
+            "imageUrl": "https://s3-symbol-logo.tradingview.com/citizens-financial-group--600.png"
+        },
+        {
+            "symbol": "CTXS",
+            "name": "Citrix Systems",
+            "imageUrl": "https://www.citrix.com/content/dam/citrix61/en_us/images/logos/citrix-logo-registered-tm-square-512x512.png"
+        },
+        {
+            "symbol": "CLX",
+            "name": "The Clorox Company",
+            "imageUrl": "https://www.thecloroxcompany.com/wp-content/uploads/2022/08/TCC_Stacked_1200x1200.png"
+        },
+        {
+            "symbol": "CME",
+            "name": "CME Group Inc.",
+            "imageUrl": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSOz1GrrItZt-Lkt-Dq6Hg1Zqe-K169JAvkQA&s"
+        },
+        {
+            "symbol": "CMS",
+            "name": "CMS Energy",
+            "imageUrl": "https://companieslogo.com/img/orig/CMS-2b72b642.png?t=1720244491"
+        },
+        {
+            "symbol": "KO",
+            "name": "Coca-Cola Company",
+            "imageUrl": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTP2qB5zlQc8Vskr_iII-aNDEL_u5xBUZmrBA&s"
+        },
+        {
+            "symbol": "CTSH",
+            "name": "Cognizant Technology Solutions",
+            "imageUrl": "https://s.yimg.com/ny/api/res/1.2/ed5MA_Eise0wAbdw52dwnA--/YXBwaWQ9aGlnaGxhbmRlcjt3PTY0MDtoPTY0MA--/https://media.zenfs.com/en/us.finance.gurufocus/ed6050241a60e243c806d1325dd1c7fe"
+        },
+        {
+            "symbol": "CL",
+            "name": "Colgate-Palmolive",
+            "imageUrl": "https://yt3.googleusercontent.com/n4ZwbjbiKGpvtoNExWJ8UANJR_CyBV_gEfA6y7WwNEl-uqXejHXRhFY6q9tOjEGzplwqGtcNqA=s900-c-k-c0x00ffffff-no-rj"
+        },
+        {
+            "symbol": "CMCSA",
+            "name": "Comcast Corp.",
+            "imageUrl": "https://s.yimg.com/ny/api/res/1.2/0Au9CVlqeO6bU7GsiXz6Yg--/YXBwaWQ9aGlnaGxhbmRlcjt3PTY0MDtoPTM2MA--/https://media.zenfs.com/en/us.finance.gurufocus/2a0eb73cfa663775b6c389037ff15fb8"
+        },
+        {
+            "symbol": "CMA",
+            "name": "Comerica Inc.",
+            "imageUrl": "https://ik.imagekit.io/kkbzr2uz4cp/stock/nyse/cma.png"
+        },
+        {
+            "symbol": "CAG",
+            "name": "Conagra Brands",
+            "imageUrl": "https://upload.wikimedia.org/wikipedia/en/4/44/Conagra_brands_logo17.png"
+        },
+        {
+            "symbol": "CXO",
+            "name": "Concho Resources",
+            "imageUrl": "https://www.annualreports.com/HostedData/CompanyLogos/concho_s.png"
+        },
+        {
+            "symbol": "COP",
+            "name": "ConocoPhillips",
+            "imageUrl": "https://companieslogo.com/img/orig/COP-8c03daa5.png?t=1720244491"
+        },
+        {
+            "symbol": "ED",
+            "name": "Consolidated Edison",
+            "imageUrl": "https://s3-symbol-logo.tradingview.com/consolidated-edison--600.png"
+        },
+        {
+            "symbol": "STZ",
+            "name": "Constellation Brands",
+            "imageUrl": "https://cdn.prod.website-files.com/63c140cca12dc30690fce304/66ed59d212750274e679fd42_Constellation%20Brands.svg"
+        },
+        {
+            "symbol": "COO",
+            "name": "The Cooper Companies",
+            "imageUrl": "https://media.licdn.com/dms/image/v2/C4D0BAQEhKmBM-DToBQ/company-logo_200_200/company-logo_200_200/0/1630553236007/coopercompanies_logo?e=2147483647&v=beta&t=uImb7lJcTr7CDi8BRSHEmHPnldJa9Skn9IIkLcnfxZs"
+        },
+        {
+            "symbol": "GLW",
+            "name": "Corning Inc.",
+            "imageUrl": "https://rmkcdn.successfactors.com/5da1734a/37ab45fb-30f1-4325-843b-d.jpg"
+        },
+        {
+            "symbol": "COST",
+            "name": "Costco Wholesale Corp.",
+            "imageUrl": "https://icon2.cleanpng.com/20180526/svu/avqzi3zes.webp"
+        },
+        {
+            "symbol": "COTY",
+            "name": "Coty, Inc",
+            "imageUrl": "https://yt3.googleusercontent.com/-PtocIqcoQI0PE2396tvmODRpj9aKmZu4rewUI_0Aeyxl8ItEcdWL4k99SU6SO1Hb7-_AK4YvfM=s900-c-k-c0x00ffffff-no-rj"
+        },
+        {
+            "symbol": "CCI",
+            "name": "Crown Castle International Corp.",
+            "imageUrl": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT_VGfyHRYB3c-RVnNeyDOOV-j0SYVadF66-A&s"
+        },
+        {
+            "symbol": "CSRA",
+            "name": "CSRA Inc.",
+            "imageUrl": "https://media.licdn.com/dms/image/v2/C4D0BAQEZQwgBAfJYTw/company-logo_200_200/company-logo_200_200/0/1631359573428?e=2147483647&v=beta&t=2odr7uO8Keq0WY_nuXSArYipxDBgOkWbYqaDg1LBro0"
+        },
+        {
+            "symbol": "CSX",
+            "name": "CSX Corp.",
+            "imageUrl": "https://cdn-news.warriortrading.com/wp-content/uploads/2016/01/19183305/CSX-Logo.jpg"
+        },
+        {
+            "symbol": "CMI",
+            "name": "Cummins Inc.",
+            "imageUrl": "https://wateractionhubfrontdoor-d6dwaqhbgwebcfg2.z01.azurefd.net/media/CACHE/images/organizations/2019/09/26/cummins/8af163ed348a1b6163346db312b35a34.png"
+        },
+        {
+            "symbol": "CVS",
+            "name": "CVS Health",
+            "imageUrl": "https://play-lh.googleusercontent.com/3CwK7os6VJgLefIi8Iry2pSsahB9S0IEg4rj7bgDY5tMePFxBpSB1Gulfy9rKb39-8Y"
+        },
+        {
+            "symbol": "DHI",
+            "name": "D. R. Horton",
+            "imageUrl": "https://media.licdn.com/dms/image/v2/C4E0BAQFPKpGcUw3h5A/company-logo_200_200/company-logo_200_200/0/1630599900468/dr_horton_logo?e=2147483647&v=beta&t=6GNkC9S9Zb1hRgQ2QkdJUJBNr5oxKP2QZIPupFg9O0E"
+        },
+        {
+            "symbol": "DHR",
+            "name": "Danaher Corp.",
+            "imageUrl": "https://upload.wikimedia.org/wikipedia/en/thumb/9/96/Danaher_logo_since_2023.svg/1280px-Danaher_logo_since_2023.svg.png"
+        },
+        {
+            "symbol": "DRI",
+            "name": "Darden Restaurants",
+            "imageUrl": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcROZW9xZ1wpYZ5Di5YiAjR5bbgLKgqUTGfOMQ&s"
+        },
+        {
+            "symbol": "DVA",
+            "name": "DaVita",
+            "imageUrl": "https://play-lh.googleusercontent.com/Sc0wDA6yGmaHwxymrSdzTrHgaFRP9s307hGki2BF5ckr-y0Cq1uxvv9pW3aeziisSAGB"
+        },
+        {
+            "symbol": "DE",
+            "name": "Deere & Co.",
+            "imageUrl": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRfER6o_hzGACWpHvTiOZRemJ9fgk2rMHAdNQ&s"
+        },
+        {
+            "symbol": "DLPH",
+            "name": "Delphi Automotive",
+            "imageUrl": "https://images.seeklogo.com/logo-png/52/2/delphi-autoparts-logo-png_seeklogo-526619.png"
+        },
+        {
+            "symbol": "DAL",
+            "name": "Delta Air Lines",
+            "imageUrl": "https://www.tramatm.com/_next/image?url=https%3A%2F%2Ftrama-static.s3.eu-central-1.amazonaws.com%2Fimages%2Fhall-of-fame%2Flogos%2F141-logo.png&w=3840&q=75"
+        },
+        {
+            "symbol": "XRAY",
+            "name": "Dentsply Sirona",
+            "imageUrl": "https://excelldent-bg.com/wp-content/uploads/2025/03/Dentsply_Sirona_BLUE_RGB_Logo.jpg"
+        },
+        {
+            "symbol": "DVN",
+            "name": "Devon Energy",
+            "imageUrl": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRvH9Vi3oLVeJxbDdCPiG5nJPLmGFbxtn4Dag&s"
+        },
+        {
+            "symbol": "DLR",
+            "name": "Digital Realty",
+            "imageUrl": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRLg5LB6jACHzfIpzRuXTcrbPvQJos1jpDIzQ&s"
+        },
+        {
+            "symbol": "DFS",
+            "name": "Discover Financial Services",
+            "imageUrl": "https://media.licdn.com/dms/image/v2/C560BAQEsP5_Oy6THpA/company-logo_200_200/company-logo_200_200/0/1631310170581?e=2147483647&v=beta&t=otJ0LNKGO19bG0FZaTQSiriU0S-taMn0yhiLPxBBG10"
+        },
+        {
+            "symbol": "DISCA",
+            "name": "Discovery Communications",
+            "imageUrl": "https://deadline.com/wp-content/uploads/2017/12/discovery-logo.jpg?w=647"
+        },
+        {
+            "symbol": "DISCK",
+            "name": "Discovery Communications",
+            "imageUrl": "https://deadline.com/wp-content/uploads/2017/12/discovery-logo.jpg?w=647"
+        },
+        {
+            "symbol": "DISH",
+            "name": "Dish Network",
+            "imageUrl": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS_SswMDZ0GZkFS3Ci1Vlk9X-MomZTkwpgf0g&s"
+        },
+        {
+            "symbol": "DG",
+            "name": "Dollar General",
+            "imageUrl": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTyoAZtVMIdzh5bz6RbmzOR3gHV5LaX2G6sGQ&s"
+        },
+        {
+            "symbol": "DLTR",
+            "name": "Dollar Tree",
+            "imageUrl": "https://play-lh.googleusercontent.com/iK6fpkpmc8VfgzUgmQceiazP85Ui0ru-RM1hrnBZ8IXcBvHAf8QXFjq6dAVjKrtpr4M"
+        },
+        {
+            "symbol": "D",
+            "name": "Dominion Energy",
+            "imageUrl": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRZVp_MR-FOkLq0SqMm-3yXgcVwN4o178herQ&s"
+        },
+        {
+            "symbol": "DOV",
+            "name": "Dover Corp.",
+            "imageUrl": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcShVr1lYefAQGGMsW4zWWoT0VgaXOpXW6zpWA&s"
+        },
+        {
+            "symbol": "DWDP",
+            "name": "DowDuPont",
+            "imageUrl": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR8RTMCYi2uEbo5JlrliYsLFsmzX1_L-MKD2Q&s"
+        },
+        {
+            "symbol": "DPS",
+            "name": "Dr Pepper Snapple Group",
+            "imageUrl": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRPGOA4KJ45NouDiqq3hDhW8Hth_4t0CcKTKw&s"
+        },
+        {
+            "symbol": "DTE",
+            "name": "DTE Energy",
+            "imageUrl": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSbYxPwNDBF8pxvHBf_YEsXcaR9-dXsza8tVw&s"
+        },
+        {
+            "symbol": "DRE",
+            "name": "Duke Realty Corp",
+            "imageUrl": "https://image.pitchbook.com/U2EjVcEpYaPbpAT6vSbp3dF49Ho1605442122592_200x200"
+        },
+        {
+            "symbol": "DUK",
+            "name": "Duke Energy",
+            "imageUrl": "https://image.pitchbook.com/U2EjVcEpYaPbpAT6vSbp3dF49Ho1605442122592_200x200"
+        },
+        {
+            "symbol": "DXC",
+            "name": "DXC Technology",
+            "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a3/DXC_Technology_logo_%282021%29.svg/250px-DXC_Technology_logo_%282021%29.svg.png"
+        },
+        {
+            "symbol": "ETFC",
+            "name": "E*Trade",
+            "imageUrl": "https://www.investopedia.com/thmb/oTVrNsaZsp4yUgiEWIONI3QiWwY=/fit-in/1500x750/filters:format(png):fill(white):max_bytes(150000):strip_icc()/ETRADE-logo-2025-3bdd4f60fd8d46569b7f436345c93741.jpg"
+        },
+        {
+            "symbol": "EMN",
+            "name": "Eastman Chemical",
+            "imageUrl": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRyXUx-y8FgzuHhtvSlUGZr2y9GdNIP-XqlSA&s"
+        },
+        {
+            "symbol": "ETN",
+            "name": "Eaton Corporation",
+            "imageUrl": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTY4QkbsNrZ6N2Itw8nKj18cat9vrJl93ntwQ&s"
+        },
+        {
+            "symbol": "EBAY",
+            "name": "eBay",
+            "imageUrl": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS654m-41tzb4Kd-f4V_j50sdfj-GxpKBRz0Q&s"
+        },
+        {
+            "symbol": "ECL",
+            "name": "Ecolab",
+            "imageUrl": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQlE8PhWcQqKuDUBsHhHZS-u_wpaYDzmL2QIg&s"
+        },
+        {
+            "symbol": "EIX",
+            "name": "Edison Int'l",
+            "imageUrl": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT8_Qd20BgqgrfVG1dNMg61LvsT8DisJRyqpA&s"
+        },
+        {
+            "symbol": "EW",
+            "name": "Edwards Lifesciences",
+            "imageUrl": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSDRSrms66KAHtEc_XIXzBrISypA-OwF0322Q&s"
+        },
+        {
+            "symbol": "EA",
+            "name": "Electronic Arts",
+            "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/0/0d/Electronic-Arts-Logo.svg"
+        },
+        {
+            "symbol": "EMR",
+            "name": "Emerson Electric Company",
+            "imageUrl": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ_MJGNhTyE3dpaZSOGuJ0feRuYP5kfw3BMNA&s"
+        },
+        {
+            "symbol": "ETR",
+            "name": "Entergy Corp.",
+            "imageUrl": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcStcHieCzTZto6PcBGU2S57TxiirhbCJE6AkQ&s"
+        },
+        {
+            "symbol": "EVHC",
+            "name": "Envision Healthcare",
+            "imageUrl": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRXJLhIcaGa9tXnbgvVLblmyuV815HY0NZ1WQ&s"
+        },
+        {
+            "symbol": "EOG",
+            "name": "EOG Resources",
+            "imageUrl": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRDIftSNR37jxZCipZBGqf9UYjjzwWaE7u6-g&s"
+        },
+        {
+            "symbol": "EQT",
+            "name": "EQT Corporation",
+            "imageUrl": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRQ-t0HDAHjG0aa7gqqDvWuEFoHcmbdnn6H8g&s"
+        },
+        {
+            "symbol": "EFX",
+            "name": "Equifax Inc.",
+            "imageUrl": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTEuRGVYpnSWbhse-22Weh9X3HXAVmNGqH6UA&s"
+        },
+        {
+            "symbol": "EQIX",
+            "name": "Equinix",
+            "imageUrl": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTEuRGVYpnSWbhse-22Weh9X3HXAVmNGqH6UA&s"
+        },
+        {
+            "symbol": "EQR",
+            "name": "Equity Residential",
+            "imageUrl": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQDxS3qx3hnlWMuOOEmZfhI7X4kHkEi86kUow&s"
+        },
+        {
+            "symbol": "ESS",
+            "name": "Essex Property Trust, Inc.",
+            "imageUrl": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQgnLwwldPP6qT8Xyw-gncxoezvMA0TH9Ik-g&s"
+        },
+        {
+            "symbol": "EL",
+            "name": "Estee Lauder Cos.",
+            "imageUrl": "https://cdn.ymaws.com/leadershipcalifornia.site-ym.com/resource/resmgr/sponsor-logos/estee-lauder-260.png"
+        },
+        {
+            "symbol": "ES",
+            "name": "Eversource Energy",
+            "imageUrl": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTPtKzbChyv-gslGqdVb0BEhZe_qJ4mwLTMHQ&s"
+        },
+        {
+            "symbol": "RE",
+            "name": "Everest Re Group",
+            "imageUrl": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTDFI4e_y3QyPZH9Z_QwWZlMxfZENmislxkkw&s"
+        },
+        {
+            "symbol": "EXC",
+            "name": "Exelon Corp.",
+            "imageUrl": "https://media.licdn.com/dms/image/v2/C4D0BAQFZm45ZFS9UeQ/company-logo_200_200/company-logo_200_200/0/1643803400311/exelon_logo?e=2147483647&v=beta&t=8ivDuwr0BIo6IswnJjsK-O0b449LjrXrnLB3bm53jGM"
+        },
+        {
+            "symbol": "EXPE",
+            "name": "Expedia Inc.",
+            "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/0/0a/Expedia_Group_logo.svg"
+        },
+        {
+            "symbol": "EXPD",
+            "name": "Expeditors International",
+            "imageUrl": "https://info.expeditors.com/hubfs/Photography%20Assets/Expeditors%20Branding/Red%20Flag.png"
+        },
+        {
+            "symbol": "ESRX",
+            "name": "Express Scripts",
+            "imageUrl": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQkgYOfAm25CndQSlOyG39gIMmljEjojaZ0_g&s"
+        },
+        {
+            "symbol": "EXR",
+            "name": "Extra Space Storage",
+            "imageUrl": "https://upload.wikimedia.org/wikipedia/en/thumb/3/3a/Extra_Space_Storage_Logo.svg/1280px-Extra_Space_Storage_Logo.svg.png"
+        },
+        {
+            "symbol": "XOM",
+            "name": "Exxon Mobil Corp.",
+            "imageUrl": "https://s3-symbol-logo.tradingview.com/exxon--600.png"
+        },
+        {
+            "symbol": "FFIV",
+            "name": "F5 Networks",
+            "imageUrl": "https://upload.wikimedia.org/wikipedia/en/thumb/f/f9/F5_Networks_logo.svg/1280px-F5_Networks_logo.svg.png"
+        },
+        {
+            "symbol": "FB",
+            "name": "Facebook, Inc.",
+            "imageUrl": "https://rm-15da4.kxcdn.com/wp-content/uploads/2017/01/Facebook-Inc.-Leadership.png"
+        },
+        {
+            "symbol": "FAST",
+            "name": "Fastenal Co",
+            "imageUrl": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS9mk2-aARaAxOIQv2OBqyysW_qkkAhiXLqpA&s"
+        },
+        {
+            "symbol": "FRT",
+            "name": "Federal Realty Investment Trust",
+            "imageUrl": "https://ssd2.s3.amazonaws.com/7sll8rv77a21oky947pw37nn56wn"
+        },
+        {
+            "symbol": "FDX",
+            "name": "FedEx Corporation",
+            "imageUrl": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQg7OHKjra7ryjIMoVCO5mbq5fDYqEd6Oi_1w&s"
+        },
+        {
+            "symbol": "FIS",
+            "name": "Fidelity National Information Services",
+            "imageUrl": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTneoJCddFzr0g_faQWdLznxAmllVktPt7JXQ&s"
+        },
+        {
+            "symbol": "FITB",
+            "name": "Fifth Third Bancorp",
+            "imageUrl": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTM7hNsAVfohhM20YajtI0czyEjAjxVOOTs0w&s"
+        },
+        {
+            "symbol": "FE",
+            "name": "FirstEnergy Corp",
+            "imageUrl": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRYnbR_ITFtb72Wqq7dOPXNIVglocwBmmoauQ&s"
+        },
+        {
+            "symbol": "FISV",
+            "name": "Fiserv Inc",
+            "imageUrl": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR2ajmT1CKKsmtrZm3RfHkGQe0IjJW03YA0GA&s"
+        },
+        {
+            "symbol": "FLIR",
+            "name": "FLIR Systems",
+            "imageUrl": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTinfdMDqbI-WRNLrrDIhPQ_STqjTBHUl3DPg&s"
+        },
+        {
+            "symbol": "FLS",
+            "name": "Flowserve Corporation",
+            "imageUrl": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTNW63PEa7Ix2H0MGyrC4C6KkUQQ6N7HG3vhw&s"
+        },
+        {
+            "symbol": "FLR",
+            "name": "Fluor Corp.",
+            "imageUrl": "https://pbs.twimg.com/profile_images/1559178207861129218/9EPBO_ZZ_400x400.jpg"
+        },
+        {
+            "symbol": "FMC",
+            "name": "FMC Corporation",
+            "imageUrl": "https://yt3.googleusercontent.com/ytc/AIdro_kZ1chf2xxEMdFJG0ZxSFD0ej98AUfJ5iO8TukCuqhSagI=s900-c-k-c0x00ffffff-no-rj"
+        },
+        {
+            "symbol": "FL",
+            "name": "Foot Locker Inc",
+            "imageUrl": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTlFWtnx9N6hZcd_aza1xThGhyX4UgTm9lClQ&s"
+        },
+        {
+            "symbol": "F",
+            "name": "Ford Motor",
+            "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/3/3e/Ford_logo_flat.svg"
+        },
+        {
+            "symbol": "FTV",
+            "name": "Fortive Corp",
+            "imageUrl": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTx8SzFH0qitjLbMirCL9_4oOKfaIsaohq42A&s"
+        },
+        {
+            "symbol": "FBHS",
+            "name": "Fortune Brands Home & Security",
+            "imageUrl": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSs73Y7nD33eDZROLWzsvLz8GpltKr9VFd2KQ&s"
+        },
+        {
+            "symbol": "BEN",
+            "name": "Franklin Resources",
+            "imageUrl": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSmQGf_LkcDrp9c35b1UAKfseJwu3EDsGDhKg&s"
+        },
+        {
+            "symbol": "FCX",
+            "name": "Freeport-McMoRan Inc.",
+            "imageUrl": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSFG-rnG97wLFr6sOPKfJMHysE8hSw0L-n-xA&s"
+        },
+        {
+            "symbol": "GPS",
+            "name": "Gap Inc.",
+            "imageUrl": "https://media.licdn.com/dms/image/v2/D4E0BAQG5sv-G9Q3_Xg/company-logo_200_200/company-logo_200_200/0/1688585700709/gap_inc__gap_logo?e=2147483647&v=beta&t=cBCsb5joAICAtRQCAxd_7Vwt1yoTnRUJlq7sp_QJSDU"
+        },
+        {
+            "symbol": "GRMN",
+            "name": "Garmin Ltd.",
+            "imageUrl": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSl4UMTApeph9DHjhbjnhDHSJyvfYf9Nlq0DQ&s"
+        },
+        {
+            "symbol": "IT",
+            "name": "Gartner Inc",
+            "imageUrl": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRvwww_k0-9zCLJ9Okp_J2CCD8azdjKIFBjWA&s"
+        },
+        {
+            "symbol": "GD",
+            "name": "General Dynamics",
+            "imageUrl": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQs4cVKxw6NXE03JkreBRaOuRtDARRjauW7uQ&s"
+        },
+        {
+            "symbol": "GE",
+            "name": "General Electric",
+            "imageUrl": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQs4cVKxw6NXE03JkreBRaOuRtDARRjauW7uQ&s"
+        },
+        {
+            "symbol": "GGP",
+            "name": "General Growth Properties Inc.",
+            "imageUrl": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQoSpXLJwK3hAOXmtBX6icq9_Py2QPMuvrCAA&s"
+        },
+        {
+            "symbol": "GIS",
+            "name": "General Mills",
+            "imageUrl": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQXufoqb17d8lYaMHjqJyOtehB8mjJsXICj7Q&s"
+        },
+        {
+            "symbol": "GM",
+            "name": "General Motors",
+            "imageUrl": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSLfuMhXFDwqvLwzaPS-VhyT0DmI15AMkaqOA&s"
+        },
+        {
+            "symbol": "GPC",
+            "name": "Genuine Parts",
+            "imageUrl": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRFA03qWT68JOSx-M2eus26-g-bC-bY3qCKQA&s"
+        },
+        {
+            "symbol": "GILD",
+            "name": "Gilead Sciences",
+            "imageUrl": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT3iwFjRtkSZ_b9AHocNxl_FF7ywKtaH0FNiA&s"
+        },
+        {
+            "symbol": "GPN",
+            "name": "Global Payments Inc",
+            "imageUrl": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR88JrRDF9wZE7JK4YV4dQMz5l6AR360pyohw&s"
+        },
+        {
+            "symbol": "GS",
+            "name": "Goldman Sachs Group",
+            "imageUrl": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSCtTG4PFO9ZwPB82aHWUd0AC7oBrzQXFrXXg&s"
+        },
+        {
+            "symbol": "GT",
+            "name": "Goodyear Tire & Rubber",
+            "imageUrl": "https://www.motorcities.org/images/SOTW_5-6-2020/Goodyear_logo_1950s_Goodyear_Archives_RESIZED_6.jpg"
+        },
+        {
+            "symbol": "GWW",
+            "name": "Grainger (W.W.) Inc.",
+            "imageUrl": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRn7w09MG03JZctPFI79akyK-Upxt39THkjEw&s"
+        },
+        {
+            "symbol": "HAL",
+            "name": "Halliburton Co.",
+            "imageUrl": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRaxzePToW-ApRgS4sBNvd8OHdbR6wlTDy2mQ&s"
+        },
+        {
+            "symbol": "HBI",
+            "name": "Hanesbrands Inc",
+            "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f0/Hanes-logo.svg/250px-Hanes-logo.svg.png"
+        },
+        {
+            "symbol": "HOG",
+            "name": "Harley-Davidson",
+            "imageUrl": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRXh9oJH_S4GFV-PYRytCnjXmubXTnLPBI6ZQ&s"
+        },
+        {
+            "symbol": "HRS",
+            "name": "Harris Corporation",
+            "imageUrl": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS23_ppaTgXdh-OyoitMI08rWFQLuE2znpr9A&s"
+        },
+        {
+            "symbol": "HIG",
+            "name": "Hartford Financial Svc.Gp.",
+            "imageUrl": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRDC51HKOK_MPvQ2aBmy-x7oLcj_wTmb-a-xA&s"
+        },
+        {
+            "symbol": "HAS",
+            "name": "Hasbro Inc.",
+            "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/ea/Hasbro_logo.svg/1280px-Hasbro_logo.svg.png"
+        },
+        {
+            "symbol": "HCA",
+            "name": "HCA Holdings",
+            "imageUrl": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTUCq_3eQkcLQqM-ijEg9JeYlNuYBJi8anuGQ&s"
+        },
+        {
+            "symbol": "HCP",
+            "name": "HCP Inc.",
+            "imageUrl": "https://media.licdn.com/dms/image/v2/C4E0BAQFiArLS8Sqk2g/company-logo_200_200/company-logo_200_200/0/1659710635310/hcp_packaging_usa_inc__logo?e=2147483647&v=beta&t=wiaOmmw_d7_-dH1AiJ9UPoervWWRPb-WXccbrqBi9oQ"
+        },
+        {
+            "symbol": "HP",
+            "name": "Helmerich & Payne",
+            "imageUrl": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS-YWGlz9iqjdDtYX8pDsW5h8fgY2D4xkavJw&s"
+        },
+        {
+            "symbol": "HSIC",
+            "name": "Henry Schein",
+            "imageUrl": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRSVeGqiJ6KjSX7CgxEeKZ_UnFXPcO0tK5nKg&s"
+        },
+        {
+            "symbol": "HSY",
+            "name": "The Hershey Company",
+            "imageUrl": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ7R2LYj_dH3FlCVmWrR7__Hj4JV-yYZ1rB0g&s"
+        },
+        {
+            "symbol": "HES",
+            "name": "Hess Corporation",
+            "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/5/58/Hess_Corporation_Logo.svg"
+        },
+        {
+            "symbol": "HPE",
+            "name": "Hewlett Packard Enterprise",
+            "imageUrl": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTYGIeGn07Itb3FMLjU1vRMwiQACp380UdJiQ&s"
+        },
+        {
+            "symbol": "HLT",
+            "name": "Hilton Worldwide",
+            "imageUrl": "https://1000logos.net/wp-content/uploads/2017/02/Hilton-logo.png"
+        },
+        {
+            "symbol": "HOLX",
+            "name": "Hologic",
+            "imageUrl": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSI6UliyeVizXtZyfNJ5tTJMu5SCMD9WvNeKw&s"
+        },
+        {
+            "symbol": "HD",
+            "name": "Home Depot",
+            "imageUrl": "https://yt3.googleusercontent.com/zb-CeccQq1pm8B_zvan3SZ5LGJ1EATwU6EeLye35F8wjG3nClyIzhNPA53xoUjGA4BEk6mYLmRg=s900-c-k-c0x00ffffff-no-rj"
+        },
+        {
+            "symbol": "HON",
+            "name": "Honeywell Int'l Inc.",
+            "imageUrl": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRl75rvOsSDKwnvHhBx2CqvzM3zFCINbXPV3w&s"
+        },
+        {
+            "symbol": "HRL",
+            "name": "Hormel Foods Corp.",
+            "imageUrl": "https://www.supermarketperimeter.com/ext/resources/2022/08/09/hormel-foods-logo.webp?height=667&t=1671206411&width=1080"
+        },
+        {
+            "symbol": "HST",
+            "name": "Host Hotels & Resorts",
+            "imageUrl": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT-IJQBmUzCzIShYHmxGTiHBsOjHxOF5MLvXw&s"
+        },
+        {
+            "symbol": "HPQ",
+            "name": "HP Inc.",
+            "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/0/05/HP_logo_2025.svg"
+        },
+        {
+            "symbol": "HUM",
+            "name": "Humana Inc.",
+            "imageUrl": "https://play-lh.googleusercontent.com/CDOBMPeagikrwXwkajiHLQjzDnrfrkbmjlEeOOykGezb_7YIVpq0D5831AF75lQClRU"
+        },
+        {
+            "symbol": "HBAN",
+            "name": "Huntington Bancshares",
+            "imageUrl": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSupY0MxBvT02gMB1KaB9JzOZJf9efzbAUkRg&s"
+        },
+        {
+            "symbol": "IDXX",
+            "name": "IDEXX Laboratories",
+            "imageUrl": "https://images.ctfassets.net/bxvspbo2e7cv/6AlVG4E3tXH8itXiAjrJwe/0b663565531a433a6d288057ea148319/idxx-removebg-preview.png"
+        },
+        {
+            "symbol": "INFO",
+            "name": "IHS Markit Ltd.",
+            "imageUrl": "https://assets.weforum.org/organization/image/BHjBodCTAqz5azWGLEaD6SmM-RPrCBQFaSOfVSuJCas.jpg"
+        },
+        {
+            "symbol": "ITW",
+            "name": "Illinois Tool Works",
+            "imageUrl": "https://itwtranstech.com/wp-content/uploads/2020/01/ITW_logo_square-790x680.jpg"
+        },
+        {
+            "symbol": "ILMN",
+            "name": "Illumina Inc",
+            "imageUrl": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTpa4GOuR5injdFyfzEwGgxu8xrhFQ7NZYBgQ&s"
+        },
+        {
+            "symbol": "IR",
+            "name": "Ingersoll-Rand PLC",
+            "imageUrl": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRPT0-92ONK2rbSjZwH-SB9Phw-cb3Lyp2c8g&s"
+        },
+        {
+            "symbol": "INTC",
+            "name": "Intel Corp.",
+            "imageUrl": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRNPKp7FnlnWKUi4m3GyH2scG9q4YG58b3ECg&s"
+        },
+        {
+            "symbol": "ICE",
+            "name": "Intercontinental Exchange",
+            "imageUrl": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcShOVnT_cUz3unFqlJMePzai6LPPSvysORt4w&s"
+        },
+        {
+            "symbol": "IBM",
+            "name": "International Business Machines",
+            "imageUrl": "https://product.statnano.com/resource/amar_university_world/files/images/21/1/thumbnail_c4ca4238a0b923820dcc509a6f75849b393.png"
+        },
+        {
+            "symbol": "INCY",
+            "name": "Incyte",
+            "imageUrl": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRjLei2_hicS8llAxQrsM5u8KMtB4A2V2IhOA&s"
+        },
+        {
+            "symbol": "IP",
+            "name": "International Paper",
+            "imageUrl": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRHgP9llk8Y8LUrFctQjikVpL_PjVvC80_HyQ&s"
+        },
+        {
+            "symbol": "IPG",
+            "name": "Interpublic Group",
+            "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/9/91/Interpublic_Group_of_Companies_logo.svg/1280px-Interpublic_Group_of_Companies_logo.svg.png"
+        },
+        {
+            "symbol": "IFF",
+            "name": "Intl Flavors & Fragrances",
+            "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/9/9c/IFF_Company_Logo.png"
+        },
+        {
+            "symbol": "INTU",
+            "name": "Intuit",
+            "imageUrl": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQowNoJQPWnBvzoA0eJOzHzMBWZaef7r58TUg&s"
+        },
+        {
+            "symbol": "ISRG",
+            "name": "Intuitive Surgical Inc.",
+            "imageUrl": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR1me2GsLkFrOxS_20gMqW8YANreJzV1tIkfA&s"
+        },
+        {
+            "symbol": "IVZ",
+            "name": "Invesco Ltd.",
+            "imageUrl": "https://www.wikicorporates.org/mediawiki/images/thumb/9/99/Invesco.svg/250px-Invesco.svg.png"
+        },
+        {
+            "symbol": "IRM",
+            "name": "Iron Mountain Incorporated",
+            "imageUrl": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT6hrxIxvXFiNDzR-IP3rMzYeLDE3IlL7mD6g&s"
+        },
+        {
+            "symbol": "JEC",
+            "name": "Jacobs Engineering Group",
+            "imageUrl": "https://www.4cornersed.com/media/userfiles/subsite_182/images/business-directory/members/jacobs.jpg"
+        },
+        {
+            "symbol": "JBHT",
+            "name": "J. B. Hunt Transport Services",
+            "imageUrl": "https://s3-symbol-logo.tradingview.com/j-b-hunt--600.png"
+        },
+        {
+            "symbol": "SJM",
+            "name": "JM Smucker",
+            "imageUrl": "https://www.jmsmucker.com/assets/jmsmucker/logos/JMS.png"
+        },
+        {
+            "symbol": "JNJ",
+            "name": "Johnson & Johnson",
+            "imageUrl": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQfUmfIl6bTW7peI9RiDmV6hUiEkhO0388d6g&s"
+        },
+        {
+            "symbol": "JCI",
+            "name": "Johnson Controls International",
+            "imageUrl": "https://yt3.googleusercontent.com/RCJ3w4IK6XX0Orexqxa86u53ka7kx_UqANmZ6vrWRjmwBJrC-SyRon4rTtz5fpngZSHA_9PH=s900-c-k-c0x00ffffff-no-rj"
+        },
+        {
+            "symbol": "JPM",
+            "name": "JPMorgan Chase & Co.",
+            "imageUrl": "https://images.crunchbase.com/image/upload/c_pad,h_256,w_256,f_auto,q_auto:eco,dpr_1/xcmxfdnrjp3ra61swsxe?ik-sanitizeSvg=true"
+        },
+        {
+            "symbol": "JNPR",
+            "name": "Juniper Networks",
+            "imageUrl": "https://assets.bizclikmedia.net/576/55a90e02629324a12e79a24058259a54:1aeac5c1a7461fcfd78aca9ad084f882/picture"
+        },
+        {
+            "symbol": "KSU",
+            "name": "Kansas City Southern",
+            "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/f/f5/Kansas_city_south_lines_logo.svg"
+        },
+        {
+            "symbol": "K",
+            "name": "Kellogg Co.",
+            "imageUrl": "https://yt3.googleusercontent.com/ytc/AIdro_mRXXFINt6TtWqJzjWZyC8vhaY6IbVwrOBiJboaqsiM_Q=s900-c-k-c0x00ffffff-no-rj"
+        },
+        {
+            "symbol": "KEY",
+            "name": "KeyCorp",
+            "imageUrl": "https://s3-symbol-logo.tradingview.com/keycorp--600.png"
+        },
+        {
+            "symbol": "KMB",
+            "name": "Kimberly-Clark",
+            "imageUrl": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS7INwpKMiVhGgMCNd8k0eEmJYIxxLCYoqGNw&s"
+        },
+        {
+            "symbol": "KIM",
+            "name": "Kimco Realty",
+            "imageUrl": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTePGbjnUpkfJ-Z0sxT9xnUsDRniC9LPFgodA&s"
+        },
+        {
+            "symbol": "KMI",
+            "name": "Kinder Morgan",
+            "imageUrl": "https://media.licdn.com/dms/image/v2/D560BAQFuSJ6NklQDTQ/company-logo_200_200/B56Zx4Qo4XIIAI-/0/1771544154283/kinder_morgan_logo?e=2147483647&v=beta&t=GczWEF_HMqhWq-Cb3bQ2qL47HsLUiOGooZJjcrapCsc"
+        },
+        {
+            "symbol": "KLAC",
+            "name": "KLA-Tencor Corp.",
+            "imageUrl": "https://mma.prnewswire.com/media/806571/KLA_Corporation_Logo.jpg?p=facebook"
+        },
+        {
+            "symbol": "KSS",
+            "name": "Kohl's",
+            "imageUrl": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSPykyMaojs5R1jHJpTerIExnME9pghQEzEDA&s"
+        },
+        {
+            "symbol": "KHC",
+            "name": "Kraft Heinz",
+            "imageUrl": "https://www.dairyfoods.com/ext/resources/2021/12/08/Kraft-Heinz-780x439.webp?t=1638998787"
+        },
+        {
+            "symbol": "KR",
+            "name": "Kroger Co.",
+            "imageUrl": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQcBKhclfzeHJ6vhBFMB44JNB8Kyt8elSGZqQ&s"
+        },
+        {
+            "symbol": "LB",
+            "name": "L Brands Inc.",
+            "imageUrl": "https://media.licdn.com/dms/image/v2/C4E0BAQHD8okj9rA0EQ/company-logo_200_200/company-logo_200_200/0/1630583085162/limited_brands_logo?e=2147483647&v=beta&t=01GCYx7Mbtzykg7YuCPuQ1_YWYetoJnQ1jql9eYMewk"
+        },
+        {
+            "symbol": "LLL",
+            "name": "L-3 Communications Holdings",
+            "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/81/L3_Technologies_Stacked_Logo.svg/250px-L3_Technologies_Stacked_Logo.svg.png"
+        },
+        {
+            "symbol": "LH",
+            "name": "Laboratory Corp. of America Holding",
+            "imageUrl": "https://cdn.umushroom.com/media/651ee70cb7e7f.png"
+        },
+        {
+            "symbol": "LRCX",
+            "name": "Lam Research",
+            "imageUrl": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTXji2sXD5Vy_ghF_VGL5kpacgvrqoZDoad1A&s"
+        },
+        {
+            "symbol": "LEG",
+            "name": "Leggett & Platt",
+            "imageUrl": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSBtpKTGPuDdtTUjSbtAPlYAejtau5RfzNk0Q&s"
+        },
+        {
+            "symbol": "LEN",
+            "name": "Lennar Corp.",
+            "imageUrl": "https://s3-symbol-logo.tradingview.com/lennar--600.png"
+        },
+        {
+            "symbol": "LUK",
+            "name": "Leucadia National Corp.",
+            "imageUrl": "https://media.licdn.com/dms/image/v2/C560BAQGZ3JVVPQtc5A/company-logo_200_200/company-logo_200_200/0/1631367770418?e=2147483647&v=beta&t=bpU1ukXJsw-jmf-S_irHnGInMk1bEJP3Ox-1STe_bOA"
+        },
+        {
+            "symbol": "LLY",
+            "name": "Lilly (Eli) & Co.",
+            "imageUrl": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSBceJ3FUXMQP_TUeQO6frSPqrBYWphKAyQqQ&s"
+        },
+        {
+            "symbol": "LNC",
+            "name": "Lincoln National",
+            "imageUrl": "https://assets.bizclikmedia.net/576/34a12d0a29510c023730d67308eca817:54e45f3691f6c5d3d7c01db9427c9222/picture"
+        },
+        {
+            "symbol": "LKQ",
+            "name": "LKQ Corporation",
+            "imageUrl": "https://media.licdn.com/dms/image/v2/C560BAQEFbbrYEyg8Kg/company-logo_200_200/company-logo_200_200/0/1653328505748/lkq_corporation_logo?e=2147483647&v=beta&t=HqNTDcoA23EeaGRrBiVpHgJ90kkI5HlFiMDFasSbJQo"
+        },
+        {
+            "symbol": "LMT",
+            "name": "Lockheed Martin Corp.",
+            "imageUrl": "https://yt3.googleusercontent.com/wkjDtbEI_eJhDeom6GHa0lj1o5Z9kaHk1jZw7Yo7SxhkPlvMnaA-tXFkTWtzfKiNoD8u0x8ksg=s900-c-k-c0x00ffffff-no-rj"
+        },
+        {
+            "symbol": "L",
+            "name": "Loews Corp.",
+            "imageUrl": "https://upload.wikimedia.org/wikipedia/en/thumb/7/75/Loews_Corp.svg/1280px-Loews_Corp.svg.png"
+        },
+        {
+            "symbol": "LOW",
+            "name": "Lowe's Cos.",
+            "imageUrl": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSMHrz20wloDi2C67g_ysnyOulb7qDvsX0K-Q&s"
+        },
+        {
+            "symbol": "LYB",
+            "name": "LyondellBasell",
+            "imageUrl": "https://media.licdn.com/dms/image/v2/D560BAQGZXlta9Djrgw/company-logo_200_200/company-logo_200_200/0/1719923766223/lyondell_basell_logo?e=2147483647&v=beta&t=uweFiX20gvJyhX8ELVyPW2QLxSeN_xNHvSS4EHtQ6sI"
+        },
+        {
+            "symbol": "MTB",
+            "name": "M&T Bank Corp.",
+            "imageUrl": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTrbRKGQsUPek4uYriZTJH9wGYHVs3aSEQCag&s"
+        },
+        {
+            "symbol": "MAC",
+            "name": "Macerich",
+            "imageUrl": "https://media.licdn.com/dms/image/v2/D560BAQHU6yDp8X68WQ/company-logo_200_200/company-logo_200_200/0/1683228679287/macerich_logo?e=2147483647&v=beta&t=rcA0YTny9Tk-pGHb5o0fT09MzaLXfgYFFW11vKkWwe0"
+        },
+        {
+            "symbol": "M",
+            "name": "Macy's Inc.",
+            "imageUrl": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ_H79g62VPoJRyEqomcFzC97Z-ZwVx6vZANg&s"
+        },
+        {
+            "symbol": "MRO",
+            "name": "Marathon Oil Corp.",
+            "imageUrl": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ1vGGD60WBa2vfKwd6DWeeipzl2CTXT42qTQ&s"
+        },
+        {
+            "symbol": "MPC",
+            "name": "Marathon Petroleum",
+            "imageUrl": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ1vGGD60WBa2vfKwd6DWeeipzl2CTXT42qTQ&s"
+        },
+        {
+            "symbol": "MAR",
+            "name": "Marriott Int'l.",
+            "imageUrl": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSP87PjB0bZlqMlhWAu5-tpQ5Fh76LfFFnLyQ&s"
+        },
+        {
+            "symbol": "MMC",
+            "name": "Marsh & McLennan",
+            "imageUrl": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR3oanDaPzVH_OCaaaqPYqGbA2wA6rJn_sGGw&s"
+        },
+        {
+            "symbol": "MLM",
+            "name": "Martin Marietta Materials",
+            "imageUrl": "https://mcdn.martinmarietta.com/assets/logo/logo.png"
+        },
+        {
+            "symbol": "MAS",
+            "name": "Masco Corp.",
+            "imageUrl": "https://media.licdn.com/dms/image/v2/C4E0BAQGaVS2uPVd7SQ/company-logo_200_200/company-logo_200_200/0/1630636099149/masco_corporation_logo?e=2147483647&v=beta&t=Jc6Mdf1_QwII47ekROfFhTm8wsJphxcH_EOsosCIp4k"
+        },
+        {
+            "symbol": "MA",
+            "name": "Mastercard Inc.",
+            "imageUrl": "https://www.marketbeat.com/logos/mastercard-incorporated-logo.png?v=20221020142959"
+        },
+        {
+            "symbol": "MAT",
+            "name": "Mattel Inc.",
+            "imageUrl": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRE7-vfX2KwUrrYTeostDB7Om3tn-DrSWLNXw&s"
+        },
+        {
+            "symbol": "MKC",
+            "name": "McCormick & Co.",
+            "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/e/ec/McCormick.svg"
+        },
+        {
+            "symbol": "MCD",
+            "name": "McDonald's Corp.",
+            "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/3/36/McDonald%27s_Golden_Arches.svg/250px-McDonald%27s_Golden_Arches.svg.png"
+        },
+        {
+            "symbol": "MCK",
+            "name": "McKesson Corp.",
+            "imageUrl": "https://s3-symbol-logo.tradingview.com/mckesson--600.png"
+        },
+        {
+            "symbol": "MDT",
+            "name": "Medtronic plc",
+            "imageUrl": "https://s.yimg.com/ny/api/res/1.2/STDNJWDOeQy25obL3.vzxw--/YXBwaWQ9aGlnaGxhbmRlcjt3PTY0MDtoPTY0MA--/https://media.zenfs.com/en/us.finance.gurufocus/04694342ca5364e2831e436bf927d3af"
+        },
+        {
+            "symbol": "MRK",
+            "name": "Merck & Co.",
+            "imageUrl": "https://s3-symbol-logo.tradingview.com/merck-and-co--600.png"
+        },
+        {
+            "symbol": "MET",
+            "name": "MetLife Inc.",
+            "imageUrl": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRZCxpT-MJRKymosFl4_Vfnrb5Tzl7qFhwIrw&s"
+        },
+        {
+            "symbol": "MTD",
+            "name": "Mettler Toledo",
+            "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/5/56/Mettler_Toledo.svg"
+        },
+        {
+            "symbol": "MGM",
+            "name": "MGM Resorts International",
+            "imageUrl": "https://cdn.prod.website-files.com/63c140cca12dc30690fce304/6659852c9436b3d7286053a5_MGM%20Resorts%20International.svg"
+        },
+        {
+            "symbol": "KORS",
+            "name": "Michael Kors Holdings",
+            "imageUrl": "https://i.pinimg.com/736x/a5/af/87/a5af874f6be6ea154f5a49b564ab1aa6.jpg"
+        },
+        {
+            "symbol": "MCHP",
+            "name": "Microchip Technology",
+            "imageUrl": "https://www.marketbeat.com/logos/microchip-technology-inc-logo.png"
+        },
+        {
+            "symbol": "MU",
+            "name": "Micron Technology",
+            "imageUrl": "https://s.yimg.com/ny/api/res/1.2/R1SvUpTznCxaaaiEQE1MbA--/YXBwaWQ9aGlnaGxhbmRlcjt3PTY0MDtoPTQ4MA--/https://media.zenfs.com/en/insidermonkey.com/7cf50e504f60395b7bc9d4ffb15f281a"
+        },
+        {
+            "symbol": "MSFT",
+            "name": "Microsoft Corp.",
+            "imageUrl": "https://s3-symbol-logo.tradingview.com/microsoft--600.png"
+        },
+        {
+            "symbol": "MAA",
+            "name": "Mid-America Apartments",
+            "imageUrl": "https://s3-symbol-logo.tradingview.com/mid-america-apartment-communities--600.png"
+        },
+        {
+            "symbol": "MHK",
+            "name": "Mohawk Industries",
+            "imageUrl": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRQU5hTSdjG98FJr8xcvdVmai7h-Iw3VSqHqg&s"
+        },
+        {
+            "symbol": "TAP",
+            "name": "Molson Coors Brewing Company",
+            "imageUrl": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTSzXFttIY8izt2Rn0ZajgSD3Sv4LEvS-GvJQ&s"
+        },
+        {
+            "symbol": "MDLZ",
+            "name": "Mondelez International",
+            "imageUrl": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSIat_-0S2cMLaUBAZ0bbIUbyTIPkmEXUmHow&s"
+        },
+        {
+            "symbol": "MON",
+            "name": "Monsanto Co.",
+            "imageUrl": "https://media.licdn.com/dms/image/v2/C560BAQGAPMrwiCkOdw/company-logo_200_200/company-logo_200_200/0/1631309634855?e=2147483647&v=beta&t=Tu_FCP23yEIKQHwNxf-Li-TOWkfP2pa_-YH9wsZ9jJ8"
+        },
+        {
+            "symbol": "MNST",
+            "name": "Monster Beverage",
+            "imageUrl": "https://logos-world.net/wp-content/uploads/2020/09/Monster-Energy-Symbol.png"
+        },
+        {
+            "symbol": "MCO",
+            "name": "Moody's Corp",
+            "imageUrl": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcReDcNjKIJQCVVUUaVtO_Pa2qYhU5raPqlm2A&s"
+        },
+        {
+            "symbol": "MS",
+            "name": "Morgan Stanley",
+            "imageUrl": "https://pbs.twimg.com/profile_images/1631347869687898142/ATwo7QZZ_400x400.jpg"
+        },
+        {
+            "symbol": "MOS",
+            "name": "The Mosaic Company",
+            "imageUrl": "https://yt3.googleusercontent.com/ujHp4U9IC24EpHKDBuglsbjCvyN2zLHSUHbenLoO0NfCG2wpe1gUznEi1cfjm9dN4h5uX0DIdg=s900-c-k-c0x00ffffff-no-rj"
+        },
+        {
+            "symbol": "MSI",
+            "name": "Motorola Solutions Inc.",
+            "imageUrl": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRQN8kJfSPdSctRuP8ZAUB1ZbZ3VFDOxfqEbQ&s"
+        },
+        {
+            "symbol": "MYL",
+            "name": "Mylan N.V.",
+            "imageUrl": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTyNN0IMbWmyzHUGleos-vzCUI-fOvIM_Aeow&s"
+        },
+        {
+            "symbol": "NDAQ",
+            "name": "Nasdaq, Inc.",
+            "imageUrl": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTWPp0pPxcsZnhf0z1AMIIAFwQXNBScK8Fw2g&s"
+        },
+        {
+            "symbol": "NOV",
+            "name": "National Oilwell Varco Inc.",
+            "imageUrl": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTI8NsVDp75-I_TO2CwKBPM7VCvROmi3DwF1Q&s"
+        },
+        {
+            "symbol": "NAVI",
+            "name": "Navient",
+            "imageUrl": "https://thecollegeinvestor.com/wp-content/uploads/2017/03/Navient.png"
+        },
+        {
+            "symbol": "NTAP",
+            "name": "NetApp",
+            "imageUrl": "https://www.komprise.com/wp-content/uploads/2018/01/netapp-2.png"
+        },
+        {
+            "symbol": "NFLX",
+            "name": "Netflix Inc.",
+            "imageUrl": "https://about.netflix.com/images/meta/netflix-symbol-black.png"
+        },
+        {
+            "symbol": "NWL",
+            "name": "Newell Brands",
+            "imageUrl": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRdlrLtLAwQovtx9WTE6dm3wKJMSBmD0HzQ7g&s"
+        },
+        {
+            "symbol": "NFX",
+            "name": "Newfield Exploration Co",
+            "imageUrl": "https://media.licdn.com/dms/image/v2/C4E0BAQE-rLSHFCixRQ/company-logo_200_200/company-logo_200_200/0/1631307741511?e=2147483647&v=beta&t=Lrw_EDN3UveHnUzSPGIP_Pis31cD9p-R1FNi2GlK7Zk"
+        },
+        {
+            "symbol": "NEM",
+            "name": "Newmont Mining Corporation",
+            "imageUrl": "https://media.licdn.com/dms/image/v2/D560BAQFaVl4X4jlHFg/company-logo_200_200/company-logo_200_200/0/1688575651197/newmont_logo?e=2147483647&v=beta&t=90z3C5OSpsxTyF4gB84_82_hRX3I4hQKwPHqje_qIoU"
+        },
+        {
+            "symbol": "NWSA",
+            "name": "News Corp. Class A",
+            "imageUrl": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT4IOag0zgcF2o-jxqJs6FqkZKhUeM7e5taJg&s"
+        },
+        {
+            "symbol": "NWS",
+            "name": "News Corp. Class B",
+            "imageUrl": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT4IOag0zgcF2o-jxqJs6FqkZKhUeM7e5taJg&s"
+        },
+        {
+            "symbol": "NEE",
+            "name": "NextEra Energy",
+            "imageUrl": "https://image.pitchbook.com/YtFhbt3FxQZT9KFp2SpekAljgpe1611756315988_200x200"
+        },
+        {
+            "symbol": "NLSN",
+            "name": "Nielsen Holdings",
+            "imageUrl": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR8IoNVw_IPuTuYGybiYbY7nQmaeLEBPfoGKw&s"
+        },
+        {
+            "symbol": "NKE",
+            "name": "Nike",
+            "imageUrl": "https://thumbs.dreamstime.com/b/web-183282388.jpg"
+        },
+        {
+            "symbol": "NI",
+            "name": "NiSource Inc.",
+            "imageUrl": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR-X6EAFYdRyhHgqTRuJczl2zeUA2dalYM4EQ&s"
+        },
+        {
+            "symbol": "NBL",
+            "name": "Noble Energy Inc",
+            "imageUrl": "https://media.licdn.com/dms/image/v2/C4D0BAQEkZ41vf_2pHw/company-logo_200_200/company-logo_200_200/0/1631300687529?e=2147483647&v=beta&t=mfENYhxEf0NTuAlz8IXVH8haUoVZRHcgNy5h0rsGPjE"
+        },
+        {
+            "symbol": "JWN",
+            "name": "Nordstrom",
+            "imageUrl": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRuxn5HDP47Mx8r1bzKf04BOMlYFnhdUniMgA&s"
+        },
+        {
+            "symbol": "NSC",
+            "name": "Norfolk Southern Corp.",
+            "imageUrl": "https://images.seeklogo.com/logo-png/23/2/norfolk-southern-corp-logo-png_seeklogo-232192.png"
+        },
+        {
+            "symbol": "NTRS",
+            "name": "Northern Trust Corp.",
+            "imageUrl": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ6c5cq09ALx9ULk4T-X8ZJBxOqliqZluNiTQ&s"
+        },
+        {
+            "symbol": "NOC",
+            "name": "Northrop Grumman Corp.",
+            "imageUrl": "https://static.wixstatic.com/media/b8c0dc_3285177a9ec349c8b7ff363586670077~mv2.png/v1/fill/w_380,h_380,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/Image-empty-state.png"
+        },
+        {
+            "symbol": "NCLH",
+            "name": "Norwegian Cruise Line",
+            "imageUrl": "https://seekvectorlogo.com/wp-content/uploads/2018/03/norwegian-cruise-line-vector-logo-small.png"
+        },
+        {
+            "symbol": "NRG",
+            "name": "NRG Energy",
+            "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/5b/NRG_Energy_logo.svg/250px-NRG_Energy_logo.svg.png"
+        },
+        {
+            "symbol": "NUE",
+            "name": "Nucor Corp.",
+            "imageUrl": "https://s3-symbol-logo.tradingview.com/nucor--600.png"
+        },
+        {
+            "symbol": "NVDA",
+            "name": "Nvidia Corporation",
+            "imageUrl": "https://download.logo.wine/logo/Nvidia/Nvidia-Logo.wine.png"
+        },
+        {
+            "symbol": "ORLY",
+            "name": "O'Reilly Automotive",
+            "imageUrl": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR3K0H_9t3KmRMMh4J8wK1DIs_SSyQXD4SMgQ&s"
+        },
+        {
+            "symbol": "OXY",
+            "name": "Occidental Petroleum",
+            "imageUrl": "https://images.ctfassets.net/bxvspbo2e7cv/3J4VhYP8Ztd1nZFQUVFGlg/20a87a6ded9b470e28839a4098985ed2/purepng.com-oxy-occidental-petroleum-logologobrand-logoiconslogos-251519938748tvfk9.png"
+        },
+        {
+            "symbol": "OMC",
+            "name": "Omnicom Group",
+            "imageUrl": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQYlVc9FqgUmRsqQk1otDNn260fC9FuuDeUjQ&s"
+        },
+        {
+            "symbol": "OKE",
+            "name": "ONEOK",
+            "imageUrl": "https://assets.noviams.com/novi-file-uploads/ghpb/members/oneok-logo-png-transparent-1.png"
+        },
+        {
+            "symbol": "ORCL",
+            "name": "Oracle Corp.",
+            "imageUrl": "https://media.licdn.com/dms/image/v2/D5612AQFzuW4hJBuVLw/article-cover_image-shrink_600_2000/article-cover_image-shrink_600_2000/0/1721201461109?e=2147483647&v=beta&t=o0r9poiXD91Bm8cDLx3ej0NMQp1a9JGygLoUZoaHdyM"
+        },
+        {
+            "symbol": "PCAR",
+            "name": "PACCAR Inc.",
+            "imageUrl": "https://img.ctykit.com/cdn/wa-bellevue/images/tr:w-900/8_8_17_member_paccar.jpg"
+        },
+        {
+            "symbol": "PKG",
+            "name": "Packaging Corporation of America",
+            "imageUrl": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSWMqn2lKFMfUxGqwrfwhjiGIUq2oK2DSpCRw&s"
+        },
+        {
+            "symbol": "PH",
+            "name": "Parker-Hannifin",
+            "imageUrl": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRBF_E-sTa9YAuMosPM-YkwjEvdhayeQEftwQ&s"
+        },
+        {
+            "symbol": "PDCO",
+            "name": "Patterson Companies",
+            "imageUrl": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR6v-sWb-mFoziXx6uxCVrb0YTu42ki5CMcLA&s"
+        },
+        {
+            "symbol": "PAYX",
+            "name": "Paychex Inc.",
+            "imageUrl": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSX8fkk1daYbgbJSCk_sbYOk7uifo-OhNyhyA&s"
+        },
+        {
+            "symbol": "PYPL",
+            "name": "PayPal",
+            "imageUrl": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQvxVOphxn40jmX2Zcbvf3nY1e4p6OlQrYvrg&s"
+        },
+        {
+            "symbol": "PNR",
+            "name": "Pentair Ltd.",
+            "imageUrl": "https://yt3.googleusercontent.com/ytc/AIdro_lR-wX6fUl2RBPxBEhWudISGDMLiJTrNOHNOwqv5wqjRcM=s900-c-k-c0x00ffffff-no-rj"
+        },
+        {
+            "symbol": "PBCT",
+            "name": "People's United Financial",
+            "imageUrl": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRQrU6pHaiKpAaUZrC0_cu3WIehPSbYZRqsng&s"
+        },
+        {
+            "symbol": "PEP",
+            "name": "PepsiCo Inc.",
+            "imageUrl": "https://portal.financialmodelingprep.com/positions/6810c4771e842a03549ae6a0.jpeg"
+        },
+        {
+            "symbol": "PKI",
+            "name": "PerkinElmer",
+            "imageUrl": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRtn9QYUvcP6IQBxvBIL_wYgodX-cJNsvbTMw&s"
+        },
+        {
+            "symbol": "PRGO",
+            "name": "Perrigo",
+            "imageUrl": "https://s.yimg.com/ny/api/res/1.2/js861E0gUwDoqc7i0PqxBg--/YXBwaWQ9aGlnaGxhbmRlcjt3PTY0MDtoPTY0MA--/https://media.zenfs.com/en/us.finance.gurufocus/aac7559551c13e92e7c83140b3539b6b"
+        },
+        {
+            "symbol": "PFE",
+            "name": "Pfizer Inc.",
+            "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/0/0b/Pfizer_logo.svg/250px-Pfizer_logo.svg.png"
+        },
+        {
+            "symbol": "PCG",
+            "name": "PG&E Corp.",
+            "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/25/Pacific_Gas_and_Electric_Company_logo.svg/1280px-Pacific_Gas_and_Electric_Company_logo.svg.png"
+        },
+        {
+            "symbol": "PM",
+            "name": "Philip Morris International",
+            "imageUrl": "https://yt3.googleusercontent.com/E2ld1N5fhaZaUWG8nG-z8EM1VpdumJ6o1ypubCG5vgLjPaM7RPSBV2zzqYKm0SdE31_8yfQzYg=s900-c-k-c0x00ffffff-no-rj"
+        },
+        {
+            "symbol": "PSX",
+            "name": "Phillips 66",
+            "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/6d/Phillips_66_logo.svg/1280px-Phillips_66_logo.svg.png"
+        },
+        {
+            "symbol": "PNW",
+            "name": "Pinnacle West Capital",
+            "imageUrl": "https://s3-symbol-logo.tradingview.com/pinnacle-west-capital--600.png"
+        },
+        {
+            "symbol": "PXD",
+            "name": "Pioneer Natural Resources",
+            "imageUrl": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSAYAQA7MhWHX3WcGicDCKG3H00cvOoEX0Snw&s"
+        },
+        {
+            "symbol": "PNC",
+            "name": "PNC Financial Services",
+            "imageUrl": "https://yt3.googleusercontent.com/ytc/AIdro_mhywWLg1KdUTHSP_AiVvmyOnuChwvJy2chi9X11FSScD0=s900-c-k-c0x00ffffff-no-rj"
+        },
+        {
+            "symbol": "RL",
+            "name": "Polo Ralph Lauren Corp.",
+            "imageUrl": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQqejLWPnEjoDTW7Z9mKkoNSx0RM0GIhZOlzA&s"
+        },
+        {
+            "symbol": "PPG",
+            "name": "PPG Industries",
+            "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/db/PPG_Logo.svg/1280px-PPG_Logo.svg.png"
+        },
+        {
+            "symbol": "PPL",
+            "name": "PPL Corp.",
+            "imageUrl": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQm6WGReklDAh7cFxJwrlMbvy388zBCcY_63Q&s"
+        },
+        {
+            "symbol": "PX",
+            "name": "Praxair Inc.",
+            "imageUrl": "https://media.licdn.com/dms/image/v2/C560BAQHhsIMMm7jyaQ/company-logo_200_200/company-logo_200_200/0/1660817387761/praxair_inc_logo?e=2147483647&v=beta&t=kESPilq1RotjMIYSI-gcOE8ggBMBC1oH9-TIel7nBjE"
+        },
+        {
+            "symbol": "PCLN",
+            "name": "Priceline.com Inc",
+            "imageUrl": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR30BmT4XWothBA0wlCyo4DX9_Uf53eyZgmhQ&s"
+        },
+        {
+            "symbol": "PFG",
+            "name": "Principal Financial Group",
+            "imageUrl": "https://s.yimg.com/ny/api/res/1.2/4XpwyxQNGVnxnxep.7mFPw--/YXBwaWQ9aGlnaGxhbmRlcjt3PTY0MDtoPTY0MA--/https://media.zenfs.com/en/us.finance.gurufocus/5f4b7d4f537bb48953fe4214680b55ed"
+        },
+        {
+            "symbol": "PG",
+            "name": "Procter & Gamble",
+            "imageUrl": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT2nu6hy93FEDwYnsCt8Ye2wB_5NmEAyrN_Hg&s"
+        },
+        {
+            "symbol": "PGR",
+            "name": "Progressive Corp.",
+            "imageUrl": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRrymc02FVROBCkedZNgJTCvKStaU7Kb-YA0g&s"
+        },
+        {
+            "symbol": "PLD",
+            "name": "Prologis",
+            "imageUrl": "https://media.licdn.com/dms/image/v2/D4E0BAQFTlTS0VtCIDA/company-logo_200_200/B4EZWREfBRGYAQ-/0/1741895627126/prologis_logo?e=2147483647&v=beta&t=ha6UQh9w4_zhnYtAIp2mLCKEek9bu7zxn_cLRMPk340"
+        },
+        {
+            "symbol": "PRU",
+            "name": "Prudential Financial",
+            "imageUrl": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ7mQzuCTIBvCxlV0gq8_G-iiZYWJCP05rtvQ&s"
+        },
+        {
+            "symbol": "PEG",
+            "name": "Public Serv. Enterprise Inc.",
+            "imageUrl": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSFqx3Rp0t_EtjRk3Rb2OnRYaQJrUsi2MOf9Q&s"
+        },
+        {
+            "symbol": "PSA",
+            "name": "Public Storage",
+            "imageUrl": "https://yt3.googleusercontent.com/i0Ei_47jyKk-TfMrx9sbbOjp9RQ5XK3OM6_ygZgUgxNYSxPmCRnxbs4s-JeW7gvI1aWQek9HK9c=s900-c-k-c0x00ffffff-no-rj"
+        },
+        {
+            "symbol": "PHM",
+            "name": "Pulte Homes Inc.",
+            "imageUrl": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQNe9Xah0Qasl14P8BAjKwJiTtDpy3iwoyySw&s"
+        },
+        {
+            "symbol": "PVH",
+            "name": "PVH Corp.",
+            "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f1/PVH_logo.svg/1280px-PVH_logo.svg.png"
+        },
+        {
+            "symbol": "QRVO",
+            "name": "Qorvo",
+            "imageUrl": "https://yt3.googleusercontent.com/ytc/AIdro_kvjWqLC5JUPvJz9u_fU_Dp6X-TnmCVnqBLYJx5cbUF-og=s900-c-k-c0x00ffffff-no-rj"
+        },
+        {
+            "symbol": "PWR",
+            "name": "Quanta Services Inc.",
+            "imageUrl": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSNo86cnRrd34DxJC_8F3Kd0N2MVBfyKgxNZQ&s"
+        },
+        {
+            "symbol": "QCOM",
+            "name": "QUALCOMM Inc.",
+            "imageUrl": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQJdw9GBfPWU00-WO3npiak-UnwyHDhKGtThA&s"
+        },
+        {
+            "symbol": "DGX",
+            "name": "Quest Diagnostics",
+            "imageUrl": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQofX5wfy7zWZicbm6gSnl9kByB23Uc7ywRDA&s"
+        },
+        {
+            "symbol": "Q",
+            "name": "Quintiles IMS Holdings, Inc",
+            "imageUrl": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR8RX_1wcSHCDxnRJx2lNEn3H2jjUXwhzJXhw&s"
+        },
+        {
+            "symbol": "RRC",
+            "name": "Range Resources Corp.",
+            "imageUrl": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQmrTgch4zy4fNj0-tsAGUDoddyG8sO3v8hpA&s"
+        },
+        {
+            "symbol": "RJF",
+            "name": "Raymond James Financial Inc.",
+            "imageUrl": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSl85J5A1pTdiyMahcQUqbDsm3EznemLe9ieA&s"
+        },
+        {
+            "symbol": "RTN",
+            "name": "Raytheon Co.",
+            "imageUrl": "https://appliedaero.space/wp-content/uploads/2020/03/raytheon-technologies5653.jpg"
+        },
+        {
+            "symbol": "O",
+            "name": "Realty Income Corporation",
+            "imageUrl": "https://s3-symbol-logo.tradingview.com/realty-income--600.png"
+        },
+        {
+            "symbol": "RHT",
+            "name": "Red Hat Inc.",
+            "imageUrl": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTyFM-5WkPOCiw4JY65so0idG1JGYC9pbJ1jg&s"
+        },
+        {
+            "symbol": "REG",
+            "name": "Regency Centers Corporation",
+            "imageUrl": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTeNVdIkY47YUDxXzD2r7arM5zD4c08fAGYfw&s"
+        },
+        {
+            "symbol": "REGN",
+            "name": "Regeneron",
+            "imageUrl": "https://www.regeneron.com/images/og/Regeneron_Web_OGimage.png"
+        },
+        {
+            "symbol": "RF",
+            "name": "Regions Financial Corp.",
+            "imageUrl": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcThNndZbBhWCtkgug5fCPK2QJfIErgx6SACPw&s"
+        },
+        {
+            "symbol": "RSG",
+            "name": "Republic Services Inc",
+            "imageUrl": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRM-LXK9z36u4_v-OMnETPC6WrPl-bPK460tg&s"
+        },
+        {
+            "symbol": "RMD",
+            "name": "ResMed",
+            "imageUrl": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ7C-Z0h5QQBqQTzr-l_nnceUOY48sePtlvnA&s"
+        },
+        {
+            "symbol": "RHI",
+            "name": "Robert Half International",
+            "imageUrl": "https://media.licdn.com/dms/image/v2/D560BAQFP6-a3z7Fm8Q/company-logo_200_200/company-logo_200_200/0/1696341221977/robert_half_international_logo?e=2147483647&v=beta&t=mQon2HNx8swkP7vd7MIaH3UDjLWjQXwqqgzE8qjra9g"
+        },
+        {
+            "symbol": "ROK",
+            "name": "Rockwell Automation Inc.",
+            "imageUrl": "https://cdn.prod.website-files.com/63c140cca12dc30690fce304/6728a85d42fda9e629ed9df8_Rockwell%20Automation.svg"
+        },
+        {
+            "symbol": "COL",
+            "name": "Rockwell Collins",
+            "imageUrl": "https://cdn.freebiesupply.com/logos/large/2x/rockwell-collins-logo-svg-vector.svg"
+        },
+        {
+            "symbol": "ROP",
+            "name": "Roper Technologies",
+            "imageUrl": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSaPibR5czroS5dLDud7rw5wirtA4a6v_uetg&s"
+        },
+        {
+            "symbol": "ROST",
+            "name": "Ross Stores",
+            "imageUrl": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ1tX4gN_a1HgAHwKvg3aafCUDhy7sCn3LX3w&s"
+        },
+        {
+            "symbol": "RCL",
+            "name": "Royal Caribbean Cruises Ltd",
+            "imageUrl": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQnUpfRQBY6DUvpsowAu0Gp05g7yM7ZcGT7ug&s"
+        },
+        {
+            "symbol": "CRM",
+            "name": "Salesforce.com",
+            "imageUrl": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSySVNLwSXQl6-BB-ty7YqzgeH95_MsdrVvdQ&s"
+        },
+        {
+            "symbol": "SBAC",
+            "name": "SBA Communications Corp",
+            "imageUrl": "https://s3-symbol-logo.tradingview.com/sba-communications--600.png"
+        },
+        {
+            "symbol": "SCG",
+            "name": "SCANA Corp",
+            "imageUrl": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQMXI1Skjdi9JSFRO9CHD7kaqhouSbxB2wyDw&s"
+        },
+        {
+            "symbol": "SLB",
+            "name": "Schlumberger Ltd.",
+            "imageUrl": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTqu44mVh5JtBJvDpWWP-wbtwuugxyvN3cWvw&s"
+        },
+        {
+            "symbol": "SNI",
+            "name": "Scripps Networks Interactive Inc.",
+            "imageUrl": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRBvx0-OxplAZsYq4SdczSiDDKtvkgUqVmOZw&s"
+        },
+        {
+            "symbol": "STX",
+            "name": "Seagate Technology",
+            "imageUrl": "https://yt3.googleusercontent.com/5zbyUO2kWpkKLoGZFJukmRrYgqwkNsf3xWEreN-KGr6np_zlNG-y8Mlnlr8hLcv-hq2qSh8VGQ8=s900-c-k-c0x00ffffff-no-rj"
+        },
+        {
+            "symbol": "SEE",
+            "name": "Sealed Air",
+            "imageUrl": "https://www.bioplasticsmagazine.com/bioplasticsmagazine-wAssets/img/20240206-tray.png"
+        },
+        {
+            "symbol": "SRE",
+            "name": "Sempra Energy",
+            "imageUrl": "https://media.licdn.com/dms/image/v2/C560BAQE5D_ljDddr_Q/company-logo_200_200/company-logo_200_200/0/1630656709629/sempra_energy_logo?e=2147483647&v=beta&t=COKxZ4TFJn0EbTBtfcA62Ig3IBZ_9VIOuXwYYIa-2UY"
+        },
+        {
+            "symbol": "SHW",
+            "name": "Sherwin-Williams",
+            "imageUrl": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT2NjGJdd3ITrVUsnCTUuPOTceA6ADDQcKNiA&s"
+        },
+        {
+            "symbol": "SIG",
+            "name": "Signet Jewelers",
+            "imageUrl": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQOHIDjuiWqIIrs26JJVoY6llMVJl7R6vAugQ&s"
+        },
+        {
+            "symbol": "SPG",
+            "name": "Simon Property Group Inc",
+            "imageUrl": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS-XECmoOpjjVLNiwQdJz9uU5_QPG-U5sz5mw&s"
+        },
+        {
+            "symbol": "SWKS",
+            "name": "Skyworks Solutions",
+            "imageUrl": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRXIH9fYe9MZHoYvRnIYst4FlOTfJFKKhiCjQ&s"
+        },
+        {
+            "symbol": "SLG",
+            "name": "SL Green Realty",
+            "imageUrl": "https://pbs.twimg.com/profile_images/1569454737224785922/aDiNem_D_400x400.jpg"
+        },
+        {
+            "symbol": "SNA",
+            "name": "Snap-On Inc.",
+            "imageUrl": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT0Sc4UY6inigqWVG5gKt8i8vf9HSqA2lazPg&s"
+        },
+        {
+            "symbol": "SO",
+            "name": "Southern Co.",
+            "imageUrl": "https://media.licdn.com/dms/image/v2/C4D0BAQEgnEjF5Fdghw/company-logo_200_200/company-logo_200_200/0/1631372612375/southern_company_logo?e=2147483647&v=beta&t=ZC34zZ0NMxBl7zxxmRCRDcJJ16BiwxipkzX6h7OlBcI"
+        },
+        {
+            "symbol": "LUV",
+            "name": "Southwest Airlines",
+            "imageUrl": "https://logos-world.net/wp-content/uploads/2020/10/Southwest-Airlines-Emblem.png"
+        },
+        {
+            "symbol": "SPGI",
+            "name": "S&P Global, Inc.",
+            "imageUrl": "https://yt3.googleusercontent.com/oT884qMpEQosABi6HK9axcOR-rdi_X1l3fVB_1Jg0uzc0LChisymjEv9TQfEF7ujaYyfIpNUNgA=s900-c-k-c0x00ffffff-no-rj"
+        },
+        {
+            "symbol": "SWK",
+            "name": "Stanley Black & Decker",
+            "imageUrl": "https://yt3.googleusercontent.com/ytc/AIdro_kFBowQIQQReBSQmo8jee1cBYkhMWF5H465bIeZY_eS7w=s900-c-k-c0x00ffffff-no-rj"
+        },
+        {
+            "symbol": "SBUX",
+            "name": "Starbucks Corp.",
+            "imageUrl": "https://upload.wikimedia.org/wikipedia/en/d/d3/Starbucks_Corporation_Logo_2011.svg"
+        },
+        {
+            "symbol": "STT",
+            "name": "State Street Corp.",
+            "imageUrl": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTgcGb-xz3CE7bqJjFTGB-qnQaRuhbQTvsu8Q&s"
+        },
+        {
+            "symbol": "SRCL",
+            "name": "Stericycle Inc",
+            "imageUrl": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR8hPNQfGHXo8oUAzaRSXj8yNO300lPTIQjQg&s"
+        },
+        {
+            "symbol": "SYK",
+            "name": "Stryker Corp.",
+            "imageUrl": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQXXdxi51gnr2-PiU-kiFJxD-sKUd7LyWs3RA&s"
+        },
+        {
+            "symbol": "STI",
+            "name": "SunTrust Banks",
+            "imageUrl": "https://discovereaston.com/wp-content/uploads/2018/05/10425169_10153314878409689_2457124019982037969_n.png"
+        },
+        {
+            "symbol": "SYMC",
+            "name": "Symantec Corp.",
+            "imageUrl": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR5jqwr5BzyFF6zOkVFW4N0cNSzlFqUO3s1aw&s"
+        },
+        {
+            "symbol": "SYF",
+            "name": "Synchrony Financial",
+            "imageUrl": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSvlHStPG57-2_6hzLrpZagzHk0xOlrEmXGzw&s"
+        },
+        {
+            "symbol": "SNPS",
+            "name": "Synopsys Inc.",
+            "imageUrl": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR7HwBNJdyyrwgIuNnw2dGVHlZ-tG9Y1ewhWA&s"
+        },
+        {
+            "symbol": "SYY",
+            "name": "Sysco Corp.",
+            "imageUrl": "https://investors.sysco.com/~/media/Images/S/Sysco-IR/logo/sysco-share-logo-v2.jpg"
+        },
+        {
+            "symbol": "TROW",
+            "name": "T. Rowe Price Group",
+            "imageUrl": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR3djPPynZ9G2IxAL-HBzHrZwJC3oHto6EW-Q&s"
+        },
+        {
+            "symbol": "TPR",
+            "name": "Tapestry, Inc.",
+            "imageUrl": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ8nvjMTKg64514jIGQE9xTn6qaIMhP8A8-2g&s"
+        },
+        {
+            "symbol": "TGT",
+            "name": "Target Corp.",
+            "imageUrl": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTKibIlH1kBTs8ozUg_CWpQ43cILPInvM2KNg&s"
+        },
+        {
+            "symbol": "TEL",
+            "name": "TE Connectivity Ltd.",
+            "imageUrl": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTpgwBLMr_LVqjS8dDBwAYUnClm1Art1RndKg&s"
+        },
+        {
+            "symbol": "FTI",
+            "name": "TechnipFMC",
+            "imageUrl": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS4t64Ik_A3vN02PFIsap6-ky29S375evbktg&s"
+        },
+        {
+            "symbol": "TXN",
+            "name": "Texas Instruments",
+            "imageUrl": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQcZ_wEfX8SGpM5YO5U-A-8JwvrCQ6crauweg&s"
+        },
+        {
+            "symbol": "TXT",
+            "name": "Textron Inc.",
+            "imageUrl": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ3QcwRd5sj_uCUQqtgqJX2TtwJIYurrnJ_3g&s"
+        },
+        {
+            "symbol": "TMO",
+            "name": "Thermo Fisher Scientific",
+            "imageUrl": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSzciUDoQySuLNI8SgtSBuGScs1xV4SrQOmqg&s"
+        },
+        {
+            "symbol": "TIF",
+            "name": "Tiffany & Co.",
+            "imageUrl": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQhFLdcKYrtSqVkA3frqvSrxAkMYw8BCovtig&s"
+        },
+        {
+            "symbol": "TWX",
+            "name": "Time Warner Inc.",
+            "imageUrl": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR3eCdcksj_eGZd5dwCWig-jXDN3IAOaHtWBQ&s"
+        },
+        {
+            "symbol": "TJX",
+            "name": "TJX Companies Inc.",
+            "imageUrl": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTBlV_lfgLfVFwxUhviDx-GA2kRFMj6I7_jng&s"
+        },
+        {
+            "symbol": "TMK",
+            "name": "Torchmark Corp.",
+            "imageUrl": "https://d1yjjnpx0p53s8.cloudfront.net/styles/logo-thumbnail/s3/0021/6684/brand.gif?itok=sZ7qQBD4"
+        },
+        {
+            "symbol": "TSS",
+            "name": "Total System Services",
+            "imageUrl": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR0J-F9btWSqRTqS2x2KZ8kAJXbCnja3sTT3g&s"
+        },
+        {
+            "symbol": "TSCO",
+            "name": "Tractor Supply Company",
+            "imageUrl": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQCcMnj5FeH7wCzMcUzw0NX-Rjw20Yo6701zA&s"
+        },
+        {
+            "symbol": "TDG",
+            "name": "TransDigm Group",
+            "imageUrl": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQgBERjXWvpbcqrboamspGR-LC13Iuqp6aO8A&s"
+        },
+        {
+            "symbol": "TRV",
+            "name": "The Travelers Companies Inc.",
+            "imageUrl": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ3q5NedteuLVJVRlYtlGy9YHFEWA2eDaqPAA&s"
+        },
+        {
+            "symbol": "TRIP",
+            "name": "TripAdvisor",
+            "imageUrl": "https://play-lh.googleusercontent.com/bfy2rE4Iu_15VyVAujaCtwQkThjUWWZSljcpnX2pdd4tcTO8SoGwrBhcTMwqeYjRlw"
+        },
+        {
+            "symbol": "FOXA",
+            "name": "Twenty-First Century Fox Class A",
+            "imageUrl": "https://mma.prnewswire.com/media/647075/21CF_Logo.jpg?p=facebook"
+        },
+        {
+            "symbol": "FOX",
+            "name": "Twenty-First Century Fox Class B",
+            "imageUrl": "https://mma.prnewswire.com/media/647075/21CF_Logo.jpg?p=facebook"
+        },
+        {
+            "symbol": "TSN",
+            "name": "Tyson Foods",
+            "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/4/40/Tyson_Foods_corporate_logo_%282024%29.svg"
+        },
+        {
+            "symbol": "UDR",
+            "name": "UDR Inc",
+            "imageUrl": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSIajA2wJfLO4Zmu1MYwIyDrVtzRSnGz7eMdg&s"
+        },
+        {
+            "symbol": "ULTA",
+            "name": "Ulta Salon Cosmetics & Fragrance Inc",
+            "imageUrl": "https://media.licdn.com/dms/image/v2/C4E0BAQEdxQmltFDGEA/company-logo_200_200/company-logo_200_200/0/1630570383106/ulta_logo?e=2147483647&v=beta&t=Yty2d64iH6rvp7TjLT4ZLtrTFKpPO3L5serH-Qrnu2w"
+        },
+        {
+            "symbol": "USB",
+            "name": "U.S. Bancorp",
+            "imageUrl": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSX7pHxjanrF3Bcb-5RwcHmw0Sp3vMxUHGZnA&s"
+        },
+        {
+            "symbol": "UA",
+            "name": "Under Armour",
+            "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/4/44/Under_armour_logo.svg/250px-Under_armour_logo.svg.png"
+        },
+        {
+            "symbol": "UAA",
+            "name": "Under Armour",
+            "imageUrl": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRKm0WMrF2pJV0XqQ-XoOTApKPtHgIbajoiTg&s"
+        },
+        {
+            "symbol": "UNP",
+            "name": "Union Pacific",
+            "imageUrl": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTkF_iu_rVlEdSl3fLHs6e4ltUPwB8Kwy7z8w&s"
+        },
+        {
+            "symbol": "UAL",
+            "name": "United Continental Holdings",
+            "imageUrl": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTIvnsdBpFH8ib0MyQPmDqEtVNGoTE0qfMzcQ&s"
+        },
+        {
+            "symbol": "UNH",
+            "name": "United Health Group Inc.",
+            "imageUrl": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRCsRHnFmKw5q0x1LKivJesgY_S6AiLr2gXBw&s"
+        },
+        {
+            "symbol": "UPS",
+            "name": "United Parcel Service",
+            "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/6/6b/United_Parcel_Service_logo_2014.svg/250px-United_Parcel_Service_logo_2014.svg.png"
+        },
+        {
+            "symbol": "URI",
+            "name": "United Rentals, Inc.",
+            "imageUrl": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRkmh__FoyYIWKHeXN7yP4cY2DFA39qSvnyEg&s"
+        },
+        {
+            "symbol": "UTX",
+            "name": "United Technologies",
+            "imageUrl": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSzoXiF4xC5-yTeLXmlSowTFRp_DnK3xdhplw&s"
+        },
+        {
+            "symbol": "UHS",
+            "name": "Universal Health Services, Inc.",
+            "imageUrl": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSw-kscLgxvLG0EwEnn81o4SCSoxNmGDXng-w&s"
+        },
+        {
+            "symbol": "UNM",
+            "name": "Unum Group",
+            "imageUrl": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTL04ICiMgegMh8KPjSp0FTJdae0Qaz6lIQ3Q&s"
+        },
+        {
+            "symbol": "VFC",
+            "name": "V.F. Corp.",
+            "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/8/8c/VF_Corporation_logo.svg"
+        },
+        {
+            "symbol": "VLO",
+            "name": "Valero Energy",
+            "imageUrl": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSqIx9pSs6JZQpkxmcGhLAOr68TpQgouDxHkg&s"
+        },
+        {
+            "symbol": "VAR",
+            "name": "Varian Medical Systems",
+            "imageUrl": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ0P0XLg5arxM6NJw6ucICVTwU9-yQRXVaDsw&s"
+        },
+        {
+            "symbol": "VTR",
+            "name": "Ventas Inc",
+            "imageUrl": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTlnIy1WviWbnYMgTvWCVx0deQhU8lyj_KVHw&s"
+        },
+        {
+            "symbol": "VRSN",
+            "name": "Verisign Inc.",
+            "imageUrl": "https://media.licdn.com/dms/image/v2/D4E0BAQFBueyZA-rM0Q/company-logo_200_200/B4EZm6Mmk3HoAI-/0/1759765490277/verisign_logo?e=2147483647&v=beta&t=K07ZybSb0RsQywfZQxQzZz7RofFlwld6xI7PuvVzYng"
+        },
+        {
+            "symbol": "VRSK",
+            "name": "Verisk Analytics",
+            "imageUrl": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTo3GnZaVrLdsqvtr6WXcqNFTwfIJ1mNpz4KQ&s"
+        },
+        {
+            "symbol": "VZ",
+            "name": "Verizon Communications",
+            "imageUrl": "https://g.foolcdn.com/art/companylogos/square/vz.png"
+        },
+        {
+            "symbol": "VRTX",
+            "name": "Vertex Pharmaceuticals Inc",
+            "imageUrl": "https://media.licdn.com/dms/image/v2/C560BAQGG-RxFccXwpg/company-logo_200_200/company-logo_200_200/0/1656690711711/vertex_pharmaceuticals_logo?e=2147483647&v=beta&t=zxs6DXslVph9LDkLEPNrso5sJEZT-Cmy8AKYgOuJZTY"
+        },
+        {
+            "symbol": "VIAB",
+            "name": "Viacom Inc.",
+            "imageUrl": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT4LUY3SUfQzlN5Aql2nfDisrX9lFYNYz0_Pw&s"
+        },
+        {
+            "symbol": "V",
+            "name": "Visa Inc.",
+            "imageUrl": "https://globalplatform.org/wp-content/uploads/2022/11/Visa.jpg"
+        },
+        {
+            "symbol": "VNO",
+            "name": "Vornado Realty Trust",
+            "imageUrl": "https://yt3.googleusercontent.com/GwzoKM81DHVapFK5XhR90_vHo4ldqFY8grpbwRAaT-YMOpKZo0BddZwShn3DO512pFRb9m9qHpE=s900-c-k-c0x00ffffff-no-rj"
+        },
+        {
+            "symbol": "VMC",
+            "name": "Vulcan Materials",
+            "imageUrl": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTbLQk3XWcLQqjfIa6aZwrJBSGzAArFDBYJmw&s"
+        },
+        {
+            "symbol": "WMT",
+            "name": "Wal-Mart Stores",
+            "imageUrl": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRWXaN9qNo_QDd9ZIXZqkyeZ6GdbwIicCNK5g&s"
+        },
+        {
+            "symbol": "WBA",
+            "name": "Walgreens Boots Alliance",
+            "imageUrl": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQYj1vT_GuGwkBs3Hfqpxl6id1KDChTUkQk1g&s"
+        },
+        {
+            "symbol": "DIS",
+            "name": "The Walt Disney Company",
+            "imageUrl": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSFSUr3VZKXd78SHgQvjV6dBOLpMNbl7ShUgQ&s"
+        },
+        {
+            "symbol": "WM",
+            "name": "Waste Management Inc.",
+            "imageUrl": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTkbSlqgF4gqDPyC55cIIJKgr8_QIFsv6blHA&s"
+        },
+        {
+            "symbol": "WAT",
+            "name": "Waters Corporation",
+            "imageUrl": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTlHaHmhgjpk0DvvmsCWvACzsf_2ii06Rn52w&s"
+        },
+        {
+            "symbol": "WEC",
+            "name": "Wec Energy Group Inc",
+            "imageUrl": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRDA4zPgSl5nzTVZcNMOvbhz23LYTSK5YtlSQ&s"
+        },
+        {
+            "symbol": "WFC",
+            "name": "Wells Fargo",
+            "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e2/Wells_Fargo_Logo_%282020%29.svg/250px-Wells_Fargo_Logo_%282020%29.svg.png"
+        },
+        {
+            "symbol": "HCN",
+            "name": "Welltower Inc.",
+            "imageUrl": "https://s.yimg.com/ny/api/res/1.2/4E0d6.661L_eoEXpBpZ_Uw--/YXBwaWQ9aGlnaGxhbmRlcjt3PTY0MDtoPTY0MA--/https://media.zenfs.com/en/us.finance.gurufocus/7084283f48196df220ae34395079f158"
+        },
+        {
+            "symbol": "WDC",
+            "name": "Western Digital",
+            "imageUrl": "https://prod-cdn.prod.asbis.io/s3size/el:t/h:689/rt:fill/w:894/plain/https://prod-cdn.prod.asbis.io/s3/cms/static-pages/01/7a/017aed9c2ef21c17013b1b92d3e199b9/western_digital_800x600_2.webp"
+        },
+        {
+            "symbol": "WU",
+            "name": "Western Union Co",
+            "imageUrl": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTlbCjKzoSFwvXCM8qz8F5GjDZnO3hzOoWWXw&s"
+        },
+        {
+            "symbol": "WRK",
+            "name": "WestRock Company",
+            "imageUrl": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ67442sWf8Oc5gegSAyvj7gXQvRSSnjI6_Bg&s"
+        },
+        {
+            "symbol": "WY",
+            "name": "Weyerhaeuser Corp.",
+            "imageUrl": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQaFEpRxMQ2LMnatkIs06_bJLgCg6MaaOE7aw&s"
+        },
+        {
+            "symbol": "WHR",
+            "name": "Whirlpool Corp.",
+            "imageUrl": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQJiYoTDJB7CrYmX4zqLcLRVVgqj3Pd-GWydA&s"
+        },
+        {
+            "symbol": "WMB",
+            "name": "Williams Cos.",
+            "imageUrl": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRFDbduHIXvui7qdrqmhOb6VlKeqIQeJeEpmg&s"
+        },
+        {
+            "symbol": "WLTW",
+            "name": "Willis Towers Watson",
+            "imageUrl": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSPg2iP-MXi7EjxOyPMjFypb4U1Y5bBzODMuw&s"
+        },
+        {
+            "symbol": "WYN",
+            "name": "Wyndham Worldwide",
+            "imageUrl": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT2pa_Nr0-MUVtl-Swlpl2Vduv_bL0r-MznPg&s"
+        },
+        {
+            "symbol": "WYNN",
+            "name": "Wynn Resorts",
+            "imageUrl": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRO-gUyfG5BdUz-FGXIKw-p5TaZKhf3q-SbVQ&s"
+        },
+        {
+            "symbol": "XEL",
+            "name": "Xcel Energy Inc",
+            "imageUrl": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQiuUvMA4Qn5MGWmixQl5Ha0OzRp5hhc0rUvQ&s"
+        },
+        {
+            "symbol": "XRX",
+            "name": "Xerox Corp.",
+            "imageUrl": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS4bvlpqIdx9WTx9sUqcMU-QanwAjXtpFcZOg&s"
+        },
+        {
+            "symbol": "XLNX",
+            "name": "Xilinx Inc",
+            "imageUrl": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRYPHNi7AKUPoCDn1c5aW8KgSCykeOUL_RYRA&s"
+        },
+        {
+            "symbol": "XL",
+            "name": "XL Capital",
+            "imageUrl": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSPTM12Jjr4BaN6HWHaBeQfpkhUZmHrJ7Nclg&s"
+        },
+        {
+            "symbol": "XYL",
+            "name": "Xylem Inc.",
+            "imageUrl": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQyjznDd0aXHkKna2PwvWqfPVn4vjdCqUXknA&s"
+        },
+        {
+            "symbol": "YUM",
+            "name": "Yum! Brands Inc",
+            "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/59/Yum%21_Brands_logo.svg/1280px-Yum%21_Brands_logo.svg.png"
+        },
+        {
+            "symbol": "ZBH",
+            "name": "Zimmer Biomet Holdings",
+            "imageUrl": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQOpKKs2b9O4H-HjeRoX0qEC1QLww-Eh-mQ7A&s"
+        },
+        {
+            "symbol": "ZION",
+            "name": "Zions Bancorp",
+            "imageUrl": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR9jqhQ6xGSAEzgm9w8StDLq1TpmOcjkUCjvA&s"
+        },
+        {
+            "symbol": "ZTS",
+            "name": "Zoetis",
+            "imageUrl": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTTmNdZnpXIpeUE5MFeEeJvUhoWiT0n7X2TrA&s"
+        },
+        {
+            "symbol": "TYL",
+            "name": "Tyler Technologies, Inc.",
+            "imageUrl": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQwP9fC8xTlMeqwLSGC-X733m6V2pW99wsYOA&s"
+        }
+    ]
+}
