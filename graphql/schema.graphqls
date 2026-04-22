@@ -11,14 +11,49 @@ type Snapshot {
   when: Date!
 }
 
+enum SignalAction {
+  BUY
+  HOLD
+  SELL
+}
+
+type Signal {
+  action: SignalAction!
+  quality: Int!
+  targetPrice: Float!
+  stopLoss: Float
+  targetDate: Date
+  when: Date
+}
+
+enum Period {
+  M1
+  M3
+  M6
+  Y1
+}
+
+type Bar {
+  open: Float!
+  high: Float!
+  low: Float!
+  close: Float!
+  volume: Float!
+  when: Date!
+}
+
 type Instrument {
   id: ID!
   name: String!
   snapshot: Snapshot
+  signal: Signal
+  chart(period: Period!): [Bar!]!
+  signalHistory(period: Period!): [Signal!]!
 }
 
 type Query {
   headlineTickers: [Instrument!]!
+  topMovers: [Instrument!]!
 
   instrument(id: ID!): Instrument!
 }
