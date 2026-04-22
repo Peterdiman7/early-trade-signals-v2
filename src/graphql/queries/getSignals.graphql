@@ -1,0 +1,42 @@
+query getSignals($period: Period!) {
+  signals(period: $period) {
+    count
+    items {
+      id
+      action
+      state
+      quality
+      targetPrice
+      stopLoss
+      targetDate
+      when
+
+      instrument {
+        id
+        name
+
+        snapshot {
+          id
+          open
+          high
+          low
+          close
+          change
+          changePercent
+          when
+        }
+
+        lastSignal {
+          id
+          action
+          state
+          quality
+          targetPrice
+          stopLoss
+          targetDate
+          when
+        }
+      }
+    }
+  }
+}

@@ -1,41 +1,36 @@
 <template>
-	<div :class="['s-card', signal.type]" @click="$emit('click')">
+	<div :class="['s-card', actionClass]" @click="$emit('click')">
 		<!-- ROW 1 -->
 		<div class="sc-row1">
 			<div class="sc-left">
 				<div class="sc-logo">
 					<img v-if="logoUrl" :src="logoUrl" @error="showFb = true" alt=""
 						:style="showFb ? 'display:none' : ''" />
-					<span v-if="!logoUrl || showFb" class="sc-logo-fb">{{ signal.ticker.slice(0, 4) }}</span>
+					<span v-if="!logoUrl || showFb" class="sc-logo-fb">{{ ticker }}</span>
 				</div>
 				<div>
-					<div class="sc-ticker">{{ signal.ticker }}</div>
-					<div class="sc-name">{{ signal.name }}</div>
+					<div class="sc-ticker">{{ ticker }}</div>
+					<div class="sc-name">{{ signal.instrument.name }}</div>
 				</div>
 			</div>
 			<div class="sc-right">
-				<!-- Bell -->
-				<button :class="['sc-icon-btn', { subscribed: notifStore.isSubscribed(signal.ticker) }]"
-					@click.stop="notifStore.toggleSubscription(signal.ticker)">
+				<button :class="['sc-icon-btn', { subscribed: notifStore.isSubscribed(ticker) }]"
+					@click.stop="notifStore.toggleSubscription(ticker)">
 					<svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"
 						stroke-linecap="round">
 						<path d="M18 8A6 6 0 0 0 6 8c0 7-3 9-3 9h18s-3-2-3-9" />
 						<path d="M13.73 21a2 2 0 0 1-3.46 0" />
 					</svg>
 				</button>
-				<!-- Star -->
-				<button :class="['sc-icon-btn', { 'wl-saved': inWatchlist }]"
-					@click.stop="wlStore.toggle(signal.ticker)">
+				<button :class="['sc-icon-btn', { 'wl-saved': inWatchlist }]" @click.stop="wlStore.toggle(ticker)">
 					<svg width="15" height="15" viewBox="0 0 24 24" :fill="inWatchlist ? 'var(--y)' : 'none'"
 						:stroke="inWatchlist ? 'var(--y)' : 'currentColor'" stroke-width="2.2" stroke-linecap="round">
 						<polygon
 							points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2" />
 					</svg>
 				</button>
-				<!-- Type badge -->
-				<button :class="['sig-btn', signal.type]" @click.stop>
-					{{ signal.type === 'buy' ? t('common.buy') : signal.type === 'hold' ? t('common.hold') :
-						t('common.sell') }}
+				<button :class="['sig-btn', actionClass]" @click.stop>
+					{{ actionLabel }}
 				</button>
 			</div>
 		</div>
@@ -44,64 +39,49 @@
 		<div class="sc-row2">
 			<div>
 				<div class="sc-row2-label">{{ t('signals.perfSince') }}</div>
-				<div :class="['sc-pct', sigUp ? 'up' : 'dn']">{{ sigUp ? '+' : '' }}{{ sigChg }}%</div>
+				<div :class="['sc-pct', perfUp ? 'up' : 'dn']">{{ perfUp ? '+' : '' }}{{ perfChg }}%</div>
 			</div>
 			<div class="sc-price-block">
-				<div class="sc-price">${{ signal.price.toLocaleString('en-US', {
+				<div class="sc-price">${{ close.toLocaleString('en-US', {
 					minimumFractionDigits: 2,
 					maximumFractionDigits: 2
 				}) }}</div>
-				<div class="sc-entry">{{ t('signals.entry') }}: ${{ signal.signalPrice }}</div>
+				<div class="sc-entry">{{ t('signals.entry') }}: ${{ signal.targetPrice.toFixed(2) }}</div>
 			</div>
 		</div>
 
 		<!-- ROW 4: Meta -->
 		<div class="sc-data3">
 			<div class="sd3">
-				<label>{{ t('signals.sector') }}</label>
-				<div class="v">{{ signal.sector }}</div>
-			</div>
-			<div class="sd3">
-				<label>{{ t('signals.strength') }}</label>
-				<div :class="['v', `str-${signal.strength.toLowerCase()}`]">{{ strengthLabel }}</div>
-			</div>
-			<div class="sd3">
 				<label>{{ t('signals.quality') }}</label>
-				<div :class="['v', signal.quality >= 4 ? 'q-hi' : signal.quality >= 3 ? 'q-mid' : 'q-lo']">Q{{
-					signal.quality }}/5</div>
+				<div :class="['v', signal.quality >= 4 ? 'q-hi' : signal.quality >= 3 ? 'q-mid' : 'q-lo']">
+					Q{{ signal.quality }}/5
+				</div>
 			</div>
 			<div class="sd3">
-				<label>{{ t('signals.horizon') }}</label>
-				<div class="v"><span :class="['dur-badge', signal.duration]">{{ durLabel }}</span></div>
+				<label>{{ t('detail.signalDate') }}</label>
+				<div class="v" style="font-size:10px">{{ signalDate }}</div>
+			</div>
+			<div class="sd3">
+				<label>{{ t('signals.state') }}</label>
+				<div :class="['v', stateClass]">{{ stateLabel }}</div>
+			</div>
+			<div class="sd3">
+				<label>{{ t('signals.target') }}</label>
+				<div class="v">${{ signal.targetPrice.toFixed(2) }}</div>
 			</div>
 		</div>
 
-		<!-- ROW 5: History footer -->
-		<div class="sc-footer" @click.stop>
-			<button :class="['sc-hist-toggle', { 'no-expand': !multiDay, open: histOpen }]"
-				@click="multiDay && (histOpen = !histOpen)">
+		<!-- ROW 5: Footer -->
+		<div class="sc-footer">
+			<div class="sc-hist-toggle no-expand">
 				<svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="var(--mu)" stroke-width="2"
 					stroke-linecap="round">
 					<circle cx="12" cy="12" r="10" />
 					<polyline points="12 6 12 12 16 14" />
 				</svg>
-				<span class="sc-hist-count">{{ multiDay ? `${signal.dayHistory.length} ${t('signals.signalsToday')}` :
-					`1 ${t('signals.oneSignalToday')}` }}</span>
-				<span class="sc-hist-sub">· {{ t('signals.lastAt') }} <span style="color:var(--tx)">{{ signal.signalTime
+				<span class="sc-hist-sub">{{ t('signals.lastAt') }} <span style="color:var(--tx)">{{ signalTime
 						}}</span></span>
-				<span v-if="multiDay" class="sc-hist-arrow">▾</span>
-			</button>
-		</div>
-
-		<!-- History body -->
-		<div v-if="multiDay" :class="['sc-hist-body', { open: histOpen }]">
-			<div class="sc-hist-inner">
-				<div v-for="(h, i) in signal.dayHistory" :key="i" class="sc-hist-row">
-					<span class="sc-hist-time">{{ h.time }}</span>
-					<span :class="['sc-hist-type', h.type]">{{ h.type.toUpperCase() }}</span>
-					<span class="sc-hist-price">${{ h.price }}</span>
-					<span class="sc-hist-note">{{ h.note }}</span>
-				</div>
 			</div>
 		</div>
 	</div>
@@ -109,46 +89,63 @@
 
 <script setup lang="ts">
 import { computed, ref } from 'vue'
-import type { Signal } from '@/stores/signals'
+import type { Signal } from '@/generated/graphql'
 import { LOGOS } from '@/stores/signals'
 import { useWatchlistStore } from '@/stores/watchlist'
 import { useNotifStore } from '@/stores/notif'
 import { useI18n } from '@/i18n'
 
-const props = defineProps<{ signal: Signal }>()
+const props = defineProps<{ signal: Signal; period: string }>()
 defineEmits(['click'])
 
 const wlStore = useWatchlistStore()
 const notifStore = useNotifStore()
-const { t, locale } = useI18n()
-
+const { t } = useI18n()
 const showFb = ref(false)
-const histOpen = ref(false)
 
-const logoUrl = computed(() => LOGOS[props.signal.ticker] || '')
-const inWatchlist = computed(() => wlStore.isInWatchlist(props.signal.ticker))
-const multiDay = computed(() => props.signal.dayHistory.length > 1)
+const ticker = computed(() => props.signal.instrument.id)
+const logoUrl = computed(() => LOGOS[ticker.value] || '')
+const inWatchlist = computed(() => wlStore.isInWatchlist(ticker.value))
 
-const sigChg = computed(() => ((props.signal.price - props.signal.signalPrice) / props.signal.signalPrice * 100).toFixed(2))
-const sigUp = computed(() => parseFloat(sigChg.value) >= 0)
+const close = computed(() => props.signal.instrument.snapshot?.close ?? 0)
 
-const strengthLabel = computed(() => {
+const perfChg = computed(() =>
+	((close.value - props.signal.targetPrice) / props.signal.targetPrice * 100).toFixed(2)
+)
+const perfUp = computed(() => parseFloat(perfChg.value) >= 0)
+
+const actionClass = computed(() => props.signal.action.toLowerCase())
+const actionLabel = computed(() => {
 	const map: Record<string, string> = {
-		Strong: t('common.strong'),
-		Moderate: t('common.moderate'),
-		Weak: t('common.weak'),
+		BUY: t('common.buy'), HOLD: t('common.hold'), SELL: t('common.sell'),
 	}
-	return map[props.signal.strength] || props.signal.strength
+	return map[props.signal.action] ?? props.signal.action
 })
 
-const durLabels = computed((): Record<string, string> => ({
-	intraday: t('signals.intraday'),
-	short: t('signals.short'),
-	medium: t('signals.medium'),
-	long: t('signals.long'),
-}))
+const stateClass = computed(() => {
+	const map: Record<string, string> = {
+		IN_PROGRESS: '', PROFIT: 'str-strong', LOSS: 'str-weak', EXPIRED: 'str-weak',
+	}
+	return map[props.signal.state] ?? ''
+})
+const stateLabel = computed(() => {
+	const map: Record<string, string> = {
+		IN_PROGRESS: t('signals.stateInProgress'),
+		PROFIT: t('signals.stateProfit'),
+		LOSS: t('signals.stateLoss'),
+		EXPIRED: t('signals.stateExpired'),
+	}
+	return map[props.signal.state] ?? props.signal.state
+})
 
-const durLabel = computed(() => durLabels.value[props.signal.duration] || props.signal.duration)
+const signalDate = computed(() => {
+	if (!props.signal.when) return '—'
+	return new Date(props.signal.when).toLocaleDateString('en-GB', { day: '2-digit', month: 'short', year: '2-digit' })
+})
+const signalTime = computed(() => {
+	if (!props.signal.when) return '—'
+	return new Date(props.signal.when).toLocaleTimeString('en-GB', { hour: '2-digit', minute: '2-digit' })
+})
 </script>
 
 <style scoped>

@@ -5,13 +5,13 @@
 				<div class="back-btn" @click="$emit('close')">←</div>
 				<div class="dh-logo">
 					<img v-if="!showFb" :src="logoUrl" @error="showFb = true" alt="" />
-					<span v-else class="dh-logo-fb">{{ signal.ticker.slice(0, 4) }}</span>
+					<span v-else class="dh-logo-fb">{{ ticker }}</span>
 				</div>
 				<div class="dh-title">
-					<div class="dh-ticker">{{ signal.ticker }}</div>
-					<div class="dh-name">{{ signal.name }}</div>
+					<div class="dh-ticker">{{ ticker }}</div>
+					<div class="dh-name">{{ signal.instrument.name }}</div>
 				</div>
-				<div :class="['d-badge', signal.type]">{{ signal.type.toUpperCase() }}</div>
+				<div :class="['d-badge', actionClass]">{{ signal.action }}</div>
 			</div>
 
 			<div class="wl-banner"
@@ -20,7 +20,7 @@
 					<div class="wl-banner-text">{{ inWl ? t('detail.inWatchlist') : t('detail.addToWatchlist') }}</div>
 					<div class="wl-banner-sub">{{ inWl ? t('detail.trackSaved') : t('detail.trackDesc') }}</div>
 				</div>
-				<button :class="['wl-banner-btn', { saved: inWl }]" @click="wlStore.toggle(signal.ticker)">
+				<button :class="['wl-banner-btn', { saved: inWl }]" @click="wlStore.toggle(ticker)">
 					{{ inWl ? t('detail.removeBtn') : t('detail.addBtn') }}
 				</button>
 			</div>
@@ -28,14 +28,14 @@
 			<div class="detail-body">
 				<div class="price-hero">
 					<div class="ph-main">
-						<div class="ph-price">${{ signal.price.toLocaleString('en-US', { minimumFractionDigits: 2 }) }}
+						<div class="ph-price">${{ close.toLocaleString('en-US', { minimumFractionDigits: 2 }) }}</div>
+						<div :class="['ph-change', changePercent >= 0 ? 'up' : 'down']">
+							{{ changePercent >= 0 ? '+' : '' }}{{ changePercent.toFixed(2) }}%
 						</div>
-						<div :class="['ph-change', signal.change >= 0 ? 'up' : 'down']">{{ signal.change >= 0 ? '+' : ''
-							}}{{ signal.change }}%</div>
 					</div>
 					<div class="ph-since">
-						{{ t('detail.since') }} {{ signal.signalDate }} (${{ signal.signalPrice }}):
-						<strong :style="{ color: sigUp ? 'var(--g)' : 'var(--r)' }">{{ sigUp ? '+' : '' }}{{ sigChg
+						{{ t('detail.since') }} {{ signalDate }} (${{ signal.targetPrice.toFixed(2) }}):
+						<strong :style="{ color: perfUp ? 'var(--g)' : 'var(--r)' }">{{ perfUp ? '+' : '' }}{{ perfChg
 							}}%</strong>
 					</div>
 				</div>
@@ -49,126 +49,72 @@
 						t('detail.tabBacktrack') }}</button>
 				</div>
 
+				<!-- Overview -->
 				<div v-if="dTab === 'overview'">
 					<div class="info-grid">
-						<div class="i-cell"><label>{{ t('detail.signalDate') }}</label>
-							<div class="v">{{ signal.signalDate }}</div>
+						<div class="i-cell">
+							<label>{{ t('detail.signalDate') }}</label>
+							<div class="v">{{ signalDate }}</div>
 						</div>
-						<div class="i-cell"><label>{{ t('detail.strength') }}</label>
-							<div class="v"
-								:style="{ color: signal.strength === 'Strong' ? 'var(--g)' : signal.strength === 'Moderate' ? 'var(--y)' : 'var(--r)' }">
-								{{ strengthLabel }}
-							</div>
-						</div>
-						<div class="i-cell"><label>{{ t('detail.quality') }}</label>
+						<div class="i-cell">
+							<label>{{ t('detail.quality') }}</label>
 							<div class="v"
 								:style="{ color: signal.quality >= 4 ? 'var(--g)' : signal.quality >= 3 ? 'var(--y)' : 'var(--r)' }">
 								Q{{ signal.quality }}/5 {{ stars }}
 							</div>
 						</div>
-						<div class="i-cell"><label>{{ t('detail.horizon') }}</label>
-							<div class="v"><span :class="['dur-badge', signal.duration]">{{ durLabel }}</span></div>
+						<div class="i-cell">
+							<label>{{ t('signals.state') }}</label>
+							<div class="v">{{ stateLabel }}</div>
 						</div>
-						<div class="i-cell"><label>{{ t('detail.sector') }}</label>
-							<div class="v">{{ signal.sector }}</div>
+						<div class="i-cell">
+							<label>{{ t('signals.target') }}</label>
+							<div class="v">${{ signal.targetPrice.toFixed(2) }}</div>
 						</div>
-						<div class="i-cell"><label>{{ t('signals.entry') }}</label>
-							<div class="v">${{ signal.signalPrice }}</div>
+						<div class="i-cell" v-if="signal.stopLoss">
+							<label>{{ t('signals.stopLoss') }}</label>
+							<div class="v" style="color:var(--r)">${{ signal.stopLoss.toFixed(2) }}</div>
+						</div>
+						<div class="i-cell" v-if="signal.targetDate">
+							<label>{{ t('signals.targetDate') }}</label>
+							<div class="v" style="font-size:11px">{{ signal.targetDate }}</div>
 						</div>
 					</div>
 
-					<!-- Price chart with period buttons -->
 					<div class="chart-box">
 						<div class="cb-head">
 							<span class="cb-title">{{ t('detail.priceCourse') }}</span>
 							<div class="period-btns">
-								<button v-for="p in periods" :key="p" :class="['pb', { on: activePeriod === p }]"
-									@click="activePeriod = p">{{ p }}</button>
+								<button v-for="p in periodOptions" :key="p.value"
+									:class="['pb', { on: activePeriod === p.value }]" @click="activePeriod = p.value">{{
+										p.label }}</button>
 							</div>
 						</div>
-						<ChartPrice :price="signal.price" :type="signal.type" :period="activePeriod" :height="210" />
-					</div>
-
-					<div class="hist-box">
-						<div class="ab-title" style="margin-bottom:9px">{{ t('detail.signalHistory') }}</div>
-						<div v-for="(h, i) in histItems" :key="i" class="hist-item">
-							<div :class="['hist-dot', h.type]"></div>
-							<div class="hist-info">
-								<div class="hist-date">{{ h.date }}</div>
-								<div :class="['hist-type', h.type]">{{ h.type.toUpperCase() }}-{{
-									t('signals.title').includes('Signal') ? 'Signal' : 'Signal' }}</div>
-							</div>
-							<div class="hist-right">
-								<div class="hist-price">${{ h.price }}</div>
-								<div :class="['hist-perf', h.perf >= 0 ? 'up' : 'down']">{{ h.perf >= 0 ? '+' : '' }}{{
-									h.perf }}%</div>
-							</div>
-						</div>
+						<ChartPrice :chartData="signal.instrument.chart" :type="actionClass" :height="210" />
 					</div>
 				</div>
 
+				<!-- Analysis (static/placeholder — no schema field) -->
 				<div v-else-if="dTab === 'analysis'">
 					<div class="analysis-box">
 						<div class="ab-title">{{ t('detail.companyAnalysis') }}</div>
 						<div class="ab-text">{{ analysisText }}</div>
 					</div>
-					<div class="news-box">
-						<div class="ab-title">{{ t('detail.newsSentiment') }}</div>
-						<div class="news-counts">
-							<div class="nc-item">
-								<div class="nc-num pos">4</div>
-								<div class="nc-lbl">{{ t('detail.positive') }}</div>
-							</div>
-							<div class="nc-item">
-								<div class="nc-num neg">2</div>
-								<div class="nc-lbl">{{ t('detail.negative') }}</div>
-							</div>
-							<div class="nc-item">
-								<div class="nc-num neu">2</div>
-								<div class="nc-lbl">{{ t('detail.neutral') }}</div>
-							</div>
-						</div>
-						<div class="nm-bar">
-							<div class="nm-seg pos" style="width:50%"></div>
-							<div class="nm-seg neg" style="width:25%"></div>
-							<div class="nm-seg neu" style="width:25%"></div>
-						</div>
-						<div class="news-list">
-							<div v-for="n in newsItems" :key="n.headline" class="news-item">
-								<div :class="['news-dot', n.s]"></div>
-								<div class="news-text"><strong>{{ n.headline }}</strong>{{ n.impact }} <span
-										style="font-size:8px;color:var(--mu2)">· {{ n.age }}</span></div>
-							</div>
-						</div>
-					</div>
 				</div>
 
+				<!-- Backtrack (static/placeholder) -->
 				<div v-else>
 					<div class="bt-box">
 						<div class="ab-title">{{ t('detail.backtracking') }}</div>
 						<div class="bt-summary">
-							<div class="bts-i"><label>{{ t('detail.btTotalReturn') }}</label>
-								<div class="v" style="color:var(--g)">+18.4%</div>
-							</div>
-							<div class="bts-i"><label>{{ t('detail.btWinRate') }}</label>
+							<div class="bts-i">
+								<label>{{ t('detail.btWinRate') }}</label>
 								<div class="v">{{ signal.quality * 15 }}%</div>
 							</div>
-							<div class="bts-i"><label>{{ t('detail.btTrades') }}</label>
-								<div class="v">5</div>
+							<div class="bts-i">
+								<label>{{ t('detail.btTrades') }}</label>
+								<div class="v">—</div>
 							</div>
-							<div class="bts-i"><label>{{ t('detail.btPeriod') }}</label>
-								<div class="v" style="font-size:10px">{{ t('detail.btMonths6') }}</div>
-							</div>
-						</div>
-						<div style="margin-bottom:11px">
-							<ChartPortfolio :totalVal="signal.price" :height="140" />
-						</div>
-						<div v-for="(tr, i) in btTrades" :key="i" class="bt-trade">
-							<span :class="['type', tr.type]">{{ tr.type.toUpperCase() }}</span>
-							<span class="dates">{{ t('signals.entry') }}: ${{ tr.entry }} → {{ t('signals.entry') }}:
-								${{ tr.exit }}<br>{{ tr.from }} → {{ tr.to }}</span>
-							<span :class="['perf', tr.pnl >= 0 ? 'up' : 'down']">{{ tr.pnl >= 0 ? '+' : '' }}{{
-								tr.pnl.toFixed(1) }}%</span>
 						</div>
 					</div>
 				</div>
@@ -179,78 +125,70 @@
 
 <script setup lang="ts">
 import { computed, ref } from 'vue'
-import type { Signal } from '@/stores/signals'
+import type { Signal, Period } from '@/generated/graphql'
 import { LOGOS } from '@/stores/signals'
 import { useWatchlistStore } from '@/stores/watchlist'
 import { useI18n } from '@/i18n'
 import ChartPrice from '@/components/ChartPrice.vue'
-import ChartPortfolio from '@/components/ChartPortfolio.vue'
 
-const props = defineProps<{ signal: Signal }>()
+const props = defineProps<{ signal: Signal; period: Period }>()
 defineEmits(['close'])
 
 const wlStore = useWatchlistStore()
 const { t } = useI18n()
 const showFb = ref(false)
 const dTab = ref<'overview' | 'analysis' | 'backtrack'>('overview')
-const activePeriod = ref('1M')
-const periods = ['1M', '3M', '6M', '1J']
+const activePeriod = ref(props.period)
 
-const logoUrl = computed(() => LOGOS[props.signal.ticker] || '')
-const inWl = computed(() => wlStore.isInWatchlist(props.signal.ticker))
-const sigChg = computed(() => ((props.signal.price - props.signal.signalPrice) / props.signal.signalPrice * 100).toFixed(2))
-const sigUp = computed(() => parseFloat(sigChg.value) >= 0)
+const periodOptions = [
+	{ value: 'D1', label: '1D' },
+	{ value: 'M1', label: '1M' },
+	{ value: 'M3', label: '3M' },
+	{ value: 'M6', label: '6M' },
+	{ value: 'Y1', label: '1Y' },
+]
 
-const strengthLabel = computed(() => {
+const ticker = computed(() => props.signal.instrument.id)
+const logoUrl = computed(() => LOGOS[ticker.value] || '')
+const inWl = computed(() => wlStore.isInWatchlist(ticker.value))
+const close = computed(() => props.signal.instrument.snapshot?.close ?? 0)
+const changePercent = computed(() => props.signal.instrument.snapshot?.changePercent ?? 0)
+
+const perfChg = computed(() =>
+	((close.value - props.signal.targetPrice) / props.signal.targetPrice * 100).toFixed(2)
+)
+const perfUp = computed(() => parseFloat(perfChg.value) >= 0)
+
+const actionClass = computed(() => props.signal.action.toLowerCase())
+
+const stateLabel = computed(() => {
 	const map: Record<string, string> = {
-		Strong: t('common.strong'),
-		Moderate: t('common.moderate'),
-		Weak: t('common.weak'),
+		IN_PROGRESS: t('signals.stateInProgress'),
+		PROFIT: t('signals.stateProfit'),
+		LOSS: t('signals.stateLoss'),
+		EXPIRED: t('signals.stateExpired'),
 	}
-	return map[props.signal.strength] || props.signal.strength
+	return map[props.signal.state] ?? props.signal.state
 })
 
-const durLabel = computed(() => {
-	const map: Record<string, string> = {
-		intraday: t('signals.intraday'),
-		short: t('signals.short'),
-		medium: t('signals.medium'),
-		long: t('signals.long'),
-	}
-	return map[props.signal.duration] || props.signal.duration
+const signalDate = computed(() => {
+	if (!props.signal.when) return '—'
+	return new Date(props.signal.when).toLocaleDateString('en-GB', { day: '2-digit', month: 'short', year: 'numeric' })
 })
 
-const stars = computed(() => { let s = ''; for (let i = 1; i <= 5; i++) s += i <= props.signal.quality ? '★' : '☆'; return s })
+const stars = computed(() => {
+	let s = ''
+	for (let i = 1; i <= 5; i++) s += i <= props.signal.quality ? '★' : '☆'
+	return s
+})
 
 const analysisText = computed(() =>
 	t('detail.companyAnalysisText')
-		.replace('{name}', props.signal.name)
-		.replace('{sector}', props.signal.sector)
-		.replace('{strength}', strengthLabel.value)
+		.replace('{name}', props.signal.instrument.name)
+		.replace('{sector}', '')
+		.replace('{strength}', '')
 		.replace('{quality}', String(props.signal.quality))
 )
-
-const histItems = computed(() => [
-	{ date: 'Feb 22, 2026 09:58', type: props.signal.type, price: props.signal.price, perf: props.signal.change },
-	{ date: 'Feb 15, 2026 10:12', type: 'hold', price: +(props.signal.price * .98).toFixed(2), perf: 0.83 },
-	{ date: 'Feb 01, 2026 09:45', type: 'buy', price: +(props.signal.price * .95).toFixed(2), perf: 3.21 },
-	{ date: 'Jan 18, 2026 11:03', type: 'sell', price: +(props.signal.price * .92).toFixed(2), perf: -1.44 },
-	{ date: 'Jan 05, 2026 09:30', type: 'buy', price: +(props.signal.price * .88).toFixed(2), perf: 4.72 }
-])
-
-const newsItems = computed(() => [
-	{ s: 'pos', headline: t('detail.newsList.headline1'), age: '1d', impact: t('detail.newsList.impact1') },
-	{ s: 'pos', headline: t('detail.newsList.headline2'), age: '2d', impact: t('detail.newsList.impact2') },
-	{ s: 'neu', headline: t('detail.newsList.headline3'), age: '2d', impact: t('detail.newsList.impact3') },
-	{ s: 'neg', headline: t('detail.newsList.headline4'), age: '3d', impact: t('detail.newsList.impact4') },
-])
-
-const btTrades = computed(() => [
-	{ type: 'buy', entry: +(props.signal.signalPrice * .82).toFixed(2), exit: +(props.signal.signalPrice * .91).toFixed(2), from: '2025-10-01', to: '2025-10-18', pnl: 10.9 },
-	{ type: 'sell', entry: +(props.signal.signalPrice * .93).toFixed(2), exit: +(props.signal.signalPrice * .89).toFixed(2), from: '2025-10-22', to: '2025-11-05', pnl: 4.3 },
-	{ type: 'buy', entry: +(props.signal.signalPrice * .88).toFixed(2), exit: +(props.signal.signalPrice * .96).toFixed(2), from: '2025-11-10', to: '2025-11-28', pnl: 9.1 },
-	{ type: 'buy', entry: +(props.signal.signalPrice * .96).toFixed(2), exit: props.signal.price, from: '2025-12-20', to: '2026-02-22', pnl: parseFloat(sigChg.value) }
-])
 </script>
 
 <style scoped>

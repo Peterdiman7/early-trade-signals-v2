@@ -14,63 +14,60 @@
 
 				<!-- Tabs -->
 				<div class="tabs" style="margin-bottom:14px">
-					<button :class="['tab buy', { on: sigStore.filterType === 'buy' }]"
-						@click="sigStore.filterType = 'buy'">
+					<button :class="['tab buy', { on: filterAction === 'BUY' }]" @click="filterAction = 'BUY'">
 						<svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor"
 							stroke-width="2.5" stroke-linecap="round">
 							<polyline points="23 6 13.5 15.5 8.5 10.5 1 18" />
 							<polyline points="17 6 23 6 23 12" />
 						</svg>
-						{{ t('signals.buyTab') }} <span class="ct">{{ sigStore.buySignals.length }}</span>
+						{{ t('signals.buyTab') }} <span class="ct">{{ countByAction('BUY') }}</span>
 					</button>
-					<button :class="['tab hold', { on: sigStore.filterType === 'hold' }]"
-						@click="sigStore.filterType = 'hold'">
+					<button :class="['tab hold', { on: filterAction === 'HOLD' }]" @click="filterAction = 'HOLD'">
 						<svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor"
 							stroke-width="2.5" stroke-linecap="round">
 							<circle cx="12" cy="12" r="10" />
 							<line x1="10" y1="15" x2="10" y2="9" />
 							<line x1="14" y1="15" x2="14" y2="9" />
 						</svg>
-						{{ t('signals.holdTab') }} <span class="ct">{{ sigStore.holdSignals.length }}</span>
+						{{ t('signals.holdTab') }} <span class="ct">{{ countByAction('HOLD') }}</span>
 					</button>
-					<button :class="['tab sell', { on: sigStore.filterType === 'sell' }]"
-						@click="sigStore.filterType = 'sell'">
+					<button :class="['tab sell', { on: filterAction === 'SELL' }]" @click="filterAction = 'SELL'">
 						<svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor"
 							stroke-width="2.5" stroke-linecap="round">
 							<polyline points="23 18 13.5 8.5 8.5 13.5 1 6" />
 							<polyline points="17 18 23 18 23 12" />
 						</svg>
-						{{ t('signals.sellTab') }} <span class="ct">{{ sigStore.sellSignals.length }}</span>
+						{{ t('signals.sellTab') }} <span class="ct">{{ countByAction('SELL') }}</span>
 					</button>
 				</div>
 
 				<!-- Filters -->
 				<div style="display:grid;grid-template-columns:1fr 1fr;gap:8px;margin-bottom:14px">
-					<!-- Duration -->
+					<!-- Period -->
 					<div style="position:relative">
-						<button :class="['fdd-btn', { active: sigStore.filterDuration !== 'all', open: durOpen }]"
-							@click="durOpen = !durOpen; qualOpen = false">
+						<button :class="['fdd-btn', { active: period !== 'M1', open: periodOpen }]"
+							@click="periodOpen = !periodOpen; qualOpen = false">
 							<svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor"
 								stroke-width="2.5" stroke-linecap="round">
 								<circle cx="12" cy="12" r="10" />
 								<polyline points="12 6 12 12 16 14" />
 							</svg>
-							<span>{{ durLabel }}</span>
+							<span>{{ periodLabel }}</span>
 							<svg class="fdd-caret" width="10" height="10" viewBox="0 0 24 24" fill="none"
 								stroke="currentColor" stroke-width="2.5" stroke-linecap="round">
 								<polyline points="6 9 12 15 18 9" />
 							</svg>
 						</button>
-						<div :class="['fdd-menu', { open: durOpen }]">
-							<div v-for="o in durOptions" :key="o.value"
-								:class="['fdd-item', { on: sigStore.filterDuration === o.value }]"
-								@click="sigStore.filterDuration = o.value as any; durOpen = false">{{ o.label }}</div>
+						<div :class="['fdd-menu', { open: periodOpen }]">
+							<div v-for="o in periodOptions" :key="o.value"
+								:class="['fdd-item', { on: period === o.value }]"
+								@click="period = o.value as Period; periodOpen = false">{{ o.label }}</div>
 						</div>
 					</div>
 					<!-- Quality -->
 					<div style="position:relative">
-						<button :class="['fdd-btn', { active: sigStore.filterQuality > 0, open: qualOpen }]"
-							@click="qualOpen = !qualOpen; durOpen = false">
+						<button :class="['fdd-btn', { active: filterQuality > 0, open: qualOpen }]"
+							@click="qualOpen = !qualOpen; periodOpen = false">
 							<svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor"
 								stroke-width="2.5" stroke-linecap="round">
 								<polygon
@@ -84,8 +81,8 @@
 						</button>
 						<div :class="['fdd-menu', { open: qualOpen }]">
 							<div v-for="o in qualOptions" :key="o.value"
-								:class="['fdd-item', { on: sigStore.filterQuality === o.value }]"
-								@click="sigStore.filterQuality = o.value; qualOpen = false">{{ o.label }}</div>
+								:class="['fdd-item', { on: filterQuality === o.value }]"
+								@click="filterQuality = o.value; qualOpen = false">{{ o.label }}</div>
 						</div>
 					</div>
 				</div>
@@ -93,11 +90,11 @@
 
 			<!-- Signal cards -->
 			<div style="padding:0 16px 80px">
-				<div v-if="sigStore.loading" style="text-align:center;padding:48px;color:var(--mu)">
+				<div v-if="fetching" style="text-align:center;padding:48px;color:var(--mu)">
 					<span class="loader"></span>
 				</div>
 				<template v-else>
-					<SignalCard v-for="s in filtered" :key="s.id" :signal="s" @click="selected = s" />
+					<SignalCard v-for="s in filtered" :key="s.id" :signal="s" :period="period" @click="selected = s" />
 					<div v-if="filtered.length === 0" style="text-align:center;padding:48px 24px;color:var(--mu)">
 						<div style="font-size:13px;font-weight:700;margin-bottom:4px">{{ t('signals.noSignals') }}</div>
 						<div style="font-size:11px">{{ t('signals.noSignalsHint') }}</div>
@@ -105,7 +102,7 @@
 				</template>
 			</div>
 
-			<SignalDetailSheet v-if="selected" :signal="selected" @close="selected = null" />
+			<SignalDetailSheet v-if="selected" :signal="selected" :period="period" @close="selected = null" />
 		</ion-content>
 	</ion-page>
 </template>
@@ -113,17 +110,40 @@
 <script setup lang="ts">
 import { computed, ref } from 'vue'
 import { IonPage, IonContent } from '@ionic/vue'
-import { useSignalsStore } from '@/stores/signals'
+import { useQuery } from '@urql/vue'
 import { useI18n } from '@/i18n'
-import type { Signal } from '@/stores/signals'
+import type { Period } from '@/generated/graphql'
+import { GetSignalsDocument } from '@/generated/graphql'
+import type { GetSignalsQuery, GetSignalsQueryVariables, Signal } from '@/generated/graphql'
 import SignalCard from '@/components/SignalCard.vue'
 import SignalDetailSheet from '@/components/SignalDetailSheet.vue'
 
-const sigStore = useSignalsStore()
 const { t, locale } = useI18n()
-const selected = ref<Signal | null>(null)
-const durOpen = ref(false)
+
+const period = ref<Period>('M1')
+const filterAction = ref<'BUY' | 'HOLD' | 'SELL'>('BUY')
+const filterQuality = ref(0)
+const periodOpen = ref(false)
 const qualOpen = ref(false)
+const selected = ref<Signal | null>(null)
+
+const { data, fetching } = useQuery<GetSignalsQuery, GetSignalsQueryVariables>({
+	query: GetSignalsDocument,
+	variables: computed(() => ({ period: period.value })),
+})
+
+const allSignals = computed(() => data.value?.signals.items ?? [])
+
+const countByAction = (action: 'BUY' | 'HOLD' | 'SELL') =>
+	allSignals.value.filter(s => s.action === action).length
+
+const filtered = computed(() =>
+	allSignals.value.filter(s => {
+		if (s.action !== filterAction.value) return false
+		if (filterQuality.value > 0 && s.quality < filterQuality.value) return false
+		return true
+	})
+)
 
 const nowStr = computed(() => {
 	const localeMap: Record<string, string> = { de: 'de-DE', en: 'en-GB', fr: 'fr-FR' }
@@ -132,14 +152,12 @@ const nowStr = computed(() => {
 	})
 })
 
-const filtered = computed(() => sigStore.filteredSignals)
-
-const durOptions = computed(() => [
-	{ value: 'all', label: t('signals.allHorizons') },
-	{ value: 'intraday', label: t('signals.intraday') },
-	{ value: 'short', label: t('signals.short') },
-	{ value: 'medium', label: t('signals.medium') },
-	{ value: 'long', label: t('signals.long') },
+const periodOptions = computed(() => [
+	{ value: 'D1' as Period, label: t('signals.intraday') },
+	{ value: 'M1' as Period, label: t('signals.short') },
+	{ value: 'M3' as Period, label: t('signals.medium') },
+	{ value: 'M6' as Period, label: t('signals.medium') },
+	{ value: 'Y1' as Period, label: t('signals.long') },
 ])
 
 const qualOptions = computed(() => [
@@ -149,8 +167,8 @@ const qualOptions = computed(() => [
 	{ value: 3, label: t('signals.q3') },
 ])
 
-const durLabel = computed(() => durOptions.value.find(o => o.value === sigStore.filterDuration)?.label || t('signals.allHorizons'))
-const qualLabel = computed(() => qualOptions.value.find(o => o.value === sigStore.filterQuality)?.label || t('signals.allQualities'))
+const periodLabel = computed(() => periodOptions.value.find(o => o.value === period.value)?.label ?? '')
+const qualLabel = computed(() => qualOptions.value.find(o => o.value === filterQuality.value)?.label ?? t('signals.allQualities'))
 </script>
 
 <style scoped>
