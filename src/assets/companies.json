@@ -2529,6 +2529,16 @@
             "symbol": "TYL",
             "name": "Tyler Technologies, Inc.",
             "imageUrl": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQwP9fC8xTlMeqwLSGC-X733m6V2pW99wsYOA&s"
+        },
+        {
+            "symbol": "OTIS",
+            "name": "Otis Worldwide Corporation",
+            "imageUrl": "https://www.marketbeat.com/logos/otis-worldwide-co-logo.jpg?v=20231222092623"
+        },
+        {
+            "symbol": "EVRG",
+            "name": "Evergy, Inc.",
+            "imageUrl": "https://media.licdn.com/dms/image/v2/D560BAQGZZROgcxOFng/company-logo_200_200/B56ZuzREohI0AI-/0/1768239156242/evergyco_logo?e=2147483647&v=beta&t=08WSF2c61Zcndc5h6GjtElws1GXxnngU2LyyrgdOvnw"
         }
     ]
 }
