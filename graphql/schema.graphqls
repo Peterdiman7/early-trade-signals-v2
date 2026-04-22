@@ -1,4 +1,5 @@
 scalar Date
+scalar DateTime
 
 type Snapshot {
   id: ID!
@@ -8,7 +9,7 @@ type Snapshot {
   close: Float!
   change: Float!
   changePercent: Float!
-  when: Date!
+  when: DateTime!
 }
 
 enum SignalAction {
@@ -17,16 +18,27 @@ enum SignalAction {
   SELL
 }
 
+enum SignalState {
+  IN_PROGRESS
+  PROFIT
+  LOSS
+  EXPIRED
+}
+
 type Signal {
+  id: ID!
+  instrument: Instrument!
   action: SignalAction!
+  state: SignalState!
   quality: Int!
   targetPrice: Float!
   stopLoss: Float
   targetDate: Date
-  when: Date
+  when: DateTime
 }
 
 enum Period {
+  D1
   M1
   M3
   M6
@@ -39,23 +51,59 @@ type Bar {
   low: Float!
   close: Float!
   volume: Float!
-  when: Date!
+  when: DateTime!
+}
+
+type Chart {
+  high: Float
+  low: Float
+  items: [Bar!]!
+}
+
+type SignalList {
+  count: Int!
+  items: [Signal!]!
 }
 
 type Instrument {
   id: ID!
   name: String!
   snapshot: Snapshot
-  signal: Signal
-  chart(period: Period!): [Bar!]!
-  signalHistory(period: Period!): [Signal!]!
+  lastSignal: Signal
+  chart(period: Period!): Chart!
+  signals(period: Period!): SignalList!
+}
+
+enum SubscriptionTier {
+  BASIC
+  PRO
+  ELITE
+}
+
+type UserSubscription {
+  tier: SubscriptionTier!
+  trial: Boolean!
+}
+
+type User {
+  id: ID!
+  name: String!
+  email: String!
+  subscription: UserSubscription
 }
 
 type Query {
+  me: User
+
   headlineTickers: [Instrument!]!
   topMovers: [Instrument!]!
 
   instrument(id: ID!): Instrument!
+  signals(period: Period!): SignalList!
+}
+
+type Mutation {
+  register(name: String!, email: String!, password: String!): Boolean!
 }
 
 type Subscription {
