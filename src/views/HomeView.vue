@@ -717,8 +717,6 @@ async function doRefresh(event: any) {
 }
 
 .ts-logo img {
-	width: 16px;
-	height: 16px;
 	object-fit: contain;
 }
 
