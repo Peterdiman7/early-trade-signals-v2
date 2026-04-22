@@ -63,7 +63,7 @@
         {
             "symbol": "AFL",
             "name": "AFLAC Inc",
-            "imageUrl": "https://lh5.googleusercontent.com/proxy/PkOBgZLTiexYcXNxcrIiVhIotYcnqqDTODMG8rEOFsB682MZWBHg5uFSVvfSLEdOeSnnNUewLGVzHWoIscefNA0PRgHU6RrM3Gx3cg"
+            "imageUrl": "https://cdn.prod.website-files.com/5cd06573f0a28dce76ef883f/600ef8da603f0c5f824767b3_logo-aflac.png"
         },
         {
             "symbol": "A",
@@ -188,7 +188,7 @@
         {
             "symbol": "AMP",
             "name": "Ameriprise Financial",
-            "imageUrl": "https://play-lh.googleusercontent.com/TG4m-O9pqYGMPTyIk_uotTLvw-c5G-QXDQqQAw7u6IzMySqWsXzjPk2DvR1Zr2AV09gB"
+            "imageUrl": "https://assets.dice.com/external/images/empLogos/a8aaa73cc5526e638313655a6063210f.png"
         },
         {
             "symbol": "ABC",
@@ -618,7 +618,7 @@
         {
             "symbol": "CL",
             "name": "Colgate-Palmolive",
-            "imageUrl": "https://yt3.googleusercontent.com/n4ZwbjbiKGpvtoNExWJ8UANJR_CyBV_gEfA6y7WwNEl-uqXejHXRhFY6q9tOjEGzplwqGtcNqA=s900-c-k-c0x00ffffff-no-rj"
+            "imageUrl": "https://www.avadolearning.com/app/uploads/2021/06/case-study-colgate-palmolive-1024x683-1-png.webp"
         },
         {
             "symbol": "CMCSA",
@@ -778,7 +778,7 @@
         {
             "symbol": "DLTR",
             "name": "Dollar Tree",
-            "imageUrl": "https://play-lh.googleusercontent.com/iK6fpkpmc8VfgzUgmQceiazP85Ui0ru-RM1hrnBZ8IXcBvHAf8QXFjq6dAVjKrtpr4M"
+            "imageUrl": "https://ik.imagekit.io/kkbzr2uz4cp/stock/nasdaq/dltr.png"
         },
         {
             "symbol": "D",
@@ -1193,7 +1193,7 @@
         {
             "symbol": "HD",
             "name": "Home Depot",
-            "imageUrl": "https://yt3.googleusercontent.com/zb-CeccQq1pm8B_zvan3SZ5LGJ1EATwU6EeLye35F8wjG3nClyIzhNPA53xoUjGA4BEk6mYLmRg=s900-c-k-c0x00ffffff-no-rj"
+            "imageUrl": "https://www.theseniorlist.com/app/uploads/2019/04/the-home-depot-logo.png"
         },
         {
             "symbol": "HON",
@@ -1803,7 +1803,7 @@
         {
             "symbol": "PNR",
             "name": "Pentair Ltd.",
-            "imageUrl": "https://yt3.googleusercontent.com/ytc/AIdro_lR-wX6fUl2RBPxBEhWudISGDMLiJTrNOHNOwqv5wqjRcM=s900-c-k-c0x00ffffff-no-rj"
+            "imageUrl": "https://images.ctfassets.net/4khkh4jw49r9/2tOA59FgG0i2EZ9ylsQo4E/536b35c90473ab14a20b63ec6ad928e9/Pentair.png?w=1200&q=100&fm=webp"
         },
         {
             "symbol": "PBCT",
@@ -2118,12 +2118,12 @@
         {
             "symbol": "SPGI",
             "name": "S&P Global, Inc.",
-            "imageUrl": "https://yt3.googleusercontent.com/oT884qMpEQosABi6HK9axcOR-rdi_X1l3fVB_1Jg0uzc0LChisymjEv9TQfEF7ujaYyfIpNUNgA=s900-c-k-c0x00ffffff-no-rj"
+            "imageUrl": "https://companieslogo.com/img/orig/SPGI-23d836fa.png?t=1720244494"
         },
         {
             "symbol": "SWK",
             "name": "Stanley Black & Decker",
-            "imageUrl": "https://yt3.googleusercontent.com/ytc/AIdro_kFBowQIQQReBSQmo8jee1cBYkhMWF5H465bIeZY_eS7w=s900-c-k-c0x00ffffff-no-rj"
+            "imageUrl": "https://resources.ripplematch.com/hubfs/Stanley%20Black%20%26%20Decker-1.png"
         },
         {
             "symbol": "SBUX",
@@ -2539,6 +2539,366 @@
             "symbol": "EVRG",
             "name": "Evergy, Inc.",
             "imageUrl": "https://media.licdn.com/dms/image/v2/D560BAQGZZROgcxOFng/company-logo_200_200/B56ZuzREohI0AI-/0/1768239156242/evergyco_logo?e=2147483647&v=beta&t=08WSF2c61Zcndc5h6GjtElws1GXxnngU2LyyrgdOvnw"
+        },
+        {
+            "symbol": "AMCR",
+            "name": "Amcor plc",
+            "imageUrl": "https://upload.wikimedia.org/wikipedia/en/2/2d/Amcor_logo.png"
+        },
+        {
+            "symbol": "BLDR",
+            "name": "Builders FirstSource, Inc.",
+            "imageUrl": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSl3ZjCy_4Qsd-a6MoNki_n5k2AEP06zlfuIw&s"
+        },
+        {
+            "symbol": "BR",
+            "name": "Broadridge Financial Solutions, Inc.",
+            "imageUrl": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR46tAh3eCLiI5jq4E1x22-ewIPLQGuPWbJgA&s"
+        },
+        {
+            "symbol": "BRO",
+            "name": "Brown & Brown, Inc.",
+            "imageUrl": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQy2LW1hLeAesJT5gxiQBNRDmVIQnF_MqM57g&s"
+        },
+        {
+            "symbol": "COR",
+            "name": "CoreSite Realty Corporation",
+            "imageUrl": "https://storage.googleapis.com/revere-user-uploads/company%2Fb13ed26e-e575-4a46-af1a-3e1208030e5e%2F27c6b21c-bfbd-4bb1-a4d2-c85825f1f4d7"
+        },
+        {
+            "symbol": "CPAY",
+            "name": "Corpay Inc. Common Stock",
+            "imageUrl": "https://simplywall.st/cdn-cgi/image/format=auto,fit=cover,q=80,blur=0,metadata=none/https://images.simplywall.st/asset/logos/www.corpay.com?size=200"
+        },
+        {
+            "symbol": "CPT",
+            "name": "Camden Property Trust",
+            "imageUrl": "https://cdn.cookielaw.org/logos/c06874e4-75dc-4e9f-855f-32bef2e26c79/722f0470-d87c-46df-8c36-0eba35971ced/cc32c371-d54b-4b52-8f6d-6883d9a953c3/camden_logo_-_blue.png"
+        },
+        {
+            "symbol": "PTC",
+            "name": "PTC Inc.",
+            "imageUrl": "https://www.ptc.com/dist/ptc/images/ptc-favicon-512x512-white.png"
+        },
+        {
+            "symbol": "PODD",
+            "name": "Insulet Corporation",
+            "imageUrl": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSePhWBSR3DnsD_3UdVNtfOLRKDfO5qmWcDKQ&s"
+        },
+        {
+            "symbol": "PANW",
+            "name": "two",
+            "imageUrl": "https://s3-symbol-logo.tradingview.com/palo-alto-networks--600.png"
+        },
+        {
+            "symbol": "MSCI",
+            "name": "MSCI Inc.",
+            "imageUrl": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQP5AEE62RI4AS1czFA4gX232_6YQ_UNqSksw&s"
+        },
+        {
+            "symbol": "LDOS",
+            "name": "Leidos Holdings, Inc.",
+            "imageUrl": "https://s3-symbol-logo.tradingview.com/leidos-holdings--600.png"
+        },
+        {
+            "symbol": "GDDY",
+            "name": "GoDaddy Inc.",
+            "imageUrl": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSxOqMa1_zFpMn1ArPBG7erFAX1-n92_VjTWw&s"
+        },
+        {
+            "symbol": "VRT",
+            "name": "Vertiv Holdings Co",
+            "imageUrl": "https://s3-symbol-logo.tradingview.com/vertiv-holdings--600.png"
+        },
+        {
+            "symbol": "VICI",
+            "name": "VICI Properties Inc.",
+            "imageUrl": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTaHzDPquSkEk2tvkZu1LRZ9XT994txf68V7Q&s"
+        },
+        {
+            "symbol": "TDY",
+            "name": "Teledyne Technologies Incorporated",
+            "imageUrl": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcScOoboi8sIMbwv6LQgauFE-jg0jz2yMdrhDA&s"
+        },
+        {
+            "symbol": "WSM",
+            "name": "Williams-Sonoma, Inc.",
+            "imageUrl": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQYcB2VxIQ2i2wYyU9NCzySz9ooNlZMlHN7gg&s"
+        },
+        {
+            "symbol": "GEHC",
+            "name": "GE HealthCare Technologies Inc. Common Stock",
+            "imageUrl": "https://s3-symbol-logo.tradingview.com/ge-healthcare-technologies--600.png"
+        },
+        {
+            "symbol": "FDS",
+            "name": "FactSet Research Systems Inc.",
+            "imageUrl": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQtaMy0pTupVHMITcSCqgy5tgDTgeAANXec7w&s"
+        },
+        {
+            "symbol": "DDOG",
+            "name": "Datadog, Inc.",
+            "imageUrl": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTYhgBKQxRvf1Jrd82GI8s0bLGiMfNc4w-VDA&s"
+        },
+        {
+            "symbol": "CRH",
+            "name": "RH",
+            "imageUrl": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSCRecnwdCkK5Qj2Uree0Q6ZeOL69FvZx92iw&s"
+        },
+        {
+            "symbol": "BALL",
+            "name": "Ball Corporation Common Stock",
+            "imageUrl": "https://s3-symbol-logo.tradingview.com/ball--600.png"
+        },
+        {
+            "symbol": "LULU",
+            "name": "Lululemon Athletica Inc.",
+            "imageUrl": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS3OMI_Pb93heILATVtS99N9gMaKNEHUaayvw&s"
+        },
+        {
+            "symbol": "GEV",
+            "name": "GE Vernova Inc. Common Stock",
+            "imageUrl": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRv6XJ3a1fX_a17U5ozzJVs_UfrbVwLM5TPng&s"
+        },
+        {
+            "symbol": "GEN",
+            "name": "Gen Digital Inc. Common Stock",
+            "imageUrl": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQg20GvCzNee4FKP2qT38CPEgd_GP_M9H_Mzw&s"
+        },
+        {
+            "symbol": "ELV",
+            "name": "Elevance Health Inc. Common Stock",
+            "imageUrl": "https://s3-symbol-logo.tradingview.com/anthem--600.png"
+        },
+        {
+            "symbol": "DPZ",
+            "name": "Domino's Pizza, Inc.",
+            "imageUrl": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR0qFmpSosYSiecKU5QdWY9-PP7sR9q_mIRZg&s"
+        },
+        {
+            "symbol": "DOC",
+            "name": "Physicians Realty Trust",
+            "imageUrl": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRDyu9GrqNJ73Sqe37yomD8bmNzICdQfaz1lw&s"
+        },
+        {
+            "symbol": "CRWD",
+            "name": "CrowdStrike Holdings, Inc.",
+            "imageUrl": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQQcJR_QpV14QDyiM20uy1avqR5h7K1Wb6A5w&s"
+        },
+        {
+            "symbol": "CRH",
+            "name": "RH",
+            "imageUrl": "https://s3-symbol-logo.tradingview.com/rh--600.png"
+        },
+        {
+            "symbol": "ZBRA",
+            "name": "Zebra Technologies Corporation",
+            "imageUrl": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTrcasOjTBdiK8I_74wZH6CgmdYzopuRZRy7g&s"
+        },
+        {
+            "symbol": "RVTY",
+            "name": "Revvity Inc. Common Stock",
+            "imageUrl": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ8PnLj3PzzBHC1d6JAEF8tO-lAxPXjSZsIDg&s"
+        },
+        {
+            "symbol": "VTRS",
+            "name": "Viatris Inc.",
+            "imageUrl": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ6rQezhV0s860YFFdEdQpnzHkghNA7ZW1ZcA&s"
+        },
+        {
+            "symbol": "WAB",
+            "name": "Westinghouse Air Brake Technologies Corporation",
+            "imageUrl": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRHvV134FAiZYwWc8Ll4-fESy7FbEqseAaDRA&s"
+        },
+        {
+            "symbol": "WDAY",
+            "name": "Workday, Inc.",
+            "imageUrl": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQNHUKZVVadjEsc3-mk2rZEi5b08LM4LRt9pg&s"
+        },
+        {
+            "symbol": "WRB",
+            "name": "W. R. Berkley Corporation",
+            "imageUrl": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTC9fmgnU5eh_bzmeyBw0OwvkgxiZIMCtSN2A&s"
+        },
+        {
+            "symbol": "WTW",
+            "name": "Willis Towers Watson Public Limited Company Ordinary Shares",
+            "imageUrl": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQkr5AUVPKNp6l9txeZXIIGN18KsR4aeFGkug&s"
+        },
+        {
+            "symbol": "APTV",
+            "name": "Aptiv PLC",
+            "imageUrl": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSmf_STFkqbTlpQkUDWnP2HNOAACvKuZNWDww&s"
+        },
+        {
+            "symbol": "AXON",
+            "name": "Axon Enterprise, Inc.",
+            "imageUrl": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcScuDkfxIUgydqt658FgzKITwlfCShOTNJQFQ&s"
+        },
+        {
+            "symbol": "BX",
+            "name": "one",
+            "imageUrl": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQX4tq0MmECkV4JXMNX-YCmC42LFPi3-ASGXA&s"
+        },
+        {
+            "symbol": "CARR",
+            "name": "Carrier Global Corporation",
+            "imageUrl": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcScs-oAD0LyZb_jveZnzv8k-oNv_5_htICRAA&s"
+        },
+        {
+            "symbol": "CPRT",
+            "name": "Copart, Inc.",
+            "imageUrl": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT_ujWA8ADy9PQ4ELYbuidYyc2BZeyHpFqB6A&s"
+        },
+        {
+            "symbol": "CRL",
+            "name": "Charles River Laboratories International, Inc.",
+            "imageUrl": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQcTcoNmKZBaaTrG6BE_V01AUjzmtr9a3WuQg&s"
+        },
+        {
+            "symbol": "DASH",
+            "name": "DoorDash, Inc.",
+            "imageUrl": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRYtzAZsFIo9YmH9l-eiOjUo4sTS1Fy1C4s1w&s"
+        },
+        {
+            "symbol": "DXCM",
+            "name": "DexCom, Inc.",
+            "imageUrl": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTgcGnW5S06i82mU2f30he9zF2Nodan1wKzWQ&s"
+        },
+        {
+            "symbol": "EXE",
+            "name": "Expand Energy Corporation Common Stock",
+            "imageUrl": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTVFy_z_XXebak4YkJYUdJFV-ooaU66wV6Ohg&s"
+        },
+        {
+            "symbol": "FANG",
+            "name": "Diamondback Energy, Inc.",
+            "imageUrl": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSwJkKsG6ngrNLAVyhWiLvCj3wL6aJpQNMOyQ&s"
+        },
+        {
+            "symbol": "FICO",
+            "name": "Fair Isaac Corporation",
+            "imageUrl": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRTw4KQAbOIf-EvKvugTlflGgYIUx4E66fZhQ&s"
+        },
+        {
+            "symbol": "GL",
+            "name": "Globe Life Inc.",
+            "imageUrl": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQenTjnKdXQnmVsjrXV_d8Ooz01YpZ8yK7g9A&s"
+        },
+        {
+            "symbol": "GNRC",
+            "name": "Generac Holdings Inc.",
+            "imageUrl": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTdIE8NT7ZjjsdhYrve4C7VtK_4hbYkty-vkQ&s"
+        },
+        {
+            "symbol": "IBKR",
+            "name": "Interactive Brokers Group, Inc.",
+            "imageUrl": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSUAjxmKCYpVfPDGNFH5MgcUe3mr2xxFkauQQ&s"
+        },
+        {
+            "symbol": "IEX",
+            "name": "IDEX Corporation",
+            "imageUrl": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTMU8T1NjC5oSH6kiegp25dvI09kPpuCeuKwQ&s"
+        },
+        {
+            "symbol": "INVH",
+            "name": "Invitation Homes Inc.",
+            "imageUrl": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTvlpl_odjOIztlG2S0nXQ6YlXXQbVvD2LTKw&s"
+        },
+        {
+            "symbol": "J",
+            "name": "Jacobs Engineering Group Inc.",
+            "imageUrl": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS-onOuzGovbztQ-yCO-5Xu_Tm1CYhR0eFUXA&s"
+        },
+        {
+            "symbol": "JKHY",
+            "name": "Jack Henry & Associates, Inc.",
+            "imageUrl": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTw2JqiJwISSBjdnJm7xG5VugVKeAqeAdst1Q&s"
+        },
+        {
+            "symbol": "KDP",
+            "name": "Keurig Dr Pepper Inc.",
+            "imageUrl": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQTNFfjRZxeA5gidAyvMTR90eO7sbVPaBj1nA&s"
+        },
+        {
+            "symbol": "KEYS",
+            "name": "Keysight Technologies, Inc.",
+            "imageUrl": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQziAnSLcGn0vck7GoHU4cNpi28zgxo0y8FXQ&s"
+        },
+        {
+            "symbol": "LIN",
+            "name": "Linde plc",
+            "imageUrl": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSRBcbaBShTug0ZJkfBqzTqFsLHwHxafk27IA&s"
+        },
+        {
+            "symbol": "LITE",
+            "name": "Lumentum Holdings Inc.",
+            "imageUrl": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRJTyvsOJAi8Rv3EcqC5AeHE77T0g3VVHJSxw&s"
+        },
+        {
+            "symbol": "MO",
+            "name": "Altria Group, Inc.",
+            "imageUrl": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTFTtbc_Xj5C-FucYrwItwU-XKyiKXhfTS5BQ&s"
+        },
+        {
+            "symbol": "MPWR",
+            "name": "Monolithic Power Systems, Inc.",
+            "imageUrl": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcREqkpt_NcBrk9JU-bvp3gZsuJm73rSUw34aA&s"
+        },
+        {
+            "symbol": "MRNA",
+            "name": "Moderna, Inc.",
+            "imageUrl": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ4bSC-KDbmkNGpnM-E_KbRp7T1PrMAxFUACA&s"
+        },
+        {
+            "symbol": "NXPI",
+            "name": "NXP Semiconductors N.V.",
+            "imageUrl": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSV-unpb9LwxGc9QdYuuBsRt53Qkem8-rFTlw&s"
+        },
+        {
+            "symbol": "ACGL",
+            "name": "Arch Capital Group Ltd.",
+            "imageUrl": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRDajb0JWK4htNjdYO52eToy8SeFmzhZGNhFg&s"
+        },
+        {
+            "symbol": "ANET",
+            "name": "two",
+            "imageUrl": "https://s3-symbol-logo.tradingview.com/arista-networks--600.png"
+        },
+        {
+            "symbol": "COIN",
+            "name": "Coinbase Global, Inc.",
+            "imageUrl": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS11htX-LRIkiY0slEtWpbZ4tVXyIF-aXHyeQ&s"
+        },
+        {
+            "symbol": "CTVA",
+            "name": "Corteva, Inc.",
+            "imageUrl": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRi-j30jIjHwlNPbZ9mlQIBCdGELhFfajd_sw&s"
+        },
+        {
+            "symbol": "XYZ",
+            "name": "Block Inc. Class A Common Stock",
+            "imageUrl": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSTbD2-flIvzQK0ugpH4T0YUJJZN9eFyQYlow&s"
+        },
+        {
+            "symbol": "WST",
+            "name": "West Pharmaceutical Services, Inc.",
+            "imageUrl": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSO4JlEGyPJNFxhux1WqFfjLQNmUvXhmYkvTQ&s"
+        },
+        {
+            "symbol": "VLTO",
+            "name": "Veralto Corp Common Stock",
+            "imageUrl": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQAt-z1TqsDLiYeimu9hvNJTwxnmzGlwbOl2A&s"
+        },
+        {
+            "symbol": "UBER",
+            "name": "Uber Technologies, Inc.",
+            "imageUrl": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQNu8jVJOkBPZVgzaWr8Idf5dTio-HACvvHhw&s"
+        },
+        {
+            "symbol": "TRGP",
+            "name": "Targa Resources Corp.",
+            "imageUrl": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTI5HtWFB73aoGtdJdHqTk5q6qd-Jye45KQIA&s"
         }
     ]
 }
