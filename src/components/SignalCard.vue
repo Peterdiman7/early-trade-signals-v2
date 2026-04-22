@@ -94,6 +94,7 @@ import { LOGOS } from '@/stores/signals'
 import { useWatchlistStore } from '@/stores/watchlist'
 import { useNotifStore } from '@/stores/notif'
 import { useI18n } from '@/i18n'
+import { companies } from '@/assets/companies.json'
 
 const props = defineProps<{ signal: Signal; period: string }>()
 defineEmits(['click'])
@@ -104,7 +105,9 @@ const { t } = useI18n()
 const showFb = ref(false)
 
 const ticker = computed(() => props.signal.instrument.id)
-const logoUrl = computed(() => LOGOS[ticker.value] || '')
+const companyMap = Object.fromEntries(companies.map(c => [c.symbol, c]))
+const logoUrl = computed(() => companyMap[ticker.value]?.imageUrl ?? '')
+
 const inWatchlist = computed(() => wlStore.isInWatchlist(ticker.value))
 
 const close = computed(() => props.signal.instrument.snapshot?.close ?? 0)
@@ -177,8 +180,6 @@ const signalTime = computed(() => {
 }
 
 .sc-logo img {
-	width: 28px;
-	height: 28px;
 	object-fit: contain;
 }
 

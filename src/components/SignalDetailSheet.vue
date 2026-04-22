@@ -4,7 +4,7 @@
 			<div class="detail-hdr">
 				<div class="back-btn" @click="$emit('close')">←</div>
 				<div class="dh-logo">
-					<img v-if="!showFb" :src="logoUrl" @error="showFb = true" alt="" />
+					<img v-if="logoUrl && !showFb" :src="logoUrl" @error="showFb = true" alt="" />
 					<span v-else class="dh-logo-fb">{{ ticker }}</span>
 				</div>
 				<div class="dh-title">
@@ -36,7 +36,7 @@
 					<div class="ph-since">
 						{{ t('detail.since') }} {{ signalDate }} (${{ signal.targetPrice.toFixed(2) }}):
 						<strong :style="{ color: perfUp ? 'var(--g)' : 'var(--r)' }">{{ perfUp ? '+' : '' }}{{ perfChg
-							}}%</strong>
+						}}%</strong>
 					</div>
 				</div>
 
@@ -130,6 +130,7 @@ import { LOGOS } from '@/stores/signals'
 import { useWatchlistStore } from '@/stores/watchlist'
 import { useI18n } from '@/i18n'
 import ChartPrice from '@/components/ChartPrice.vue'
+import { companies } from '@/assets/companies.json'
 
 const props = defineProps<{ signal: Signal; period: Period }>()
 defineEmits(['close'])
@@ -149,7 +150,9 @@ const periodOptions = [
 ]
 
 const ticker = computed(() => props.signal.instrument.id)
-const logoUrl = computed(() => LOGOS[ticker.value] || '')
+const companyMap = Object.fromEntries(companies.map(c => [c.symbol, c]))
+const logoUrl = computed(() => companyMap[ticker.value]?.imageUrl ?? '')
+
 const inWl = computed(() => wlStore.isInWatchlist(ticker.value))
 const close = computed(() => props.signal.instrument.snapshot?.close ?? 0)
 const changePercent = computed(() => props.signal.instrument.snapshot?.changePercent ?? 0)
