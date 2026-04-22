@@ -1,0 +1,9 @@
+query getTopMovers {
+    topMovers {
+        id
+        name
+        snapshot {
+            change
+        }
+    }
+}
