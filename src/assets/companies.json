@@ -18,7 +18,7 @@
         {
             "symbol": "ACN",
             "name": "Accenture plc",
-            "imageUrl": "https://www.cplace.com/wp-content/uploads/2023/08/partnerlogo-accenture-partner-overview-scaled.jpg"
+            "imageUrl": "https://s3-symbol-logo.tradingview.com/accenture--600.png"
         },
         {
             "symbol": "ATVI",
@@ -33,7 +33,7 @@
         {
             "symbol": "ADBE",
             "name": "Adobe Systems Inc",
-            "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/7b/Adobe_Systems_logo_and_wordmark.svg/250px-Adobe_Systems_logo_and_wordmark.svg.png"
+            "imageUrl": "https://s3-symbol-logo.tradingview.com/adobe--600.png"
         },
         {
             "symbol": "AMD",
@@ -103,7 +103,7 @@
         {
             "symbol": "ALGN",
             "name": "Align Technology",
-            "imageUrl": "https://www.heroku.com/wp-content/uploads/2025/03/aligntech-1.png"
+            "imageUrl": "https://s3-symbol-logo.tradingview.com/align-technology--600.png"
         },
         {
             "symbol": "ALLE",
@@ -173,7 +173,7 @@
         {
             "symbol": "AIG",
             "name": "American International Group, Inc.",
-            "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/c/cf/AIG_wordmark.svg"
+            "imageUrl": "https://s3-symbol-logo.tradingview.com/american-international-group--600.png"
         },
         {
             "symbol": "AMT",
@@ -218,7 +218,7 @@
         {
             "symbol": "ADI",
             "name": "Analog Devices, Inc.",
-            "imageUrl": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRMKrTA6mZ-StcucattUj-iFkoZuIoyLq7lLA&s"
+            "imageUrl": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSgupLCaQ0RPRLoBY80QkvRcvtocnUoOD0C2g&s"
         },
         {
             "symbol": "ANDV",
@@ -248,7 +248,7 @@
         {
             "symbol": "APA",
             "name": "Apache Corporation",
-            "imageUrl": "https://apacorp.com/wp-content/uploads/2021/02/APACorp_Logo_Color6839.png"
+            "imageUrl": "https://s3-symbol-logo.tradingview.com/apa-corporation--600.png"
         },
         {
             "symbol": "AIV",
@@ -278,7 +278,7 @@
         {
             "symbol": "AJG",
             "name": "Arthur J. Gallagher & Co.",
-            "imageUrl": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRGPdDBNyeyZoJCnnkEf_cFwOsL47nqcX0U4g&s"
+            "imageUrl": "https://s3-symbol-logo.tradingview.com/gallagher--600.png"
         },
         {
             "symbol": "AIZ",
@@ -333,7 +333,7 @@
         {
             "symbol": "BK",
             "name": "The Bank of New York Mellon Corp.",
-            "imageUrl": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSxyk-zERBetg8UHwpLpC_HfDBnD9gWP8E3-A&s"
+            "imageUrl": "https://s3-symbol-logo.tradingview.com/bank-of-new-york-mellon--600.png"
         },
         {
             "symbol": "BCR",
@@ -353,7 +353,7 @@
         {
             "symbol": "BDX",
             "name": "Becton Dickinson",
-            "imageUrl": "https://arahealth.com/wp-content/uploads/2021/11/bd.jpg"
+            "imageUrl": "https://s3-symbol-logo.tradingview.com/becton-dickinson--600.png"
         },
         {
             "symbol": "BRK.B",
@@ -368,12 +368,12 @@
         {
             "symbol": "BIIB",
             "name": "Biogen Inc.",
-            "imageUrl": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQo2QG0KvaMOn34PVtus-s0enO4vXlqrNtrlQ&s"
+            "imageUrl": "https://s3-symbol-logo.tradingview.com/biogen--600.png"
         },
         {
             "symbol": "BLK",
             "name": "BlackRock",
-            "imageUrl": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSU5vgY1I77b80lKOzwzNzXYG8FXGJGPpoabQ&s"
+            "imageUrl": "https://s3-symbol-logo.tradingview.com/blackrock-silver--600.png"
         },
         {
             "symbol": "HRB",
@@ -443,7 +443,7 @@
         {
             "symbol": "CPB",
             "name": "Campbell Soup",
-            "imageUrl": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSQOCE99AV2LJz3RSlKuBZH4WY7ze2Yu-0_Vw&s"
+            "imageUrl": "https://s3-symbol-logo.tradingview.com/campbell-soup--600.png"
         },
         {
             "symbol": "COF",
@@ -468,7 +468,7 @@
         {
             "symbol": "CCL",
             "name": "Carnival Corp.",
-            "imageUrl": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTaI75T_xgkZcsgk9lFP6NLcVe3QpVachmfsA&s"
+            "imageUrl": "https://s3-symbol-logo.tradingview.com/carnival--600.png"
         },
         {
             "symbol": "CAT",
@@ -493,7 +493,7 @@
         {
             "symbol": "CNC",
             "name": "Centene Corporation",
-            "imageUrl": "https://www.centene.com/content/dam/centenedotcom/open-graph/default_opengraph.jpg"
+            "imageUrl": "https://s3-symbol-logo.tradingview.com/centene--600.png"
         },
         {
             "symbol": "CNP",
@@ -593,7 +593,7 @@
         {
             "symbol": "CLX",
             "name": "The Clorox Company",
-            "imageUrl": "https://www.thecloroxcompany.com/wp-content/uploads/2022/08/TCC_Stacked_1200x1200.png"
+            "imageUrl": "https://s3-symbol-logo.tradingview.com/clorox--600.png"
         },
         {
             "symbol": "CME",
@@ -608,7 +608,7 @@
         {
             "symbol": "KO",
             "name": "Coca-Cola Company",
-            "imageUrl": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTP2qB5zlQc8Vskr_iII-aNDEL_u5xBUZmrBA&s"
+            "imageUrl": "https://s3-symbol-logo.tradingview.com/coca-cola--600.png"
         },
         {
             "symbol": "CTSH",
@@ -618,7 +618,7 @@
         {
             "symbol": "CL",
             "name": "Colgate-Palmolive",
-            "imageUrl": "https://www.avadolearning.com/app/uploads/2021/06/case-study-colgate-palmolive-1024x683-1-png.webp"
+            "imageUrl": "https://s3-symbol-logo.tradingview.com/colgate-palmolive--600.png"
         },
         {
             "symbol": "CMCSA",
@@ -663,7 +663,7 @@
         {
             "symbol": "GLW",
             "name": "Corning Inc.",
-            "imageUrl": "https://rmkcdn.successfactors.com/5da1734a/37ab45fb-30f1-4325-843b-d.jpg"
+            "imageUrl": "https://s3-symbol-logo.tradingview.com/corning--600.png"
         },
         {
             "symbol": "COST",
@@ -708,12 +708,12 @@
         {
             "symbol": "DHR",
             "name": "Danaher Corp.",
-            "imageUrl": "https://upload.wikimedia.org/wikipedia/en/thumb/9/96/Danaher_logo_since_2023.svg/1280px-Danaher_logo_since_2023.svg.png"
+            "imageUrl": "https://s3-symbol-logo.tradingview.com/danaher--600.png"
         },
         {
             "symbol": "DRI",
             "name": "Darden Restaurants",
-            "imageUrl": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcROZW9xZ1wpYZ5Di5YiAjR5bbgLKgqUTGfOMQ&s"
+            "imageUrl": "https://s3-symbol-logo.tradingview.com/darden--600.png"
         },
         {
             "symbol": "DVA",
@@ -733,7 +733,7 @@
         {
             "symbol": "DAL",
             "name": "Delta Air Lines",
-            "imageUrl": "https://www.tramatm.com/_next/image?url=https%3A%2F%2Ftrama-static.s3.eu-central-1.amazonaws.com%2Fimages%2Fhall-of-fame%2Flogos%2F141-logo.png&w=3840&q=75"
+            "imageUrl": "https://s3-symbol-logo.tradingview.com/delta-air-lines--600.png"
         },
         {
             "symbol": "XRAY",
@@ -833,7 +833,7 @@
         {
             "symbol": "ETN",
             "name": "Eaton Corporation",
-            "imageUrl": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTY4QkbsNrZ6N2Itw8nKj18cat9vrJl93ntwQ&s"
+            "imageUrl": "https://s3-symbol-logo.tradingview.com/eaton--600.png"
         },
         {
             "symbol": "EBAY",
@@ -908,7 +908,7 @@
         {
             "symbol": "EL",
             "name": "Estee Lauder Cos.",
-            "imageUrl": "https://cdn.ymaws.com/leadershipcalifornia.site-ym.com/resource/resmgr/sponsor-logos/estee-lauder-260.png"
+            "imageUrl": "https://s3-symbol-logo.tradingview.com/estee-lauder--600.png"
         },
         {
             "symbol": "ES",
@@ -928,12 +928,12 @@
         {
             "symbol": "EXPE",
             "name": "Expedia Inc.",
-            "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/0/0a/Expedia_Group_logo.svg"
+            "imageUrl": "https://s3-symbol-logo.tradingview.com/expedia--600.png"
         },
         {
             "symbol": "EXPD",
             "name": "Expeditors International",
-            "imageUrl": "https://info.expeditors.com/hubfs/Photography%20Assets/Expeditors%20Branding/Red%20Flag.png"
+            "imageUrl": "https://s3-symbol-logo.tradingview.com/expeditors--600.png"
         },
         {
             "symbol": "ESRX",
@@ -963,12 +963,12 @@
         {
             "symbol": "FAST",
             "name": "Fastenal Co",
-            "imageUrl": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS9mk2-aARaAxOIQv2OBqyysW_qkkAhiXLqpA&s"
+            "imageUrl": "https://s3-symbol-logo.tradingview.com/fastenal--600.png"
         },
         {
             "symbol": "FRT",
             "name": "Federal Realty Investment Trust",
-            "imageUrl": "https://ssd2.s3.amazonaws.com/7sll8rv77a21oky947pw37nn56wn"
+            "imageUrl": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQSXf5LDqgR-DDxOJLJxNcduLOORP2gxIbEzg&s"
         },
         {
             "symbol": "FDX",
@@ -983,7 +983,7 @@
         {
             "symbol": "FITB",
             "name": "Fifth Third Bancorp",
-            "imageUrl": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTM7hNsAVfohhM20YajtI0czyEjAjxVOOTs0w&s"
+            "imageUrl": "https://s3-symbol-logo.tradingview.com/fifth-third-bancorp--600.png"
         },
         {
             "symbol": "FE",
@@ -1038,7 +1038,7 @@
         {
             "symbol": "BEN",
             "name": "Franklin Resources",
-            "imageUrl": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSmQGf_LkcDrp9c35b1UAKfseJwu3EDsGDhKg&s"
+            "imageUrl": "https://s3-symbol-logo.tradingview.com/franklin-resources--600.png"
         },
         {
             "symbol": "FCX",
@@ -1078,7 +1078,7 @@
         {
             "symbol": "GIS",
             "name": "General Mills",
-            "imageUrl": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQXufoqb17d8lYaMHjqJyOtehB8mjJsXICj7Q&s"
+            "imageUrl": "https://s3-symbol-logo.tradingview.com/general-mills--600.png"
         },
         {
             "symbol": "GM",
@@ -1088,7 +1088,7 @@
         {
             "symbol": "GPC",
             "name": "Genuine Parts",
-            "imageUrl": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRFA03qWT68JOSx-M2eus26-g-bC-bY3qCKQA&s"
+            "imageUrl": "https://s3-symbol-logo.tradingview.com/gpc--600.png"
         },
         {
             "symbol": "GILD",
@@ -1118,7 +1118,7 @@
         {
             "symbol": "HAL",
             "name": "Halliburton Co.",
-            "imageUrl": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRaxzePToW-ApRgS4sBNvd8OHdbR6wlTDy2mQ&s"
+            "imageUrl": "https://s3-symbol-logo.tradingview.com/halliburton--600.png"
         },
         {
             "symbol": "HBI",
@@ -1138,7 +1138,7 @@
         {
             "symbol": "HIG",
             "name": "Hartford Financial Svc.Gp.",
-            "imageUrl": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRDC51HKOK_MPvQ2aBmy-x7oLcj_wTmb-a-xA&s"
+            "imageUrl": "https://s3-symbol-logo.tradingview.com/hartford-financial-services-grp--600.png"
         },
         {
             "symbol": "HAS",
@@ -1168,7 +1168,7 @@
         {
             "symbol": "HSY",
             "name": "The Hershey Company",
-            "imageUrl": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ7R2LYj_dH3FlCVmWrR7__Hj4JV-yYZ1rB0g&s"
+            "imageUrl": "https://s3-symbol-logo.tradingview.com/hershey--600.png"
         },
         {
             "symbol": "HES",
@@ -1203,12 +1203,12 @@
         {
             "symbol": "HRL",
             "name": "Hormel Foods Corp.",
-            "imageUrl": "https://www.supermarketperimeter.com/ext/resources/2022/08/09/hormel-foods-logo.webp?height=667&t=1671206411&width=1080"
+            "imageUrl": "https://s3-symbol-logo.tradingview.com/hormel-foods--600.png"
         },
         {
             "symbol": "HST",
             "name": "Host Hotels & Resorts",
-            "imageUrl": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT-IJQBmUzCzIShYHmxGTiHBsOjHxOF5MLvXw&s"
+            "imageUrl": "https://s3-symbol-logo.tradingview.com/host-hotels--600.png"
         },
         {
             "symbol": "HPQ",
@@ -1228,7 +1228,7 @@
         {
             "symbol": "IDXX",
             "name": "IDEXX Laboratories",
-            "imageUrl": "https://images.ctfassets.net/bxvspbo2e7cv/6AlVG4E3tXH8itXiAjrJwe/0b663565531a433a6d288057ea148319/idxx-removebg-preview.png"
+            "imageUrl": "https://s3-symbol-logo.tradingview.com/idexx-laboratories--600.png"
         },
         {
             "symbol": "INFO",
@@ -1258,7 +1258,7 @@
         {
             "symbol": "ICE",
             "name": "Intercontinental Exchange",
-            "imageUrl": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcShOVnT_cUz3unFqlJMePzai6LPPSvysORt4w&s"
+            "imageUrl": "https://s3-symbol-logo.tradingview.com/intercontinental-exchange--600.png"
         },
         {
             "symbol": "IBM",
@@ -1298,7 +1298,7 @@
         {
             "symbol": "IVZ",
             "name": "Invesco Ltd.",
-            "imageUrl": "https://www.wikicorporates.org/mediawiki/images/thumb/9/99/Invesco.svg/250px-Invesco.svg.png"
+            "imageUrl": "https://s3-symbol-logo.tradingview.com/invesco--600.png"
         },
         {
             "symbol": "IRM",
@@ -1358,7 +1358,7 @@
         {
             "symbol": "KMB",
             "name": "Kimberly-Clark",
-            "imageUrl": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS7INwpKMiVhGgMCNd8k0eEmJYIxxLCYoqGNw&s"
+            "imageUrl": "https://s3-symbol-logo.tradingview.com/kimberly-clark--600.png"
         },
         {
             "symbol": "KIM",
@@ -1373,7 +1373,7 @@
         {
             "symbol": "KLAC",
             "name": "KLA-Tencor Corp.",
-            "imageUrl": "https://mma.prnewswire.com/media/806571/KLA_Corporation_Logo.jpg?p=facebook"
+            "imageUrl": "https://s3-symbol-logo.tradingview.com/kla-tencor--600.png"
         },
         {
             "symbol": "KSS",
@@ -1383,12 +1383,12 @@
         {
             "symbol": "KHC",
             "name": "Kraft Heinz",
-            "imageUrl": "https://www.dairyfoods.com/ext/resources/2021/12/08/Kraft-Heinz-780x439.webp?t=1638998787"
+            "imageUrl": "https://s3-symbol-logo.tradingview.com/kraft-heinz--600.png"
         },
         {
             "symbol": "KR",
             "name": "Kroger Co.",
-            "imageUrl": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQcBKhclfzeHJ6vhBFMB44JNB8Kyt8elSGZqQ&s"
+            "imageUrl": "https://s3-symbol-logo.tradingview.com/kroger--600.png"
         },
         {
             "symbol": "LB",
@@ -1483,12 +1483,12 @@
         {
             "symbol": "MPC",
             "name": "Marathon Petroleum",
-            "imageUrl": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ1vGGD60WBa2vfKwd6DWeeipzl2CTXT42qTQ&s"
+            "imageUrl": "https://s3-symbol-logo.tradingview.com/marathon-petroleum--600.png"
         },
         {
             "symbol": "MAR",
             "name": "Marriott Int'l.",
-            "imageUrl": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSP87PjB0bZlqMlhWAu5-tpQ5Fh76LfFFnLyQ&s"
+            "imageUrl": "https://s3-symbol-logo.tradingview.com/marriott--600.png"
         },
         {
             "symbol": "MMC",
@@ -1498,7 +1498,7 @@
         {
             "symbol": "MLM",
             "name": "Martin Marietta Materials",
-            "imageUrl": "https://mcdn.martinmarietta.com/assets/logo/logo.png"
+            "imageUrl": "https://s3-symbol-logo.tradingview.com/martin-marietta--600.png"
         },
         {
             "symbol": "MAS",
@@ -1508,7 +1508,7 @@
         {
             "symbol": "MA",
             "name": "Mastercard Inc.",
-            "imageUrl": "https://www.marketbeat.com/logos/mastercard-incorporated-logo.png?v=20221020142959"
+            "imageUrl": "https://s3-symbol-logo.tradingview.com/mastercard--600.png"
         },
         {
             "symbol": "MAT",
@@ -1568,7 +1568,7 @@
         {
             "symbol": "MU",
             "name": "Micron Technology",
-            "imageUrl": "https://s.yimg.com/ny/api/res/1.2/R1SvUpTznCxaaaiEQE1MbA--/YXBwaWQ9aGlnaGxhbmRlcjt3PTY0MDtoPTQ4MA--/https://media.zenfs.com/en/insidermonkey.com/7cf50e504f60395b7bc9d4ffb15f281a"
+            "imageUrl": "https://s3-symbol-logo.tradingview.com/micron-technology--600.png"
         },
         {
             "symbol": "MSFT",
@@ -1648,12 +1648,12 @@
         {
             "symbol": "NTAP",
             "name": "NetApp",
-            "imageUrl": "https://www.komprise.com/wp-content/uploads/2018/01/netapp-2.png"
+            "imageUrl": "https://s3-symbol-logo.tradingview.com/netapp--600.png"
         },
         {
             "symbol": "NFLX",
             "name": "Netflix Inc.",
-            "imageUrl": "https://about.netflix.com/images/meta/netflix-symbol-black.png"
+            "imageUrl": "https://s3-symbol-logo.tradingview.com/netflix--600.png"
         },
         {
             "symbol": "NWL",
@@ -1683,7 +1683,7 @@
         {
             "symbol": "NEE",
             "name": "NextEra Energy",
-            "imageUrl": "https://image.pitchbook.com/YtFhbt3FxQZT9KFp2SpekAljgpe1611756315988_200x200"
+            "imageUrl": "https://s3-symbol-logo.tradingview.com/nextera-energy--600.png"
         },
         {
             "symbol": "NLSN",
@@ -1838,7 +1838,7 @@
         {
             "symbol": "PM",
             "name": "Philip Morris International",
-            "imageUrl": "https://yt3.googleusercontent.com/E2ld1N5fhaZaUWG8nG-z8EM1VpdumJ6o1ypubCG5vgLjPaM7RPSBV2zzqYKm0SdE31_8yfQzYg=s900-c-k-c0x00ffffff-no-rj"
+            "imageUrl": "https://s3-symbol-logo.tradingview.com/philip-morris--600.png"
         },
         {
             "symbol": "PSX",
@@ -1863,17 +1863,17 @@
         {
             "symbol": "RL",
             "name": "Polo Ralph Lauren Corp.",
-            "imageUrl": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQqejLWPnEjoDTW7Z9mKkoNSx0RM0GIhZOlzA&s"
+            "imageUrl": "https://s3-symbol-logo.tradingview.com/ralph-lauren--600.png"
         },
         {
             "symbol": "PPG",
             "name": "PPG Industries",
-            "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/db/PPG_Logo.svg/1280px-PPG_Logo.svg.png"
+            "imageUrl": "https://s3-symbol-logo.tradingview.com/ppg-industries--600.png"
         },
         {
             "symbol": "PPL",
             "name": "PPL Corp.",
-            "imageUrl": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQm6WGReklDAh7cFxJwrlMbvy388zBCcY_63Q&s"
+            "imageUrl": "https://s3-symbol-logo.tradingview.com/ppl-units-15022029--600.png"
         },
         {
             "symbol": "PX",
@@ -1953,7 +1953,7 @@
         {
             "symbol": "Q",
             "name": "Quintiles IMS Holdings, Inc",
-            "imageUrl": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR8RX_1wcSHCDxnRJx2lNEn3H2jjUXwhzJXhw&s"
+            "imageUrl": "https://s3-symbol-logo.tradingview.com/qnity-electronics--600.png"
         },
         {
             "symbol": "RRC",
@@ -2118,7 +2118,7 @@
         {
             "symbol": "SPGI",
             "name": "S&P Global, Inc.",
-            "imageUrl": "https://companieslogo.com/img/orig/SPGI-23d836fa.png?t=1720244494"
+            "imageUrl": "https://s3-symbol-logo.tradingview.com/s-and-p-global--600.png"
         },
         {
             "symbol": "SWK",
@@ -2168,7 +2168,7 @@
         {
             "symbol": "SYY",
             "name": "Sysco Corp.",
-            "imageUrl": "https://investors.sysco.com/~/media/Images/S/Sysco-IR/logo/sysco-share-logo-v2.jpg"
+            "imageUrl": "https://s3-symbol-logo.tradingview.com/sysco--600.png"
         },
         {
             "symbol": "TROW",
@@ -2258,12 +2258,12 @@
         {
             "symbol": "FOXA",
             "name": "Twenty-First Century Fox Class A",
-            "imageUrl": "https://mma.prnewswire.com/media/647075/21CF_Logo.jpg?p=facebook"
+            "imageUrl": "https://s3-symbol-logo.tradingview.com/fox-corporation--600.png"
         },
         {
             "symbol": "FOX",
             "name": "Twenty-First Century Fox Class B",
-            "imageUrl": "https://mma.prnewswire.com/media/647075/21CF_Logo.jpg?p=facebook"
+            "imageUrl": "https://s3-symbol-logo.tradingview.com/fox-corporation--600.png"
         },
         {
             "symbol": "TSN",
@@ -2408,7 +2408,7 @@
         {
             "symbol": "DIS",
             "name": "The Walt Disney Company",
-            "imageUrl": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSFSUr3VZKXd78SHgQvjV6dBOLpMNbl7ShUgQ&s"
+            "imageUrl": "https://s3-symbol-logo.tradingview.com/walt-disney--600.png"
         },
         {
             "symbol": "WM",
@@ -2543,7 +2543,7 @@
         {
             "symbol": "AMCR",
             "name": "Amcor plc",
-            "imageUrl": "https://upload.wikimedia.org/wikipedia/en/2/2d/Amcor_logo.png"
+            "imageUrl": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR-Xsd-obY7_QkmZKxslCZddQ-euZ8flSyY0g&s"
         },
         {
             "symbol": "BLDR",
@@ -2553,7 +2553,7 @@
         {
             "symbol": "BR",
             "name": "Broadridge Financial Solutions, Inc.",
-            "imageUrl": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR46tAh3eCLiI5jq4E1x22-ewIPLQGuPWbJgA&s"
+            "imageUrl": "https://s3-symbol-logo.tradingview.com/broadridge--600.png"
         },
         {
             "symbol": "BRO",
@@ -2573,7 +2573,7 @@
         {
             "symbol": "CPT",
             "name": "Camden Property Trust",
-            "imageUrl": "https://cdn.cookielaw.org/logos/c06874e4-75dc-4e9f-855f-32bef2e26c79/722f0470-d87c-46df-8c36-0eba35971ced/cc32c371-d54b-4b52-8f6d-6883d9a953c3/camden_logo_-_blue.png"
+            "imageUrl": "https://s3-symbol-logo.tradingview.com/camden-property-trust--600.png"
         },
         {
             "symbol": "PTC",
@@ -2899,6 +2899,261 @@
             "symbol": "TRGP",
             "name": "Targa Resources Corp.",
             "imageUrl": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTI5HtWFB73aoGtdJdHqTk5q6qd-Jye45KQIA&s"
+        },
+        {
+            "symbol": "TPL",
+            "name": "Texas Pacific Land Corporation",
+            "imageUrl": "https://s3-symbol-logo.tradingview.com/texas-pacific-land-corporation--600.png"
+        },
+        {
+            "symbol": "TMUS",
+            "name": "T-Mobile US, Inc.",
+            "imageUrl": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQXkREHvvYAYmEAt1ZUyQKrDiwpjhMyFihhOw&s"
+        },
+        {
+            "symbol": "TKO",
+            "name": "TKO Group Holdings Inc. Class A Common Stock",
+            "imageUrl": "https://s3-symbol-logo.tradingview.com/tko--600.png"
+        },
+        {
+            "symbol": "TECH",
+            "name": "Bio-Techne Corporation",
+            "imageUrl": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQwq6fAX9v755H9Z59qopJpgN1zb1RtEPU7DA&s"
+        },
+        {
+            "symbol": "STLD",
+            "name": "Steel Dynamics, Inc.",
+            "imageUrl": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTbvtzvKOZJYPoXbexSuj1mnwQkiU904v8leg&s"
+        },
+        {
+            "symbol": "STE",
+            "name": "STERIS plc",
+            "imageUrl": "https://s3-symbol-logo.tradingview.com/steris--600.png"
+        },
+        {
+            "symbol": "SOLV",
+            "name": "Solventum Corporation Common Stock",
+            "imageUrl": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS8E9iqcbyFiuxdQHRJH4UAEQ6tCYOrg-M1GA&s"
+        },
+        {
+            "symbol": "SNDK",
+            "name": "Sandisk Corporation Common Stock",
+            "imageUrl": "https://s3-symbol-logo.tradingview.com/sandisk--600.png"
+        },
+        {
+            "symbol": "PSKY",
+            "name": "Paramount Skydance Corporation Class B Common Stock",
+            "imageUrl": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSJMv-br0VwN3OZH7T1oCLdLv_ZTy-EgDeq7w&s"
+        },
+        {
+            "symbol": "PSA",
+            "name": "Public Storage",
+            "imageUrl": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS-rB64wyUyZvF2D5AohqrE-imRV2LaPu_pKw&s"
+        },
+        {
+            "symbol": "POOL",
+            "name": "Pool Corporation",
+            "imageUrl": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRvwAiiMmCbSy9sQEopwIQnFUSAz-8p4nsvLA&s"
+        },
+        {
+            "symbol": "PNC",
+            "name": "The PNC Financial Services Group, Inc.",
+            "imageUrl": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRSZiRHZx4CEp-m-1jpIwOUcg-x_fwoGEslWw&s"
+        },
+        {
+            "symbol": "PLTR",
+            "name": "Palantir Technologies Inc.",
+            "imageUrl": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTNaDjybemTaHvxaq0q0ObS_Hhj5MB8Rzbfrw&s"
+        },
+        {
+            "symbol": "NVR",
+            "name": "NVR, Inc.",
+            "imageUrl": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSm0qb_QH7XJhe39m9ti2j3ri4Pxw5Qb4oEXw&s"
+        },
+        {
+            "symbol": "NDSN",
+            "name": "Nordson Corporation",
+            "imageUrl": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT-4ejVayZHWkMg5Gp34hSTdmS8Qp-ZU0qAHA&s"
+        },
+        {
+            "symbol": "MRSH",
+            "name": "Marsh Common Stock",
+            "imageUrl": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRYTmGP0myS3QWxvRYfzLDrc444c30g_TNbmg&s"
+        },
+        {
+            "symbol": "META",
+            "name": "Meta Platforms Inc.",
+            "imageUrl": "https://s3-symbol-logo.tradingview.com/meta-platforms--600.png"
+        },
+        {
+            "symbol": "KVUE",
+            "name": "Kenvue Inc. Common Stock",
+            "imageUrl": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQu7U9RQxG4wN8vHShpXFZEnQEvBjk9l2DJPQ&s"
+        },
+        {
+            "symbol": "KKR",
+            "name": "KKR & Co. Inc.",
+            "imageUrl": "https://s3-symbol-logo.tradingview.com/kkr--600.png"
+        },
+        {
+            "symbol": "JBL",
+            "name": "Jabil Inc.",
+            "imageUrl": "https://s3-symbol-logo.tradingview.com/jabil--600.png"
+        },
+        {
+            "symbol": "IQV",
+            "name": "IQVIA Holdings Inc.",
+            "imageUrl": "https://s3-symbol-logo.tradingview.com/iqvia--600.png"
+        },
+        {
+            "symbol": "HWM",
+            "name": "Howmet Aerospace Inc.",
+            "imageUrl": "https://s3-symbol-logo.tradingview.com/howmet-aerospace--600.png"
+        },
+        {
+            "symbol": "HUBB",
+            "name": "Hubbell Incorporated",
+            "imageUrl": "https://s3-symbol-logo.tradingview.com/hubbell--600.png"
+        },
+        {
+            "symbol": "HOOD",
+            "name": "Robinhood Markets Inc. Class A Common Stock",
+            "imageUrl": "https://s3-symbol-logo.tradingview.com/robinhood--600.png"
+        },
+        {
+            "symbol": "EG",
+            "name": "Everest Group Ltd. Common Stock",
+            "imageUrl": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRG5e8S-PbUwIVCigVd3TgKijaC6mpmURMXbw&s"
+        },
+        {
+            "symbol": "DOW",
+            "name": "Dow Inc.",
+            "imageUrl": "https://s3-symbol-logo.tradingview.com/dow--600.png"
+        },
+        {
+            "symbol": "DD",
+            "name": "DuPont de Nemours, Inc.",
+            "imageUrl": "https://s3-symbol-logo.tradingview.com/dupont-de-nemours--600.png"
+        },
+        {
+            "symbol": "CVNA",
+            "name": "Carvana Co.",
+            "imageUrl": "https://s3-symbol-logo.tradingview.com/carvana--600.png"
+        },
+        {
+            "symbol": "CIEN",
+            "name": "Carvana Co.",
+            "imageUrl": "https://s3-symbol-logo.tradingview.com/ciena--600.png"
+        },
+        {
+            "symbol": "CEG",
+            "name": "Constellation Energy Corporation Common Stock",
+            "imageUrl": "https://s3-symbol-logo.tradingview.com/constellation-energy-cad-hedged-cibc-cdr--600.png"
+        },
+        {
+            "symbol": "CBRE",
+            "name": "CBRE Group, Inc.",
+            "imageUrl": "https://s3-symbol-logo.tradingview.com/cbre-group--600.png"
+        },
+        {
+            "symbol": "BKNG",
+            "name": "Booking Holdings Inc.",
+            "imageUrl": "https://s3-symbol-logo.tradingview.com/booking--600.png"
+        },
+        {
+            "symbol": "BG",
+            "name": "Bunge Limited",
+            "imageUrl": "https://s3-symbol-logo.tradingview.com/bunge--600.png"
+        },
+        {
+            "symbol": "ARES",
+            "name": "Ares Management Corporation",
+            "imageUrl": "https://s3-symbol-logo.tradingview.com/ares-management--600.png"
+        },
+        {
+            "symbol": "APO",
+            "name": "Apollo Global Management, Inc.",
+            "imageUrl": "https://s3-symbol-logo.tradingview.com/apollo--600.png"
+        },
+        {
+            "symbol": "VST",
+            "name": "Vistra Corp.",
+            "imageUrl": "https://s3-symbol-logo.tradingview.com/vistra-energy--600.png"
+        },
+        {
+            "symbol": "TTWO",
+            "name": "two",
+            "imageUrl": "https://s3-symbol-logo.tradingview.com/take-two-interactive-software--600.png"
+        },
+        {
+            "symbol": "TT",
+            "name": "Trane Technologies plc",
+            "imageUrl": "https://s3-symbol-logo.tradingview.com/trane-technologies--600.png"
+        },
+        {
+            "symbol": "TER",
+            "name": "Teradyne, Inc.",
+            "imageUrl": "https://s3-symbol-logo.tradingview.com/teradyne--600.png"
+        },
+        {
+            "symbol": "SW",
+            "name": "Smurfit WestRock plc Ordinary Shares",
+            "imageUrl": "https://s3-symbol-logo.tradingview.com/smurfit-kappa--600.png"
+        },
+        {
+            "symbol": "SMCI",
+            "name": "Super Micro Computer, Inc.",
+            "imageUrl": "https://s3-symbol-logo.tradingview.com/super-micro-computer--600.png"
+        },
+        {
+            "symbol": "SATS",
+            "name": "EchoStar Corporation",
+            "imageUrl": "https://s3-symbol-logo.tradingview.com/echostar--600.png"
+        },
+        {
+            "symbol": "ON",
+            "name": "ON Semiconductor Corporation",
+            "imageUrl": "https://s3-symbol-logo.tradingview.com/on-semiconductor--600.png"
+        },
+        {
+            "symbol": "HII",
+            "name": "Huntington Ingalls Industries, Inc.",
+            "imageUrl": "https://s3-symbol-logo.tradingview.com/huntington-ingalls-industries--600.png"
+        },
+        {
+            "symbol": "DELL",
+            "name": "Dell Technologies Inc.",
+            "imageUrl": "https://s3-symbol-logo.tradingview.com/dell--600.png"
+        },
+        {
+            "symbol": "DECK",
+            "name": "Deckers Outdoor Corporation",
+            "imageUrl": "https://s3-symbol-logo.tradingview.com/deckers-outdoor--600.png"
+        },
+        {
+            "symbol": "WELL",
+            "name": "Welltower Inc.",
+            "imageUrl": "https://s3-symbol-logo.tradingview.com/welltower-indrn--600.png"
+        },
+        {
+            "symbol": "COHR",
+            "name": "Coherent, Inc.",
+            "imageUrl": "https://s3-symbol-logo.tradingview.com/coherent--600.png"
+        },
+        {
+            "symbol": "CDW",
+            "name": "CDW Corporation",
+            "imageUrl": "https://s3-symbol-logo.tradingview.com/cdw--600.png"
+        },
+        {
+            "symbol": "LYV",
+            "name": "Live Nation Entertainment, Inc.",
+            "imageUrl": "https://s3-symbol-logo.tradingview.com/live-nation--600.png"
+        },
+        {
+            "symbol": "BKR",
+            "name": "Baker Hughes Company",
+            "imageUrl": "https://s3-symbol-logo.tradingview.com/baker-hughes--600.png"
         }
     ]
 }
