@@ -126,11 +126,9 @@
 <script setup lang="ts">
 import { computed, ref } from 'vue'
 import type { Signal, Period } from '@/generated/graphql'
-import { LOGOS } from '@/stores/signals'
 import { useWatchlistStore } from '@/stores/watchlist'
 import { useI18n } from '@/i18n'
 import ChartPrice from '@/components/ChartPrice.vue'
-import { companies } from '@/assets/companies.json'
 
 const props = defineProps<{ signal: Signal; period: Period }>()
 defineEmits(['close'])
@@ -150,8 +148,18 @@ const periodOptions = [
 ]
 
 const ticker = computed(() => props.signal.instrument.id)
-const companyMap = Object.fromEntries(companies.map(c => [c.symbol, c]))
-const logoUrl = computed(() => companyMap[ticker.value]?.imageUrl ?? '')
+
+const logos = import.meta.glob('@/assets/images/logos/*', {
+	eager: true,
+	import: 'default'
+})
+
+const normalizeTicker = (t: string) => t.replace('.', '-')
+
+const logoUrl = computed(() => {
+	const key = `/src/assets/images/logos/${normalizeTicker(ticker.value)}.png`
+	return logos[key] ?? ''
+})
 
 const inWl = computed(() => wlStore.isInWatchlist(ticker.value))
 const close = computed(() => props.signal.instrument.snapshot?.close ?? 0)

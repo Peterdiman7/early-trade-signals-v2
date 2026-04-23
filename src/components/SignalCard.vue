@@ -90,11 +90,9 @@
 <script setup lang="ts">
 import { computed, ref } from 'vue'
 import type { Signal } from '@/generated/graphql'
-import { LOGOS } from '@/stores/signals'
 import { useWatchlistStore } from '@/stores/watchlist'
 import { useNotifStore } from '@/stores/notif'
 import { useI18n } from '@/i18n'
-import { companies } from '@/assets/companies.json'
 
 const props = defineProps<{ signal: Signal; period: string }>()
 defineEmits(['click'])
@@ -105,8 +103,18 @@ const { t } = useI18n()
 const showFb = ref(false)
 
 const ticker = computed(() => props.signal.instrument.id)
-const companyMap = Object.fromEntries(companies.map(c => [c.symbol, c]))
-const logoUrl = computed(() => companyMap[ticker.value]?.imageUrl ?? '')
+
+const logos = import.meta.glob('@/assets/images/logos/*', {
+	eager: true,
+	import: 'default'
+})
+
+const normalizeTicker = (t: string) => t.replace('.', '-')
+
+const logoUrl = computed(() => {
+	const key = `/src/assets/images/logos/${normalizeTicker(ticker.value)}.png`
+	return logos[key] ?? ''
+})
 
 const inWatchlist = computed(() => wlStore.isInWatchlist(ticker.value))
 
