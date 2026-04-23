@@ -30,7 +30,9 @@ type Signal {
   instrument: Instrument!
   action: SignalAction!
   state: SignalState!
+  timeframe: Timeframe!
   quality: Int!
+  startPrice: Float!
   targetPrice: Float!
   stopLoss: Float
   targetDate: Date
@@ -65,6 +67,28 @@ type SignalList {
   items: [Signal!]!
 }
 
+enum Timeframe {
+  SHORT_TERM
+  MID_TERM
+  LONG_TERM
+}
+
+input LastSignalCriteria {
+  timeframe: Timeframe
+  quality: Int
+  action: SignalAction
+}
+
+type LastSignalItem {
+  signal: Signal!
+  others: [Signal!]!
+}
+
+type LastSignalList {
+  count: Int!
+  items: [LastSignalItem!]!
+}
+
 type Instrument {
   id: ID!
   name: String!
@@ -97,9 +121,9 @@ type Query {
 
   headlineTickers: [Instrument!]!
   topMovers: [Instrument!]!
-
   instrument(id: ID!): Instrument!
   signals(period: Period!): SignalList!
+  lastSignals(criteria: LastSignalCriteria, last: Int): LastSignalList!
 }
 
 type Mutation {
