@@ -260,7 +260,6 @@ import ChartIndex from '@/components/ChartIndex.vue'
 import ChartSignalDist from '@/components/ChartSignalDist.vue'
 import { useQuery } from '@urql/vue'
 import { GetTopMoversDocument, GetTopMoversQuery, GetTopMoversQueryVariables, HeadlineTickersDocument, HeadlineTickersQuery, HeadlineTickersQueryVariables } from '@/generated/graphql'
-import { companies } from "../assets/companies.json"
 
 const router = useRouter()
 const authStore = useAuthStore()
@@ -314,27 +313,28 @@ const getTopMovers = useQuery<GetTopMoversQuery, GetTopMoversQueryVariables>({
 })
 
 const headlineTickers = computed(() => getHeadlineTickersResult.data.value?.headlineTickers ?? [])
-// map companies by symbol
-const companyMap = computed(() => {
-	return Object.fromEntries(
-		companies.map(c => [c.symbol, c])
-	)
+
+const logos = import.meta.glob('@/assets/images/logos/*', {
+	eager: true,
+	import: 'default'
 })
 
-// enrich movers
+const normalizeTicker = (t: string) => t.replace('.', '-')
+
+function getLogo(symbol: string) {
+	const key = `/src/assets/images/logos/${normalizeTicker(symbol)}.png`
+	return logos[key] ?? ''
+}
+
 const topMoversEnriched = computed(() => {
 	const data = getTopMovers.data.value?.topMovers ?? []
 
-	return data.map(t => {
-		const company = companyMap.value[t.id]
-
-		return {
-			...t,
-			symbol: t.id,
-			name: company?.name ?? t.name,
-			imageUrl: company?.imageUrl ?? ''
-		}
-	})
+	return data.map(t => ({
+		...t,
+		symbol: t.id,
+		name: t.name,
+		imageUrl: getLogo(t.id)
+	}))
 })
 
 // buy / sell
